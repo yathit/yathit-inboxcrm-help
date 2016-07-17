@@ -1,0 +1,20 @@
+name: Yathit Help
+baseurl: /sugarcrm
+permalink: /:title
+product: Yathit InboxCRM
+gems: 
+  - jekyll-assets
+  - jekyll-last-modified-at
+exclude: [vendor,Gemfile,Gemfile.lock,Rakefile,readme.md]
+canonical_domain: https://www.wisecashhq.com
+sugarcrm:
+  extension_id: iccdnijlhdogaccaiafdpjmbakdcdakk
+assets:
+  js_compressor:  uglifier
+  css_compressor: sass
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
