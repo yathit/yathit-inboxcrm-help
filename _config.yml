@@ -1,5 +1,5 @@
 name: Yathit Help
-baseurl: /sugarcrm
+baseurl: /sugarcrm-gmail
 permalink: /:title
 product: Yathit InboxCRM
 gems: 

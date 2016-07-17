@@ -2,94 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea83011d-30e2-41a1-8833-abdc07e61df6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_assets/stylesheets/_old.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/side-image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_plugins/svg_icon.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-01-02-administration.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-01-03-updating.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-01-04-uninstall.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-01-05-faq.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-02-02-using-context-widget.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-02-03-new-record.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-02-06-email-archiving.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-02-07-social.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-03-01-working-with-sugarcrm.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-03-02-leads.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-03-03-contacts.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-03-04-accounts.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-03-04-activity-feed.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-03-05-upcoming-activity.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-04-01-email-tracking.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-04-02-how-email-tracking-work.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-04-03-settings.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-06-01-enterprise.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-06-03-enterprise-deployment.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-06-04-google-apps-integration.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2000-06-05-configuration.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/account-edit-tags.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/account-overview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/auto-mark-as-paid-on-due-date.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/balance-projection.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/burn-chart-forecast.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/chart-filtering.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/click-account.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/data-entry.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/delete-upcoming-transactions.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/disable-weekly-reminder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/edit-account.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/edit-series.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/edit-single-transaction.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/edit-yearly-goal.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/enabling-tagging-add-on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/go-to-forecasting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/go-to-monthly-breakdown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/go-to-yearly-goal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/income-growth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/mark-transaction-as-paid.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/monthly-breakdown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/percent-growth.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/preview-deletion-of-transactions.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/preview-edition-of-multiple-transactions.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/preview-edition-of-single-transaction.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/reaching-account-overview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/reaching-transactions-listing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/save-single-transaction.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/select-account.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/selected-transaction.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/selecting-a-transaction.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/set-bank-account-balance.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/settings-fiscal-year.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/upcoming-and-outstanding-transactions.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/weekly-reminder-email.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/yearly-goal.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_assets/images/yearly-income-goal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-account-overview.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-applying-tagging-and-filtering.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-balance-forecast-and-runway-estimation.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-common-business-expenses-and-income.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-frequently-asked-questions.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-getting-a-weekly-reminder-email.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-installing-yathit-chrome-extension.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-marking-transactions-as-paid.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-modifying-all-upcoming-occurrences.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-modifying-one-occurrence-of-a-series.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-monthly-breakdown.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-overdue-and-upcoming-transactions-tracking.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-setting-up-a-recurring-transaction.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-simulating-month-to-month-growth.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-stopping-a-recurring-series.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2000-01-01-yearly-income-tracking.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_assets/stylesheets/site.scss" afterPath="$PROJECT_DIR$/_assets/stylesheets/site.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_data/sections.yml" afterPath="$PROJECT_DIR$/_data/sections.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/github-edit.html" afterPath="$PROJECT_DIR$/_includes/github-edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/navbar.html" afterPath="$PROJECT_DIR$/_includes/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_plugins/autolinker.rb" afterPath="$PROJECT_DIR$/_plugins/autolinker.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2000-01-01-getting-started.md" afterPath="$PROJECT_DIR$/_posts/2000-01-01-getting-started.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="wisecash-support.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,19 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2000-06-03-enterprise-deployment.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2000-06-03-enterprise-deployment.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2000-01-02-administration.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2000-01-02-administration.md">
           <provider editor-type-id="MarkdownPreviewEditor">
@@ -150,14 +55,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2000-02-03-new-record.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2000-02-03-new-record.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2000-02-03-new-record.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="319" selection-start-line="9" selection-start-column="319" selection-end-line="9" selection-end-column="319" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="github-edit.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_includes/github-edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -176,26 +134,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/stylesheets/site.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_old.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_assets/stylesheets/_old.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2000-06-04-google-apps-integration.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2000-06-04-google-apps-integration.md">
           <provider editor-type-id="MarkdownPreviewEditor">
@@ -204,32 +142,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2000-04-02-how-email-tracking-work.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2000-04-02-how-email-tracking-work.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2000-04-03-settings.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2000-04-03-settings.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -248,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_posts/2000-01-01-what-is-wisecash.md" />
         <option value="$PROJECT_DIR$/_posts/2000-01-01-installing-yathit-chrome-extension.md" />
         <option value="$PROJECT_DIR$/_posts/2000-01-03-uninstall.md" />
@@ -265,7 +176,6 @@
         <option value="$PROJECT_DIR$/_posts/2000-06-05-configuration.md" />
         <option value="$PROJECT_DIR$/_posts/2000-05-01-settings.md" />
         <option value="$PROJECT_DIR$/_plugins/autolinker.rb" />
-        <option value="$PROJECT_DIR$/_includes/navbar.html" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/_posts/2000-02-06-email-archiving.md" />
         <option value="$PROJECT_DIR$/_data/sections.yml" />
@@ -277,7 +187,6 @@
         <option value="$PROJECT_DIR$/_posts/2000-03-04-activity-feed.md" />
         <option value="$PROJECT_DIR$/_posts/2000-03-05-upcoming-activity.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-02-using-context-widget.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_plugins/svg_icon.rb" />
         <option value="$PROJECT_DIR$/_posts/2000-02-07-social.md" />
         <option value="$PROJECT_DIR$/_includes/side-image.html" />
@@ -293,6 +202,11 @@
         <option value="$PROJECT_DIR$/_posts/2000-01-02-administration.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-03-new-record.md" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_includes/navbar.html" />
+        <option value="$PROJECT_DIR$/_includes/footer.html" />
+        <option value="$PROJECT_DIR$/_includes/github-edit.html" />
       </list>
     </option>
   </component>
@@ -1139,16 +1053,16 @@
       <updated>1468417059770</updated>
       <workItem from="1468703099185" duration="18000" />
       <workItem from="1468703124519" duration="2239000" />
-      <workItem from="1468706661217" duration="11339000" />
+      <workItem from="1468706661217" duration="12417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13596000" />
+    <option name="totallyTimeSpent" value="14674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1398" height="877" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1159,13 +1073,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33069828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33069828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2721239" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1212,13 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1316,39 +1223,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/github-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="124">
-            <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1364,14 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1501,14 +1372,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1837,8 +1700,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="319" selection-start-line="9" selection-start-column="319" selection-end-line="9" selection-end-column="319" />
           <folding />
         </state>
       </provider>
@@ -1849,6 +1712,58 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="124">
+            <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/github-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
