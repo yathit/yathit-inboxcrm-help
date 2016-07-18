@@ -1,10 +1,7 @@
-This repository contains all that is needed to fully generate the [Knowledge Base](https://www.wisecashhq.com/help/what-is-wisecash) of my cash-flow forecasting SaaS app [WiseCash](https://www.wisecashhq.com).
+This repository  iscontains all that is needed to fully generate the [Knowledge Base](https://www.yathit.com/sugarcrm-gmail/) of [Yathit](https://www.yathit.com).
 
-Make sure to read the companion article: [Lessons Learned Building a Git-Based Knowledge Base for my SaaS product](https://www.wisecashhq.com/blog/lessons-learned-creating-a-git-based-knowledge-base-for-my-saas-product).
+For this opensource Knowledge Base web site generator, please see : [Lessons Learned Building a Git-Based Knowledge Base for my SaaS product](https://www.wisecashhq.com/blog/lessons-learned-creating-a-git-based-knowledge-base-for-my-saas-product).
 
-## Using this as a template for your own Knowledge Base
-
-You can freely reuse this repository as a starting point to create your own Knowledge Base. Just make sure to tweak the appearance enough that it doesn't look too similar, and do not reuse written content, images or animations. [Contact us](mailto:support@wisecashhq.com) in case of doubt. Credit/back-link is appreciated!
 
 ## How to run locally
 
@@ -18,11 +15,7 @@ You can freely reuse this repository as a starting point to create your own Know
 
 This is mostly:
 
-```
-cd wisecash-support-clone
-bundle exec jekyll build --destination $target_folder -c _config.yml,_private_config.yml
-```
 
     bundle exec jekyll build --destination ~/gae/yathit-app/src/main/webapp/static/sugarcrm-gmail
 
-Private config is used to avoid leaving it in the public repository. Nothing sensitive but I want to make sure nobody deploys it by mistake, in order to avoid affecting our own typekit quotas.
+
