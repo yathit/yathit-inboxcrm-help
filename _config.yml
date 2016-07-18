@@ -1,6 +1,6 @@
 name: Yathit Help
 baseurl: /sugarcrm-gmail
-permalink: /:title
+permalink: /:title.html
 product: Yathit InboxCRM
 gems: 
   - jekyll-assets
