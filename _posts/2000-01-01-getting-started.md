@@ -16,7 +16,7 @@ Install Yathit InboxCRM for SugarCRM by clicking the following button:
 
 This will prompt permission grant dialog as follow:
 
-{% include screenshot.html file="add-to-chrome.gif" %}
+{% include full-screenshot.html file="add-to-chrome.gif" %}
 
 Click "Add" to grant permission and install the extension.
 
@@ -32,11 +32,11 @@ You must login to the extension with Google account before you use it. You can e
 
 To login with Chrome sign in, simply click the Login button on the extension panel.
 
-{% include screenshot.html file="sigin-to-chrome.gif" %}
+{% include full-screenshot.html file="sigin-to-chrome.gif" %}
 
 To login with Chrome sign in, click the Login button while holding SHIFT key.
 
-{% include screenshot.html file="login-to-yathit.gif" %}
+{% include full-screenshot.html file="login-to-yathit.gif" %}
 
 You should login with same account as your Gmail account.
 
@@ -44,11 +44,11 @@ Login registration to Yathit server is free. You can use Yathit InboxCRM extensi
 
 ## Setting SugarCRM
 
-Bring up [Setup wizard page](chrome-extension://{{ site.sugarcrm.extension_id }}/setup.html). The link is also available in extension sidebar and option page.
+Click the setup link in the extension sidebar home panel or in Setting > Sugar Setting panel to bring up Sugar login form.
 
-{% include screenshot.html file="sugarcrm-login.gif" %}
+{% include full-screenshot.html file="sugarcrm-login.gif" %}
 
-Enter SugarCRM website URL, username and password in Section 3: SugarCRM login.
+Enter SugarCRM website URL, username and password.
 
 It will as to grant host access to your SugarCRM domain. Click 'Allow' to accept the requested permission. Your SugarCRM username and password are NOT sent to any server except your SugarCRM server. Your SugarCRM username and password are stored in the browser.
 
