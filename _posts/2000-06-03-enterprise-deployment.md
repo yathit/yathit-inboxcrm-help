@@ -1,6 +1,6 @@
 ---
 title: Enterprise deployment
-section: Customerization
+section: Miscellaneous
 index: 3
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Configuration
-section: Customerization
+section: Miscellaneous
 index: 3
 ---
 

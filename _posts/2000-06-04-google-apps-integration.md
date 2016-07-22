@@ -1,6 +1,6 @@
 ---
 title: Google apps integration
-section: Customerization
+section: Miscellaneous
 index: 3
 ---
 

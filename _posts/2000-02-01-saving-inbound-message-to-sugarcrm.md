@@ -1,10 +1,11 @@
 ---
-title: Archiving email
-section: Using InboxCRM
-index: 6
+title: Saving Inbound Emails to SugarCRM
+section: Inbound Messages
+index: 1
 ---
 
-When you open [Gmail](https://mail.google.com) message, a link is injected just before "Reply" button in the Gmail message header.
+{{site.product}} gives you a easy ways to easily save emails into SugarCRM. Simply click on the {{ "ydn-logo-bw" | svg_icon }} icon in the gmail message toolbar. 
+
 
 {% include screenshot.html file="archive-email.gif" %}
 
