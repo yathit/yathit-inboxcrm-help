@@ -17,4 +17,4 @@ To upload email attachments to SugarCRM Documents module, click the upload butto
 
 {% include screenshot.html file="upload-attachment.gif" %}
 
-If an attachment is already uploaded to SugarCRM, SugarCRM icon, {{ "sugarcrm-bw" | svg_icon }}, will be shown instead of upload button. Click SugarCRM icon to bring up detail information on sidebar panel. You can visit to SugarCRM upload page from there.
+If an attachment is already uploaded to SugarCRM, SugarCRM icon, {{ "sugarcrm-bw" | svg_icon }}, will be shown instead of upload button. Click SugarCRM icon to bring up detail information on the sidebar panel. You can also visit to record detail page in SugarCRM.
