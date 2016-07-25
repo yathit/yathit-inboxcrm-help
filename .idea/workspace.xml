@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ea83011d-30e2-41a1-8833-abdc07e61df6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2000-02-01-saving-inbound-message-to-sugarcrm.md" afterPath="$PROJECT_DIR$/_posts/2000-02-01-saving-inbound-message-to-sugarcrm.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md" afterPath="$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md" />
     </list>
     <ignored path="wisecash-support.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,12 +63,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2000-02-01-using-sidebar.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2000-02-01-using-sidebar.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor relative-caret-position="150">
+                <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -76,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2000-02-01-saving-inbound-message-to-sugarcrm.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2000-02-01-saving-inbound-message-to-sugarcrm.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2000-02-01-saving-inbound-message-to-sugarcrm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -176,7 +176,6 @@
         <option value="$PROJECT_DIR$/_posts/2000-01-05-faq.md" />
         <option value="$PROJECT_DIR$/_assets/stylesheets/site.scss" />
         <option value="$PROJECT_DIR$/_assets/stylesheets/_old.scss" />
-        <option value="$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-06-email-archiving.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-01-contextual-info.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-02-contextual-info.md" />
@@ -186,6 +185,7 @@
         <option value="$PROJECT_DIR$/_posts/2000-03-01-using-sugar-template-in-gmail.md" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/_posts/2000-02-01-saving-inbound-message-to-sugarcrm.md" />
+        <option value="$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md" />
       </list>
     </option>
   </component>
@@ -496,7 +496,7 @@
       <workItem from="1469221274082" duration="6895000" />
       <workItem from="1469352388799" duration="26000" />
       <workItem from="1469451446621" duration="482000" />
-      <workItem from="1469451934344" duration="502000" />
+      <workItem from="1469451934344" duration="570000" />
     </task>
     <task id="LOCAL-00001" summary="ok now.">
       <created>1468733788935</created>
@@ -575,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469451846731</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="link">
+      <created>1469452449267</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1469452449267</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34341000" />
+    <option name="totallyTimeSpent" value="34409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1398" height="877" extended-state="6" />
@@ -598,7 +605,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27876106" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27876106" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -633,7 +640,8 @@
     <MESSAGE value="add inbond and outbound message." />
     <MESSAGE value="outbound email" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="link" />
+    <option name="LAST_COMMIT_MESSAGE" value="link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1025,23 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2000-02-07-social.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1101,6 +1092,23 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="81">
             <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2000-02-01-using-sidebar.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
             <folding />
           </first_editor>
           <second_editor />

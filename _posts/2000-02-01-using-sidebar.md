@@ -26,7 +26,7 @@ A the bottom of the sidebar is footer, which as link to [Chrome Extension option
 
 ## Sidebar body
 
-Sidebar body is the main content of the sidebar, comprising seven tabbed panels.
+Sidebar body is the main content of the sidebar comprising seven tabbed panels.
 
 * {{ "magnifying-glass" | svg_icon }} **Search Panel** is used to search SugarCRM records.
 * {{ "plus" | svg_icon }} **New Record Panel** is used to create a new SugarCRM record.
