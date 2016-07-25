@@ -1,4 +1,4 @@
-This repository contains all that is needed to fully generate the [Knowledge Base](https://www.yathit.com/sugarcrm-gmail/) of [Yathit](https://www.yathit.com).
+This repository contains all that is needed to fully generate the [Knowledge Base](https://www.yathit.com/sugarcrm-gmail/) for [Yathit InboxCRM](https://www.yathit.com).
 
 For this opensource Knowledge Base web site generator, please see : [Lessons Learned Building a Git-Based Knowledge Base for my SaaS product](https://www.wisecashhq.com/blog/lessons-learned-creating-a-git-based-knowledge-base-for-my-saas-product).
 
