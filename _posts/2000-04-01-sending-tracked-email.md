@@ -1,19 +1,17 @@
 ---
-title: Overview
+title: Sending a tracked email
 section: Email Tracking
 index: 1
 ---
 
 ## How to track an email
 
-Track your mail send by simply a click of a button on Gmail compose panel or reply panel. When a recipient open the email, it will be instantly notify you.
+To send a tracked email, just click email Tracking checkbox on an outbound email. This will let you know who opens your emails and links, when and where they do it. The person you send the email to won’t know that the email is being tracked--it’s different than a read receipt:
 
-{% include full-screenshot.html file="track-email.gif" %}
+{% include full-screenshot.html file="sending-tracked-email.png" %}
+<br/>
 
-
-For more detail see [how email tracking works](how-email-tracking-work.html). You may also change default [tracking options](options.html).
-
-You can also define [do-not-track](setting.html#do-not-track) list.
+For more detail see [How email tracking works](how-email-tracking-work.html). 
 
 ## Get notified
 
@@ -24,7 +22,7 @@ When a recipient open a *recently* tracked email or link, you will be immediatel
 You can see the status of tracking of a message beside Gmail message thread.
 
 {% include full-screenshot.html file="view-tracked-email.gif" %}
-
+<br/>
 
 
 You can view all tracking in extension [Option Page](chrome-extension://ldikiokclnbceabnlbkabmcacpiednop/option-page.html).
