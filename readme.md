@@ -9,7 +9,7 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 * Make sure to have Ruby installed (tested fine on Ruby 2.1.x).
 * Install required dependencies with `bundle install`
 * Run `jekyll serve`
-* Go to [http://localhost:4000/help/](http://localhost:4000/help/)
+* Go to [http://localhost:4000/sugarcrm-gmail/(http://localhost:4000/sugarcrm-gmail/)
 
 ## How to build in production
 
