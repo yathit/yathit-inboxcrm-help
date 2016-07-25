@@ -12,5 +12,4 @@ When you open an email {{site.product}} will automatically look for a correspond
 * Open & Closed Opportunities
 * Open & Closed Cases
 
-
 {% include full-screenshot.html file="context-info.gif" %}
