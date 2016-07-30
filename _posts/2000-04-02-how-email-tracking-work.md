@@ -1,7 +1,7 @@
 ---
 title: How email tracking works
 section: Email Tracking
-index: 2
+index: 3
 ---
 
 

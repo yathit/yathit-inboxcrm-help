@@ -1,7 +1,7 @@
 ---
 title: Sending a tracked email
 section: Email Tracking
-index: 1
+index: 2
 ---
 
 ## How to track an email
