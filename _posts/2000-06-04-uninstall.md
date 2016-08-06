@@ -1,6 +1,6 @@
 ---
 title: Uninstalling
-section: Miscellaneous
+section: Setup
 index: 4
 ---
 

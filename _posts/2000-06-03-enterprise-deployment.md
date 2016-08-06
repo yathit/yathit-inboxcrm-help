@@ -1,7 +1,7 @@
 ---
 title: Enterprise deployment
-section: Miscellaneous
-index: 3
+section: Setup
+index: 7
 ---
 
 

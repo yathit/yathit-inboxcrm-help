@@ -1,7 +1,7 @@
 <ul class="toc sections">
   {% for section in site.data.sections %}
   <li>
-    <span class='section'>{{ section.name }}</span>
+    <span class='section'>{% if section.path %}<a href="{{site.baseurl}}/{{ section.path }}">{{ section.name }}</a>{% else %}{{ section.name }}{% endif %}</span>
     <ul class="toc pages">
       {% assign pages = (site.posts | where: 'section', section.name | sort: 'index') %}
       {% for p in pages %}

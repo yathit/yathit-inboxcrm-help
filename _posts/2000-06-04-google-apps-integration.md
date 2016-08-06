@@ -1,7 +1,7 @@
 ---
 title: Google apps integration
-section: Miscellaneous
-index: 3
+section: Setup
+index: 5
 ---
 
 

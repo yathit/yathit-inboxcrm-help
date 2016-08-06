@@ -1,6 +1,6 @@
 ---
-title: Saving Outbound Emails to SugarCRM
-section: Outbound Messages
+title: Outbound Emails
+section: Archive Email
 index: 2
 ---
 

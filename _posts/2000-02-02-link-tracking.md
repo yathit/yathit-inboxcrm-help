@@ -1,5 +1,5 @@
 ---
-title: Creating a Tracked HyperLink within an Email 
+title: Link tracking
 section: Email Tracking
 index: 3
 ---

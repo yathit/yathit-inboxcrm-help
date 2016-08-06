@@ -16,8 +16,7 @@ require "jekyll/assets_plugin/asset_path"
 
 module Jekyll
   #
-  # Provides the canonical URL for the current page by removing
-  # index.html and removing .html from the page names.
+  # Display svg icon.
   #
   module SvgIconInjector
     def svg_icon(name)

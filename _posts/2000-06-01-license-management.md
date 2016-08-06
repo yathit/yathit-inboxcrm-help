@@ -1,6 +1,6 @@
 ---
 title: License management
-section: Miscellaneous
+section: Setup
 index: 1
 ---
 

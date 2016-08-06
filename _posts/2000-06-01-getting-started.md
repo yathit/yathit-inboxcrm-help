@@ -1,6 +1,6 @@
 ---
 title: Setup
-section: Miscellaneous
+section: Setup
 index: 1
 ---
 

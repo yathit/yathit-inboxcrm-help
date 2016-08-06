@@ -1,6 +1,6 @@
 ---
-title: Automatically View Contextual SugarCRM Information
-section: Archive Email
+title: Contextual SugarCRM Information
+section: Working with Gmail
 index: 2
 ---
 

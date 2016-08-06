@@ -1,6 +1,6 @@
 ---
 title: Using SugarCRM template in Gmail
-section: Outbound Messages
+section: Working with Gmail
 index: 1
 ---
 
