@@ -1,6 +1,6 @@
 ---
 title: Creating and updating record
-section: Using InboxCRM
+section: Archive Email
 index: 3
 ---
 

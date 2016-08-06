@@ -1,6 +1,6 @@
 ---
 title: Setup
-section: Getting Started
+section: Miscellaneous
 index: 1
 ---
 

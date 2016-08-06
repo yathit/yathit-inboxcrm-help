@@ -1,6 +1,6 @@
 ---
 title: Automatically View Contextual SugarCRM Information
-section: Inbound Messages
+section: Archive Email
 index: 2
 ---
 

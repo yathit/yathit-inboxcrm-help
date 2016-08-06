@@ -1,6 +1,6 @@
 ---
 title: Using Sidebar
-section: Using InboxCRM
+section: Miscellaneous
 index: 1
 ---
 

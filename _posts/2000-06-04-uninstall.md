@@ -1,6 +1,6 @@
 ---
 title: Uninstalling
-section: Getting Started
+section: Miscellaneous
 index: 4
 ---
 

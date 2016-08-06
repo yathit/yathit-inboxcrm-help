@@ -1,7 +1,5 @@
-- name: Getting Started
-- name: Inbound Messages
+- name: Archive Email
 - name: Outbound Messages
 - name: Email Tracking
 - name: Working with SugarCRM
-- name: Using InboxCRM
 - name: Miscellaneous

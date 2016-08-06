@@ -1,6 +1,6 @@
 ---
 title: Saving Inbound Emails to SugarCRM
-section: Inbound Messages
+section: Archive Email
 index: 1
 ---
 
