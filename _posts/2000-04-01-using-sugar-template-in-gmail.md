@@ -13,4 +13,6 @@ Click 'Template' button to bring up list of template organized by category.
 <br/>
 Dynamic fields, such as, contact name, address are automatically applied from the database.
 
+To create a new template in Sugar, click "New template..." menu. This will bring to create a new template in your SugarCRM portal. You may need to click "Refresh" to appear your newly created template appear in the menu.
+
 
