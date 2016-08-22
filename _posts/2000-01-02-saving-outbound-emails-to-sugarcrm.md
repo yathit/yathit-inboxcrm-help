@@ -4,7 +4,7 @@ section: Archive Email
 index: 2
 ---
 
-For an easy management of Outbound emails, SugarCRM provides you the capability to archive the Outbound emails. You can do this using the Yathit toolbor, which appears below the recipients input in Gmail compose and reply panels. 
+For an easy management of Outbound emails, Yathit provides you the capability to archive the Outbound emails. You can do this using the Yathit toolbor, which appears below the recipients input in Gmail compose and reply panels. 
 
 To archive the outbound emails to SugarCRM, select the Archive checkbox in the toolbar.
 
