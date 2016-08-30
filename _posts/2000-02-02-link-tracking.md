@@ -5,6 +5,9 @@ index: 3
 ---
 
 
-To track when a recipient of your email clicks on a link that you’ve placed in the body of your email, simply create your email and ensure the Tracking checkbox is checked. All the hyperlinks inside the email body content will be tracked.
+Link tracking is very easy with Yathit. You can easily embed a link within your email. When the recipient will click the link, you will get a notification about the same. 
+
+To ensure that the link tracking is being done, you will have to select the Tracking check box while creating an email. Any hyperlink embedded in the email will be tracked automatically once the Tracking check box is selected. You need not to do anything else. 
+
 
 
