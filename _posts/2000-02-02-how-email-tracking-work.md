@@ -6,20 +6,20 @@ index: 3
 
 
 
-Yathit email tracker uses the same pixel-beacon approach that many newsletter services use, applied to one-to-one communication. When you send an email using Yathit tracking, a pixel is embedded in your message. Once the recipient's email client or application loads the image, Yathit’s server gets pinged with the IP address, providing you with relevant information about where, when, and on what device your email was opened.
+Yathit's email tracker uses a pixel-beacon that is being used by many prominent newsletter services for one-to-one communication. With this feature, a pixel gets embedded in your email that helps in its tracking. As soon as the recipient opens the email or the application loads the image, Yathit's server instantly gets notified by the IP address providing you with all necessary information, such as who, when, where, and on which device the email has been opened.
 
-Transparent one pixel gif image with unique URL is added to email content body just before sending to Google email server.Your recipient will sees exactly the email sent from you. Your recipient might see a message such as "Load images from this user?" depending on the email client.
+A transparent GIF image, barely of one pixel size with unique URL, has been added to the content body of your email before it gets delivered to the Google email server. With this option, the recipient will get the exact email that you have sent. In this case, the recipient might see the message "Load images from this user?" depending on his / her email client.
 
-Since all image URL are unique, Yathit server knows which email belong to when the image is accessed. When browser or email client request the image, it send usual IP address of the client. The IP address is used for location of email reader.
+All the image URLs are unique; hence, Yathit's server knows exactly which email is attached to the image on being accessed. An IP address is sent to the client when the email recipient or a browser requests to load the image. This IP address is used to track the location of the recipient.
 
-If email message is opened by sender oneself, the image will also be acquired from Yathit server. Such self open access is recorded as _self open_ by sending additional request from the extension.
+If the email sender opens the email message, the Yathit server also acquires the image as well. This is recorded in the server as a _self open_ access by sending an additional request from the extension.
 
 ## When email tracking does not work
 
-Email tracking work only when the image is accessed. Some email client does not display images embedded in the email body for security and privacy reason. In Gmail, [embedded images are displayed](http://gmailblog.blogspot.sg/2013/12/images-now-showing.html) by default, but accessed via Google [image proxy sever](https://support.google.com/mail/answer/145919?p=display_images&rd=1). It means, Yathit will not able to trace IP address of email reader. However the time of access can still be recorded and considered as intended reader read the email.
+In fact, email tracking only works when the image is being accessed, but not all email clients embed images to be displayed in the email body for privacy or security reasons. In Gmail, [embedded images are displayed](http://gmailblog.blogspot.sg/2013/12/images-now-showing.html) by default, but they are accessed via Google [image proxy sever](https://support.google.com/mail/answer/145919?p=display_images&rd=1). It means, Yathit cannot trace the IP address of the email reader. However, the time when the email has been accessed is recorded and considered as the recipient has intentionally opened and read the email.
 
 ## How link tracking works
 
-In addition to email tracking, Yathit email tracker also track links. Link tracking creates a proxy link to any link in your email body. When the link is click, Yathit server record link access and redirect to original link. The original look of the link does not change. Link tracking is very reliable as compare to email tracking.
+Apart from tracking emails, Yathit's email tracker also tracks links embedded in the email body. Link tracking works by creating a proxy link on any link within the email body. On clicking that link, the Yathit server records its access and then redirects it to the original link. The original link maintains the link tracking ability without making any change in the appearance of the original link. Link tracking is very reliable as compared to the email tracking.
 
 
