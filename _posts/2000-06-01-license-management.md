@@ -7,12 +7,14 @@ index: 1
 
 ## License assignment
 
-Purchases subscription licenses can be assigned to users in [License Management portal](https://www.yathit.com/portal/index.html). 
+With the [License Management portal](https://www.yathit.com/portal/index.html), users can easily be assigned with a purchased subscription.
 
 {% include screenshot.html file="license-portal.png" %}
 
 
 ## Enterprise licensing 
 
-Google domain admin or user who has read access to Admin Directory API can manage users for bill payment and usage auditing. Login to [Yathit Admin Portal](https://www.yathit.com/portal/crm-admin.html). Login user must be Google domain admin or user who has read access to Admin Directory API. [Google apps integration,Google apps integration] is not required to use Admin portal or manage users.
+Any Google domain admin or a person who has access to the Admin Directory API can easily manage not only the bill payments but also the usage auditing as well. To do this, login to the [Yathit Admin Portal](https://www.yathit.com/portal/crm-admin.html). 
+
+Note that the user has to be either a Google domain admin or someone who has access to the Admin Directory API. You do not have to use any special [Google apps integration, Google apps integration] for using the Admin portal or to manage the users.
 
