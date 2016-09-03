@@ -6,9 +6,9 @@ index: 5
 
 ## Overview
 
-Yathit InboxCRM Chrome Extension can be pre-configured through Enterprise Configuration file. The configuration file is uploaded in [License Management](/portal/index.html) portal. All users using the license are pre-configured using the configuration.
+You can pre-reconfigure the Yathit InboxCRM Chrome Extension directly from Enterprise Configuration File, which is available in the [License Management](/portal/index.html) Portal. The configuration provides the capability to pre-configure all licensed users.
 
-Here is an example configuration file, which disable Snapshot panel in the extension.
+In the example given below, you can see the configuration for disabling snapshot panel in the extension.
 
     {
       "Sugar": {
@@ -20,15 +20,18 @@ Here is an example configuration file, which disable Snapshot panel in the exten
 
 ## Root configuration keys
 
-There are three root configuration keys in the configuration file 1) Sugar, 2) EmailTracking and 2) GoogleApps.
+The configuration file has three root configuration keys:
+1) Sugar
+2) Email Tracking
+3) Google Apps
 
 ### Sugar configuration key
 
-The following section explain several configuration keys under root `Sugar` configuration key.
+The following section explains many configuration keys available under the root `Sugar` configuration key. 
 
 #### LoginInfo
 
-Change current user login info. For example, the following configuration changes default currency of the login user.
+By using simple configuration, you can change the current user login info.; for example, the below configuration will change the default currency of the login user.
 
     {
       "Sugar": {
@@ -40,7 +43,7 @@ Change current user login info. For example, the following configuration changes
 
 ### ModuleSetting
 
-The following configuration remove Module Setting panel from the extension sidebar.
+Remove the Module Setting Panel from the extension sidebar by using the configuration given below.
 
     {
       "Sugar": {
@@ -50,7 +53,7 @@ The following configuration remove Module Setting panel from the extension sideb
       }
     }
 
-To change specific property, use `Modules` key. The following setting make `id` fields visible in the record edit panel for Account record type. By default `id` fields is hidden in the panel.
+Not only you can remove the module setting but also make changes in a specific property. To do this, you can use the `Modules` key. The following settings will make the `id` fields visible in the record edit panel for Account record types. The `id` field in the panel is hidden by default.
 
      {
        "Sugar": {
@@ -68,7 +71,7 @@ To change specific property, use `Modules` key. The following setting make `id` 
        }
      }
 
-Where "Accounts" is module name. To apply all modules, use `*`. The following configuration make Assign User fields visible to all modules.
+In the above settings, the module name is "Account." To apply the same changes to all modules, use the * sign instead of the module name. This configuration given below will make the Assign user fields visible to all the modules.
 
      {
        "Sugar": {
@@ -88,13 +91,13 @@ Where "Accounts" is module name. To apply all modules, use `*`. The following co
 
 ### ModuleFields
 
-`ModuleFields` is used to adjust Sugar CRM meta data as return by REST API method `get_module_fields`.
+Adjust the SugarCRM meta data as a result with the REST API method named `get_module_fields` using `ModuleFields`.
 
-The following configuration adjust correct grouping for `campaing_name` fields. (Note: incorrect spelling).
+The following configuration adjusts the correct grouping for the `campaing_name` fields. (Note: incorrect spelling).
 
 ### EmailTracking configuration key
 
-Currently the only supported key under `EmailTracking` configuration key is `disable` key with valid values are either `true` or `false`.
+Currently the `disable` key is the only supported key under the `EmailTracking` configuration key. It supports only `true` or `false` values.
 
      {
        "Sugar": {
@@ -114,7 +117,7 @@ Currently the only supported key under `EmailTracking` configuration key is `dis
 
 ### RecordBrowsePanel
 
-The following configuration change menu items in the Record Browser panel and Record search panel.
+The following configuration changes the menu item in the Record search panel and the Record Browser panel. 
 
      {
        "Sugar": {
@@ -137,15 +140,15 @@ The following configuration change menu items in the Record Browser panel and Re
        }
      }
 
-Note that, by doing so, the two modules "Bugs" and "Campaigns", which is not display by default, are shown in the browser panel and editable. Any module can be add there.
+By following the above configuration, the two modules "Bugs" and "Campaign" are visible in the browser panel and are editable. These modules are not visible by default. You can add any module in the browser panel by adding its name in the configuration given above.
 
 ### GoogleApps configuration key
 
-`GoogleApps` configuration key configure Google Apps.
+The `GoogleApps` configuration key configures all Google Apps.
 
 ### Contacts
 
-The following configuration disable Contact sync.
+Follow this configuration to disable the contact sync.
 
     {
       "GoogleApps": {
@@ -159,7 +162,7 @@ The following configuration disable Contact sync.
 
 ### Calendar
 
-The following configuration disable Calendar sync.
+To disable the calendar sync, follow this configuration.
 
     {
       "GoogleApps": {
