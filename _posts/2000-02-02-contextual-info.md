@@ -4,7 +4,10 @@ section: Working with Gmail
 index: 2
 ---
 
-When you open an email {{site.product}} will automatically look for a corresponding record in SugarCRM based off of their email address. Click on the email address in the context panel, we will then display a snapshot summary of their record including:
+{{site.product}} provides the possibility to check the contextual info, such as contact detail, email tracking information, and so on for an email that you open in your gmail account.  
+
+When you open an email, {{site.product}} automatically looks for its corresponding record in SugarCRM based on the email address. 
+When you click the email address in the context panel, you will see a summary of the related information that includes:
 
 * Contact Info
 * Email Tracking Information
