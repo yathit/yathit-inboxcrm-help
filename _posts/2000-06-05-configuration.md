@@ -20,14 +20,13 @@ In the example given below, you can see the configuration for disabling snapshot
       }
     }
 
-## Root configuration keys
 
 The configuration file has three root configuration keys:
 1) Sugar
 2) Email Tracking
 3) Google Apps
 
-### Sugar configuration key
+## Sugar configuration key
 
 The following section explains many configuration keys available under the root `Sugar` configuration key. 
 
@@ -90,6 +89,34 @@ In the above settings, the module name is "Account." To apply the same changes t
          }
        }
      }
+
+
+### RecordBrowsePanel
+
+The following configuration changes the menu item in the Record search panel and the Record Browser panel. 
+
+     {
+       "Sugar": {
+         "RecordBrowsePanel": {
+           "modules": [
+              "Contacts",
+              "Cases",
+              "Opportunities",
+              "Leads",
+              "Accounts",
+              "Bugs",
+              "Campaigns",
+              "Documents",
+              "Notes",
+              "Tasks",
+              "Calls",
+              "Users"
+           ]
+         }
+       }
+     }
+
+By following the above configuration, the two modules "Bugs" and "Campaign" are visible in the browser panel and are editable. These modules are not visible by default. You can add any module in the browser panel by adding its name in the configuration given above.
 
 ### Modules
 
@@ -171,7 +198,7 @@ In the following example configuration, `Leads` module is disabled for editing a
     }
 
 
-### EmailTracking configuration key
+## EmailTracking configuration key
 
 Currently the `disable` key is the only supported key under the `EmailTracking` configuration key. It supports only `true` or `false` values.
 
@@ -191,34 +218,7 @@ Currently the `disable` key is the only supported key under the `EmailTracking` 
        }
      }
 
-### RecordBrowsePanel
-
-The following configuration changes the menu item in the Record search panel and the Record Browser panel. 
-
-     {
-       "Sugar": {
-         "RecordBrowsePanel": {
-           "modules": [
-              "Contacts",
-              "Cases",
-              "Opportunities",
-              "Leads",
-              "Accounts",
-              "Bugs",
-              "Campaigns",
-              "Documents",
-              "Notes",
-              "Tasks",
-              "Calls",
-              "Users"
-           ]
-         }
-       }
-     }
-
-By following the above configuration, the two modules "Bugs" and "Campaign" are visible in the browser panel and are editable. These modules are not visible by default. You can add any module in the browser panel by adding its name in the configuration given above.
-
-### GoogleApps configuration key
+## GoogleApps configuration key
 
 The `GoogleApps` configuration key configures all Google Apps.
 
