@@ -8,7 +8,7 @@ index: 5
 
 You can pre-reconfigure the Yathit InboxCRM Chrome Extension directly from Enterprise Configuration File, which is available in the [License Management](/portal/index.html) Portal. The configuration provides the capability to pre-configure all licensed users.
 
-We also provides configuration support.
+We also provides [paid support](https://www.yathit.com/buy-custom.html) for this customization.
 
 In the example given below, you can see the configuration for disabling snapshot panel in the extension.
 

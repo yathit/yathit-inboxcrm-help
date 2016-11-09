@@ -28,7 +28,7 @@ Extension has a background page. It runs only when browser is opening [Gmail](ht
 
 ## Login
 
-You must login to the extension with Google account before you use it. You can either '[sign in to Chrome](https://support.google.com/chrome/answer/185277)' or Login to Yathit server.
+To persist setting and additional feature for licensing, you should log in to Yathit server. You can either '[sign in to Chrome](https://support.google.com/chrome/answer/185277)' or Login to Yathit server.
 
 To login with Chrome sign in, simply click the Login button on the extension panel.
 
@@ -38,9 +38,11 @@ To login with Chrome sign in, click the Login button while holding SHIFT key.
 
 {% include full-screenshot.html file="login-to-yathit.gif" %}
 
-You should login with same account as your Gmail account.
+### Using Extension in multiple Gmail accounts
 
-Login registration to Yathit server is free. You can use Yathit InboxCRM extension for free, but functionality will be limited.
+By default only login gmail account will use Extension. On other gmail session, the extension will be hide on side. If you want to use all gmail sessions, you can still do by changing in General Preference Setting. 
+
+{% include full-screenshot.html file="enable-all-gmail-sessions.gif" %}
 
 ## Setting SugarCRM
 
