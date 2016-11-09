@@ -8,6 +8,8 @@ index: 5
 
 You can pre-reconfigure the Yathit InboxCRM Chrome Extension directly from Enterprise Configuration File, which is available in the [License Management](/portal/index.html) Portal. The configuration provides the capability to pre-configure all licensed users.
 
+We also provides configuration support.
+
 In the example given below, you can see the configuration for disabling snapshot panel in the extension.
 
     {
@@ -89,11 +91,85 @@ In the above settings, the module name is "Account." To apply the same changes t
        }
      }
 
-### ModuleFields
+### Modules
 
-Adjust the SugarCRM meta data as a result with the REST API method named `get_module_fields` using `ModuleFields`.
+Adjust the SugarCRM meta data as a result with the REST API method named `get_module_fields` using `Modules`.
 
 The following configuration adjusts the correct grouping for the `campaing_name` fields. (Note: incorrect spelling).
+
+     {
+       "Sugar": {
+          "Modules": {
+            "Accounts": {
+              "module_fields": {
+                "campaing_name": {
+                  "group": "campaign"
+                }
+              }
+            }
+          }
+       }
+     }
+
+When related module name is missing in the field option, the field value will not suggest properly. It can be fixed as follow:
+
+     {
+       "Sugar": {
+          "Modules": {
+            "Opportunities": {
+              "module_fields": {
+                "currency_id": {
+                  "related_module": "mstr_Currency_s"
+                }
+              }
+            }
+          }
+       }
+     }
+
+Where `mstr_Currency_s` is Module name, which stores currency conversion rate.
+
+### Disabling editing/deleting
+
+For some reason, you may not want user to update certain module from Yathit extension. You can modify ACL for this purpose.
+
+In the following example configuration, `Leads` module is disabled for editing and deleting from the extension.
+
+    {
+      "Sugar": {
+        "Acls": {
+          "Leads": {
+            "acls": [
+              {
+                "action": "view",
+                "access": false
+              },
+              {
+                "action": "edit",
+                "access": false
+              },
+              {
+                "action": "delete",
+                "access": true
+              },
+              {
+                "action": "list",
+                "access": true
+              },
+              {
+                "action": "import",
+                "access": true
+              },
+              {
+                "action": "export",
+                "access": true
+              }
+            ]
+          }
+        }
+      }
+    }
+
 
 ### EmailTracking configuration key
 
