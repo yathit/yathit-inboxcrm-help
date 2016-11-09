@@ -203,18 +203,8 @@ In the following example configuration, `Leads` module is disabled for editing a
 Currently the `disable` key is the only supported key under the `EmailTracking` configuration key. It supports only `true` or `false` values.
 
      {
-       "Sugar": {
-         "ModuleSetting": {
-           "Modules": {
-             "Accounts": {
-               "module_fields": {
-                 "campaing_name": {
-                   "group": "campaign"
-                 }
-               }
-             },
-           }
-         }
+       "EmailTracking": {
+         "disable": true
        }
      }
 
