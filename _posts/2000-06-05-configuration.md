@@ -21,11 +21,6 @@ In the example given below, you can see the configuration for disabling snapshot
     }
 
 
-The configuration file has three root configuration keys:
-1) Sugar
-2) Email Tracking
-3) Google Apps
-
 ## Sugar configuration key
 
 The following section explains many configuration keys available under the root `Sugar` configuration key. 
