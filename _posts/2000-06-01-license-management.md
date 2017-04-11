@@ -7,7 +7,8 @@ index: 1
 
 ## License assignment
 
-With the [License Management portal](https://www.yathit.com/portal/index.html), users can easily be assigned with a purchased subscription.
+
+With the [License Management portal](https://www.yathit.com/portal/index.html), users can easily be assigned with a purchased subscription. 
 
 {% include screenshot.html file="license-portal.png" %}
 

@@ -34,6 +34,8 @@ To login with Chrome sign in, simply click the Login button on the extension pan
 
 {% include full-screenshot.html file="sigin-to-chrome.gif" %}
 
+If you are Chrome profile, i.e, the Google account login to the extension, is different from the Gmail you want to use, [switch Chrome profile](https://support.google.com/chrome/answer/2364824) that you want to use. Briefly, to switch Chrome profile, click you profile name on the top right of the Chrome browser, to show menu and select another account or click Manage account. It will let you to add your chosen Gmail account. 
+
 To login with Chrome sign in, click the Login button while holding SHIFT key.
 
 {% include full-screenshot.html file="login-to-yathit.gif" %}
