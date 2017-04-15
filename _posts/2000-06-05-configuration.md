@@ -115,7 +115,7 @@ By following the above configuration, the two modules "Bugs" and "Campaign" are 
 
 ### Modules
 
-Adjust the SugarCRM meta data as a result with the REST API method named `get_module_fields` using `Modules`.
+Adjust the SugarCRM meta data as a result with the REST API method named `get_module_fields` using `Modules`. Your CRM meda data can be download as json file in Sugar Setting panel.
 
 The following configuration adjusts the correct grouping for the `campaing_name` fields. (Note: incorrect spelling).
 
@@ -150,6 +150,48 @@ When related module name is missing in the field option, the field value will no
      }
 
 Where `mstr_Currency_s` is Module name, which stores currency conversion rate.
+
+When displaying records, its relationships are also displayed in the below sections such as Activities, Relateded and Emails. To included module selection, CRM Meta Data of the module must have configure as follow:
+  
+    "Contacts": {
+       "module_fields": { 
+          "link_fields": {
+            "opportunities": {
+              "name": "opportunities",
+              "type": "link",
+              "group": "",
+              "id_name": "",
+              "relationship": "opportunities_contacts",
+              "module": "Opportunities",
+              "bean_name": "Opportunity"
+            }
+         }
+       }
+    }
+        
+Where "module" fields is required, but sometimes not appear in custom module. It can be fixed as follow:
+         
+     {
+       "Sugar": {
+          "Modules": {         
+            "Contacts": {
+               "module_fields": { 
+                  "link_fields": {
+                    "opportunities": {
+                      "name": "opportunities",
+                      "type": "link",
+                      "group": "",
+                      "id_name": "",
+                      "relationship": "opportunities_contacts",
+                      "module": "Opportunities",
+                      "bean_name": "Opportunity"
+                    }
+                 }
+               }
+            }
+         }
+      }
+            
 
 ### Disabling editing/deleting
 
