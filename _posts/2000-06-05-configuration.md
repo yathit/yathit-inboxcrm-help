@@ -276,3 +276,15 @@ To disable the calendar sync, follow this configuration.
         }
       }
     }
+    
+To force syncing only with "Sync to Outlook®" option
+    
+    {
+      "Sugar": {
+        "ContactSettingPanel": {
+          "SyncOutlookContactOnly": true,
+          "SyncOutlookContactOnlyDisabled": true
+        }
+      }
+    }
+    
