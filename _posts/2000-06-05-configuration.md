@@ -66,6 +66,23 @@ Not only you can remove the module setting but also make changes in a specific p
          }
        }
      }
+     
+Define color and symbol for custom module "Recruitment".
+
+     {
+       "Sugar": {
+         "ModuleSetting": {
+           "Modules": {
+             "Recruitment": {
+               "color": "#555",
+               "symbol": "Ki"
+             }
+           }
+         }
+       }
+     }   
+       
+       
 
 In the above settings, the module name is "Account." To apply the same changes to all modules, use the * sign instead of the module name. This configuration given below will make the Assign user fields visible to all the modules.
 
