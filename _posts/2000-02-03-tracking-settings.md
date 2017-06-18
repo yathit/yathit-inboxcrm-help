@@ -4,7 +4,7 @@ section: Email Tracking
 index: 4
 ---
 
-To configure the email tracking settings, visit the Tracking Setting in the sidebar. Once you have accessed the Email Tracking Setting in the sidebar, you will see that by default email tracking is on. Here you can decide whether to keep the tracking on or not by following the processes given below.
+To configure the email tracking settings, visit the Email Tracking Setting in the sidebar. Once you have accessed the Email Tracking Setting in the sidebar, you will see that by default email tracking is on. Here you can decide whether to keep the tracking on or not by following the processes given below.
 
 ## Default email tracking setting
 
