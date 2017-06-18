@@ -18,7 +18,6 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 
 This is mostly:
 
-
     bundle exec jekyll build --destination ~/gae/yathit-app/src/main/webapp/static/sugarcrm-gmail
 
 
