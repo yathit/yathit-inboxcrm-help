@@ -4,6 +4,9 @@ section: Archive Email
 index: 1
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TcwbeEQsId0?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU"  frameborder="0" allowfullscreen></iframe>
+
+
 Gmail is a necessity for anyone who uses the net, whether personal or business and the {{site.product}} Integration just enhances your experience. It is ideal for administration in search of a perfect CRM solution to save email securely out of Gmail. You can use your existing Gmail account as the address to receive emails and save them on the SugarCRM as an integrated email client.
 
 Inbound Emails

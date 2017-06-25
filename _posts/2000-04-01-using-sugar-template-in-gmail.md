@@ -4,6 +4,8 @@ section: Working with Gmail
 index: 1
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ByisDh97d1E?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU" frameborder="0" allowfullscreen></iframe>
+
 Compose the email you’d like to add to SugarCRM and add a recipient in the To field of the email. You can use search, {{ "magnifying-glass" | svg_icon }} icon in right side of recipients, to bring up contacts from SugarCRM for recipient email address. Email addresses are from Leads, Accounts and Contacts records are suggested.
 
 Click 'Template' button to bring up list of template organized by category.
