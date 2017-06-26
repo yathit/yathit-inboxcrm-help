@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    {% if page.meta_description %}
+    <meta name="description" content="{{ page.meta_description }}">
+    {% else %}
+    <meta name="description" content="{{ page.excerpt || autolink || strip_html }}">
+    {% endif %}
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/iccdnijlhdogaccaiafdpjmbakdcdakk">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ldikiokclnbceabnlbkabmcacpiednop">
+
+    {% stylesheet bootstrap.min %}
+
+    {% stylesheet site %}
+
+    <meta http-equiv="refresh" content="0; url=https://www.yathit.com/kb/" />
+  </head>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+    {% include navbar.html %}
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 toc-wrapper">
+            {% include forum-toc.html %}
+          </div>
+          <div class="col-sm-9 content-wrapper">
+            <div class="content">
+              {{ content || autolink }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  {% javascript kb-script %}
+  </body>
+</html>
