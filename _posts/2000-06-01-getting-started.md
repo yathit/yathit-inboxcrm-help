@@ -4,6 +4,7 @@ section: Setup
 index: 1
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/es3UCAXU19I" frameborder="0" allowfullscreen></iframe>
 
 ## Install
 

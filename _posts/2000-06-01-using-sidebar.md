@@ -4,6 +4,8 @@ section: Miscellaneous
 index: 1
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nIw6KVEVII" frameborder="0" allowfullscreen></iframe>
+
 {% include side-image.html file="sidebar.gif" %}
 
 Once [Yathit InboxCRM Chrome extension](https://chrome.google.com/webstore/detail/{{ site.sugarcrm.extension_id }}) is installed, a sidebar tab is appeared on right side of [Gmail](https://mail.google.com). Click the sidebar tab to bring up the sidebar.

@@ -1,5 +1,5 @@
 ---
-title: Inbound Emails
+title: Saving Inbound Emails
 section: Archive Email
 index: 1
 ---
@@ -9,13 +9,12 @@ index: 1
 
 Gmail is a necessity for anyone who uses the net, whether personal or business and the {{site.product}} Integration just enhances your experience. It is ideal for administration in search of a perfect CRM solution to save email securely out of Gmail. You can use your existing Gmail account as the address to receive emails and save them on the SugarCRM as an integrated email client.
 
-Inbound Emails
 
 {{site.product}} offers an easy option for saving your mails in SugarCRM. And, to do this all you have to do is click the {{ "ydn-logo-bw" | svg_icon }} icon in the Gmail message toolbar.
 
-{% include screenshot.html file="archive-email.gif" %}
+### Archiving
 
-Archive Email
+{% include screenshot.html file="archive-email.gif" %}
 
 If you want to archive your email, then just click the “Archive” menu and your Gmail message will be automatically get archived in the SugarCRM Email records. You can easily find the email in the [Sugar Email Archiving mailbox](http://support.sugarcrm.com/02_Documentation/01_Sugar_Editions/04_Sugar_Professional/Sugar_Professional_6.5/Application_Guide/23_Emails/#Sugar_Email_Archiving). In case, the email has any attachments, they can easily be uploaded via the Upload Attachment option.
 
@@ -23,7 +22,9 @@ Messages that are already archived in the SugarCRM are accessible by clicking th
 
 In fact, the archiving ability of SugarCRM allows you to easily store your Gmail messages into the SugarCRM record of your account, contacts, or cases. You also get a complete record of your communication as all your Gmail attachments, images, and calendar events get updated instantly.
 
-Upload Attachment
+### Uploading Attachment
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4m4uhUj1iDo" frameborder="0" allowfullscreen></iframe>
 
 You can also upload an attachment to the SugarCRM’s Documents module directly from your Gmail interface using the {{site.product}}. To upload an attachment, click the Upload button {{ "cloud-upload" | svg_icon }} on the attachment. You may need to give permission to upload the document so, do not ignore it. 
 
