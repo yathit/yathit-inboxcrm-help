@@ -1,7 +1,3 @@
-- name: Working with Gmail
-- name: Working with SugarCRM
-- name: Archive Email
-- name: Email Tracking
-- name: Sync
-- name: Setup
-- name: Miscellaneous
+- name: Tutorial
+- name: User Guide
+- name: Admin Guide

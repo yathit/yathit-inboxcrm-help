@@ -293,3 +293,39 @@ IFRAME {
   display: block;
   margin: 16px auto;
 }
+
+.user-profile.readonly INPUT[type="button"], .user-profile.readonly BUTTON {
+  display: none;
+}
+
+.user-profile.readonly INPUT[type="text"] {
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.toc-top {
+  margin-top: 16px;
+}
+
+#search-result B {
+  background-color: yellow;
+}
+
+.display-none {
+  display: none;
+}
+
+.comment-header .edit-button {
+  margin-left: 16px;
+  margin-top: 4px;
+}
+
+
+.search-box {
+  margin-bottom: 8px;
+}
+
+.search-box INPUT {
+  width: 100%;
+}

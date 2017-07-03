@@ -1,6 +1,6 @@
 ---
 title: License management
-section: Setup
+section: Admin Guide
 index: 1
 ---
 

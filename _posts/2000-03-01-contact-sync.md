@@ -1,7 +1,7 @@
 ---
-title: Contact Sync
-section: Sync
-index: 1
+title: Sync Contact 
+section: Tutorial
+index: 4
 ---
 
 {{ site.product }} brings you bi-drectional Sugar Contact Sync with Gmail Contacts. You can quickly and easily sync contacts from Sugar to Google Contacts and your mobile devices.

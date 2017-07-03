@@ -1,6 +1,6 @@
 ---
 title: Enterprise deployment
-section: Setup
+section: Admin Guide
 index: 7
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Saving Inbound Emails
-section: Archive Email
+title: Archiving Emails
+section: User Guide
 index: 1
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: How email tracking works
-section: Email Tracking
-index: 3
+section: Admin Guide
+index: 12
 ---
 
 

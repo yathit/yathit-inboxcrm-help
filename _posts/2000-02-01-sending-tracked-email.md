@@ -1,6 +1,6 @@
 ---
-title: Sending a tracked email
-section: Email Tracking
+title: Track Email
+section: Tutorial
 index: 2
 ---
 

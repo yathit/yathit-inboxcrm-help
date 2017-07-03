@@ -1,7 +1,7 @@
 ---
-title: Using SugarCRM template in Gmail
-section: Working with Gmail
-index: 1
+title: Mail merge Sugar template
+section: Tutorial
+index: 2
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ByisDh97d1E?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU" frameborder="0" allowfullscreen></iframe>

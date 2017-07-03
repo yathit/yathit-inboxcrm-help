@@ -1,6 +1,6 @@
 ---
 title: Configuration
-section: Setup
+section: Admin Guide
 index: 5
 ---
 

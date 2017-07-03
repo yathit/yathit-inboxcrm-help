@@ -1,5 +1,5 @@
 ---
-title: Setting
+title: Email Archive
 section: Archive Email
 index: 3
 ---

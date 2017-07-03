@@ -1,6 +1,6 @@
 ---
-title: Calendar Sync
-section: Sync
+title: Sync Calendar
+section: Tutorial
 index: 2
 ---
 
