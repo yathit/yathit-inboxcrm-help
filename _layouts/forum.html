@@ -4,11 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
-    {% if page.meta_description %}
-    <meta name="description" content="{{ page.meta_description }}">
-    {% else %}
-    <meta name="description" content="{{ page.excerpt || autolink || strip_html }}">
-    {% endif %}
+    <meta name="description" content="Yathit knowledgebase">
 
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/iccdnijlhdogaccaiafdpjmbakdcdakk">
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ldikiokclnbceabnlbkabmcacpiednop">
@@ -40,7 +36,8 @@
 </div>
 </div>
 {% include footer.html %}
-{% javascript jquery %}
+{% javascript respond.min %}
+{% javascript jquery-3.2.1.slim.min %}
 {% javascript kb-script %}
 </body>
 </html>

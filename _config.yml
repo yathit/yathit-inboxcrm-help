@@ -10,7 +10,6 @@ canonical_domain: https://www.yathit.com
 sugarcrm:
   extension_id: iccdnijlhdogaccaiafdpjmbakdcdakk
 assets:
-  js_compressor:  uglifier
   css_compressor: sass
 defaults:
   -

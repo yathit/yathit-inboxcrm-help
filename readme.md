@@ -18,6 +18,12 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 
 This is mostly:
 
+    ant
+    
+To build the site    
+
     bundle exec jekyll build --destination ~/gae/yathit-app/src/main/webapp/static/sugarcrm-gmail
 
+Then replace token on forum.html 
 
+    ant forum
