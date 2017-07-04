@@ -1,6 +1,6 @@
 ---
-title: Creating and updating record
-section: Working with SugarCRM
+title: Quick create records
+section: Tutorials
 index: 3
 ---
 

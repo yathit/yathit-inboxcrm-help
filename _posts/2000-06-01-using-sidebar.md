@@ -1,6 +1,6 @@
 ---
-title: Using Sidebar
-section: Miscellaneous
+title: Sidebar
+section: User Guide
 index: 1
 ---
 

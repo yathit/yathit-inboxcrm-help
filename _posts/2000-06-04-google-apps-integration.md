@@ -1,6 +1,6 @@
 ---
 title: Google apps integration
-section: Setup
+section: Admin Guide
 index: 5
 ---
 

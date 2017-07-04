@@ -1,7 +1,7 @@
 ---
 title: Sync Calendar
-section: Tutorial
-index: 2
+section: Tutorials
+index: 5
 ---
 
 {{ site.product }} provides a bi-directional sync of events between Google & Sugar. Events created and edited in either platform will automatically sync to the other hourly. And with {{ site.product }} you have the only solution that automatically syncs events to corresponding attendee records in Sugar.

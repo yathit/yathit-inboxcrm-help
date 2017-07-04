@@ -1,6 +1,6 @@
 ---
 title: Email Archive
-section: Archive Email
+section: User Guide
 index: 3
 ---
 

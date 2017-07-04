@@ -1,10 +1,8 @@
 ---
 title: How email tracking works
 section: Admin Guide
-index: 12
+index: 3
 ---
-
-
 
 Yathit's email tracker uses a pixel-beacon that is being used by many prominent newsletter services for one-to-one communication. With this feature, a pixel gets embedded in your email that helps in its tracking. As soon as the recipient opens the email or the application loads the image, Yathit's server instantly gets notified by the IP address providing you with all necessary information, such as who, when, where, and on which device the email has been opened.
 

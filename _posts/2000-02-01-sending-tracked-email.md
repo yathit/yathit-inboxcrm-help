@@ -1,7 +1,7 @@
 ---
 title: Track Email
-section: Tutorial
-index: 2
+section: Tutorials
+index: 4
 ---
 
 SugarCRM provides you an option to keep a track on who is opening the email you have sent, when the email has been opened, where the email has been opened, and if the links embedded in the email are clicked. Let us see how does it work.
@@ -16,6 +16,13 @@ The main advantage of this feature is that the person who receives the email wil
 <br/>
 
 For more detail see [How email tracking works](how-email-tracking-work.html). 
+
+## Tracking links
+
+Link tracking is very easy with Yathit. You can easily embed a link within your email. When the recipient will click the link, you will get a notification about the same. 
+
+To ensure that the link tracking is being done, you will have to select the Tracking check box while creating an email. Any hyperlink embedded in the email will be tracked automatically once the Tracking check box is selected. You need not to do anything else. 
+
 
 ## Get notified
 
