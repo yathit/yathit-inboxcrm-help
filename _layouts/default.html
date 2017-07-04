@@ -28,14 +28,19 @@
             {% include toc.html %}
           </div>
           <div class="col-sm-9 content-wrapper">
-            <div class="content">
+            <div class="content" id="main-content">
               {{ content || autolink }}
+            </div>
+            <div class="content" id="search-result">
+
             </div>
           </div>
         </div>
       </div>
     </div>
     {% include footer.html %}
+  {% javascript respond.min %}
+  {% javascript jquery %}
   {% javascript kb-script %}
   </body>
 </html>
