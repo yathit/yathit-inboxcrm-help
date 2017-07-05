@@ -322,6 +322,9 @@ IFRAME {
   margin-top: 4px;
 }
 
+.forum-post img {
+  max-width: 790px;
+}
 
 .search-box {
   margin-bottom: 8px;
@@ -375,6 +378,10 @@ UL.post-items {
 
 .comment-post TEXTAREA {
   width: 100%;
+}
+
+.post-item img {
+  display: none;
 }
 
 .post-comment {

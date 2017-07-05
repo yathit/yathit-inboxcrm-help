@@ -220,7 +220,8 @@
               type.style.width = '6em';
               var list = document.createElement('datalist');
               list.id = 'posttype';
-              list.innerHTML = '<option value="FAQ"><option value="Idea"><option value="Question">';
+              list.innerHTML = '<option value="FAQ"><option value="Idea"><option value="Question">' +
+                  '<option value="Blog"><option value="UserStory">';
               document.body.appendChild(list);
               type.setAttribute('list', 'posttype');
             }
