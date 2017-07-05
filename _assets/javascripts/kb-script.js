@@ -298,6 +298,37 @@
     }, 'POST', 'user/', data);
   });
 
+  $('#upload-image').on('click', function (ev) {
+    ev.preventDefault();
+    $('#upload-input').click();
+  });
+
+  $('#upload-input').on('change', function(ev) {
+    $btn = $('#upload-image');
+    var input = $(this);
+    var filename = input.val();
+    var ext = filename.substr(filename.lastIndexOf('.'));
+    var form = input.parents('FORM');
+    var data = new FormData(form.get(0));
+    $btn.attr('disabled', '1');
+    $.post({
+      type: 'POST',
+      url: '/gcs/upload/' + filename,
+      data: data,
+      processData: false,
+      contentType: false,
+      complete: function(xhr, code) {
+        if (code === 'success') {
+          $btn.removeAttr('disabled');
+          console.log(xhr.responseText);
+          input.value = null;
+        } else {
+          alert(xhr.responseText, "Error submitting.");
+        }
+      }
+    });
+  });
+
 })();
 
 
