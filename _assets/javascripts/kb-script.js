@@ -104,7 +104,7 @@
   }
 
   function sendKb(cb, mth, path, body) {
-    send(cb, '/kb/' + mth, path, body);
+    send(cb, mth, '/kb/' + path, body);
   }
 
   /**
