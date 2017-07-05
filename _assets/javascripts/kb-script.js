@@ -86,31 +86,25 @@
   }
 
   function send(cb, mth, path, body) {
-    const opt = {
-      credentials: 'include',
-      method: mth || 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json; charset=utf-8'
-      }),
-      body: JSON.stringify(body)
+    var xhr = new XMLHttpRequest();
+    xhr.open(mth || 'GET', path, true);
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    xhr.onload = function(ev) {
+      if (/json/.test(xhr.getResponseHeader('Content-Type'))) {
+        if (xhr.status == 401 && /^https/.test(xhr.responseText)) {
+          location.href = xhr.responseText;
+        }
+        cb(JSON.parse(xhr.responseText), xhr.status, xhr.responseText);
+      } else {
+        cb(xhr.responseText, xhr.status, xhr.responseText);
+      }
     };
-    var status, statusText;
-    fetch('/kb/' + (path || ''), opt)
-        .then(function(x) {
-          status = x.status;
-          statusText = x.statusText;
-          if (/json/.test(x.headers.get('Content-Type'))) {
-            return x.json();
-          } else {
-            return x.text();
-          }
-        })
-        .then(function(json) {
-          if (status == 401) {
-            location.href = json;
-          }
-          cb(json, status, statusText);
-        });
+    var payload = body ? JSON.stringify(body) : null;
+    xhr.send(payload);
+  }
+
+  function sendKb(cb, mth, path, body) {
+    send(cb, '/kb/' + mth, path, body);
   }
 
   /**
@@ -124,26 +118,26 @@
       console.error('id');
       return;
     }
-    send(function(json, status) {
+    sendKb(function(json, status) {
       console.log(json, status);
     }, 'POST', post.id + '?patch=1', post);
   };
 
-  function search(q) {
-    return new Promise(function(done, fail) {
-      send(function(json, status) {
+  function search(q, done) {
+
+      sendKb(function(json, status) {
         if (status == 200) {
           done(json);
         } else {
           console.error(json);
         }
       }, 'GET', 'search/?q=' + q);
-    })
+
   }
   window.search = search;
 
   function exeSearch(q, root) {
-    search(q).then(function(arr) {
+    search(q, function(arr) {
       root.innerHTML = '';
       for (var i = 0; arr && i < arr.length; i++) {
         var json = arr[i];
@@ -189,7 +183,7 @@
       if (form.type) {
         post['type'] = form.type.value;
       }
-      send(function(json, status, statusText) {
+      sendKb(function(json, status, statusText) {
         if (status == 200 || status == 201) {
           var id = json.threadId || json.id;
           location.href = '/kb/' + id + '-' + json.title;
@@ -208,12 +202,8 @@
     });
   }
 
-  const opt = {credentials: 'include'};
-  fetch('/rpc_login?url=' + location.href, opt)
-      .then(function(x) {
-        return x.json();
-      })
-      .then(function(login_resp) {
+  var path = '/rpc_login?url=' + location.href;
+  send(function(login_resp) {
         const user = login_resp.User || {};
 
         var login_el = document.getElementById('login');
@@ -240,7 +230,7 @@
           login_el.href = user.login_url;
           document.body.classList.add('user-notlogin');
         }
-      });
+      }, 'GET', path);
 
   renderNewPost(document.querySelector('FORM.forum-post'));
 
@@ -261,7 +251,7 @@
         'replyId': id,
         'content': comment
       };
-      send(function(json, status, msg) {
+      sendKb(function(json, status, msg) {
         btn.removeAttribute('disabled');
         if (status == 200 || status == 201) {
           cmt_form.comment.value = '';
@@ -299,7 +289,7 @@
     var data = {
       nickname: nickname
     };
-    send(function(json, status, msg) {
+    sendKb(function(json, status, msg) {
       if (status == 200) {
         location.reload();
       } else {
