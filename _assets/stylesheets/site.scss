@@ -471,3 +471,84 @@ UL.post-items {
   display: none;
 }
 
+.vote-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-control {
+  display: flex;
+  flex-direction: row;
+}
+
+.voting-panel:not(:hover) .voting-panel-extend {
+  display: none;
+}
+
+.voting-panel:hover {
+
+}
+
+.voting-panel:hover .vote-placeholder {
+  visibility: hidden;
+}
+
+.voting-panel-extend {
+  position: relative;
+}
+
+.vote-header {
+  width: 80px;
+  padding-top: 4px;
+}
+
+.voting-panel-extend .float-wrapper {
+  position: absolute;
+  top: -24px;
+  left: -2px;
+  background: white;
+  padding: 4px;
+  border: 1px solid #CFD7E6;
+  border-radius: 3px;
+  font-size: 80%;
+}
+.voting-panel-extend .btn-rows {
+  display: flex;
+  flex-direction: row;
+}
+
+.voting-panel-extend .btn-rows BUTTON {
+  width: 6em;
+  margin-left: 8px;
+}
+
+.voting-panel-extend .btn-rows .remove-vote {
+  width: 8em;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 8px;
+  padding-top: 6px;
+  font-size: 90%;
+  cursor: pointer;
+}
+
+.vote-description {
+  text-align: left;
+  padding-left: 88px;
+  font-size: 80%;
+  margin-top: 4px;
+}
+
+.why-vote-limit {
+  cursor: default;
+}
+
+.voting-panel.vote0 .remove-vote {
+  display: none;
+}
+
+.vote1 BUTTON.vote1, .vote2 BUTTON.vote2, .vote3 BUTTON.vote3 {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}

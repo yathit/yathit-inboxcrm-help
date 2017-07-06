@@ -342,11 +342,14 @@
       location.href = document.getElementById('login').href;
     }
 
+    var vote = parseInt($(this).val(), 10) || 0;
     sendKb(function(vote, status) {
       if (status == 200) {
-        $item.find('[name="vote-count"]').text(vote);
+        $item.find('[name="vote-count"]').text(vote.total);
+        $item.find('.voting-panel').get(0).className = 'voting-panel vote' + vote.mine;
+        $item.find('[name="remain-vote"]').text(vote.remain);
       }
-    }, 'POST', 'vote/' + id + '?vote=1');
+    }, 'POST', 'vote/' + id + '?vote=' + vote);
   })
 
 })();
