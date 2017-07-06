@@ -330,6 +330,25 @@
     });
   });
 
+  $('.btn-vote').on('click', function(ev) {
+    var $item = $(this).parents('.post-item');
+    var id = parseInt($item.attr('data-id'), 10);
+    if (!id) {
+      throw new Error('invalid post id ' + id + ' for ' + $item.attr('data-id') +
+          '\nJava long integer not fit in javascript number? Shit, I knew this will come.');
+    }
+    if (document.body.classList.contains('user-notlogin')) {
+      alert('Please login and vote again.');
+      location.href = document.getElementById('login').href;
+    }
+
+    sendKb(function(vote, status) {
+      if (status == 200) {
+        $item.find('[name="vote-count"]').text(vote);
+      }
+    }, 'POST', 'vote/' + id + '?vote=1');
+  })
+
 })();
 
 
