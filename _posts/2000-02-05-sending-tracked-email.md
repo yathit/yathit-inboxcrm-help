@@ -1,7 +1,7 @@
 ---
 title: Track Email
 section: Tutorials
-index: 4
+index: 5
 ---
 
 SugarCRM provides you an option to keep a track on who is opening the email you have sent, when the email has been opened, where the email has been opened, and if the links embedded in the email are clicked. Let us see how does it work.
