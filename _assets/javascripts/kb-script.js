@@ -1,7 +1,8 @@
 
 
 var _paq = _paq || [];
-// _paq.push(['trackPageView']); // this will be called after user id.
+_paq.push(['setUserId', localStorage.getItem('uid') || '']);
+_paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {
   var u="https://analytic.yathit.com/";
@@ -246,13 +247,12 @@ function sendAnalytic() {
               type.setAttribute('list', 'posttype');
             }
           }
-          sendAnalytic('setUserId', user.email);
+          localStorage.setItem('uid', user.email);
         } else {
           login_el.textContent = 'Login';
           login_el.href = user.login_url;
           document.body.classList.add('user-notlogin');
         }
-        sendAnalytic('trackPageView');
       }, 'GET', path);
 
   renderNewPost(document.querySelector('FORM.forum-post'));
