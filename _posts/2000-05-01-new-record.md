@@ -1,6 +1,6 @@
 ---
-title: Quick create records
-section: Tutorials
+title: Managing records
+section: User Guide
 index: 3
 ---
 

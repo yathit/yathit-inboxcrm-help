@@ -1,6 +1,5 @@
 ---
 title: Sidebar
-section: User Guide
 index: 1
 ---
 
