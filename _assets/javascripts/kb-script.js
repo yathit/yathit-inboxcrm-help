@@ -1,5 +1,25 @@
 
 
+var _paq = _paq || [];
+// _paq.push(['trackPageView']); // this will be called after user id.
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="https://analytic.yathit.com/";
+  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  if (location.host === 'www.yathit.com') {
+    _paq.push(['setSiteId', '1']);
+    _paq.push(['setDomains', '*.yathit.com']);
+  } else {
+    _paq.push(['setSiteId', '2']);
+  }
+
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+
+function sendAnalytic() {
+  _paq.push(Array.prototype.slice.call(arguments));
+}
 
 (function() {
 
@@ -226,11 +246,13 @@
               type.setAttribute('list', 'posttype');
             }
           }
+          sendAnalytic('setUserId', user.email);
         } else {
           login_el.textContent = 'Login';
           login_el.href = user.login_url;
           document.body.classList.add('user-notlogin');
         }
+        sendAnalytic('trackPageView');
       }, 'GET', path);
 
   renderNewPost(document.querySelector('FORM.forum-post'));

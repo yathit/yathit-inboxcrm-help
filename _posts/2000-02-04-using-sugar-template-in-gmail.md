@@ -1,6 +1,6 @@
 ---
 title: Mail Merge Template 
-section: Tutorials
+section: How To ...
 index: 4
 ---
 

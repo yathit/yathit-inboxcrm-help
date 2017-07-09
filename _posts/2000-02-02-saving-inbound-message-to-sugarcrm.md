@@ -1,6 +1,6 @@
 ---
-title: Archiving Emails
-section: Tutorials
+title: Archive Email
+section: How To ...
 index: 2
 ---
 
