@@ -250,13 +250,13 @@ function sendAnalytic() {
     cmt_form.addEventListener('submit', function(ev) {
       ev.preventDefault();
       var btn = cmt_form.querySelector('button');
-      btn.setAttribute('disabled', '');
       var comment = cmt_form.comment.value;
       if (comment.length < 5) {
         alert('Please talk more');
         return;
       }
-      var id = parseInt(document.querySelector('.forum-post').getAttribute('data-id'), 10);
+      btn.setAttribute('disabled', '');
+      var id = parseInt(document.querySelector('.post-root').getAttribute('data-id'), 10);
       var data = {
         'threadId': id,
         'replyId': id,

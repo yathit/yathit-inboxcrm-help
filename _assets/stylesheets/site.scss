@@ -562,6 +562,10 @@ UL.post-items {
   display: none;
 }
 
+.post-items:not(.Idea) .post-status {
+  display: none;
+}
+
 .post-status {
   font-size: 10px;
   line-height: 15px;
