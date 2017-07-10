@@ -19,7 +19,7 @@
     {% stylesheet site %}
 
   </head>
-  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+  <body {% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     {% include navbar.html %}
     <div class="main">
       <div class="container">
@@ -39,8 +39,6 @@
       </div>
     </div>
     {% include footer.html %}
-  {% javascript respond.min %}
-  {% javascript jquery-3.2.1.slim.min %}
-  {% javascript kb-script %}
+  {% javascript all %}
   </body>
 </html>
