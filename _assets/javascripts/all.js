@@ -136,6 +136,7 @@ function sendAnalytic() {
 
   /**
    * patchPost({type: 'FAQ'});
+   * patchPost({status: 'Completed'});
    */
   window.patchPost = function(post) {
     if (!post.id) {
@@ -166,7 +167,9 @@ function sendAnalytic() {
   function exeSearch(q, root) {
     search(q, function(arr) {
       root.innerHTML = '';
-      for (var i = 0; arr && i < arr.length; i++) {
+      var n = arr ? arr.length || 0 : 0;
+      sendAnalytic('trackSiteSearch', q, 'kb', n);
+      for (var i = 0; i < n; i++) {
         var json = arr[i];
         var div = document.createElement('div');
         div.innerHTML = '<h3><a href="/kb/' + json.id + '">' + json.title + '</a></h3><div class="post-content">' +

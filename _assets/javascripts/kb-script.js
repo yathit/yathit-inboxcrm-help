@@ -115,6 +115,7 @@ function sendAnalytic() {
 
   /**
    * patchPost({type: 'FAQ'});
+   * patchPost({status: 'Completed'});
    */
   window.patchPost = function(post) {
     if (!post.id) {

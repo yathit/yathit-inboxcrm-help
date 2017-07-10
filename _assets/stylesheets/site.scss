@@ -350,7 +350,7 @@ UL.post-items {
 .item-row {
   display: flex;
   flex-direction: row;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .item-row H3 {
@@ -402,7 +402,7 @@ UL.post-items {
 }
 
 .item-detail > * {
-  padding-right: 8px;
+  margin-right: 8px;
 }
 
 .item-detail {
@@ -446,7 +446,12 @@ UL.post-items {
   margin-top: 16px;
   margin-bottom: 16px;
   color: #6F675E;
-  font-size: 120%;
+  display: flex;
+  align-items: center;
+}
+
+.comment-meta > * {
+  margin-right: 8px;
 }
 
 .post-comments {
@@ -551,4 +556,42 @@ UL.post-items {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
+}
+
+.post-status.None {
+  display: none;
+}
+
+.post-status {
+  font-size: 10px;
+  line-height: 15px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.post-status.Completed {
+  background-color: #7D7EDF;
+  color: #FFF;
+}
+
+.post-status.Under_Review {
+  background-color: #999999;
+  color: #FFF;
+}
+
+.post-status.Declined {
+  background-color: #BBBBBB;
+  color: #FFF;
+}
+
+.post-status.Started {
+  background-color: #6FBC00;
+  color: #FFF;
+}
+
+.post-status.Planned {
+  background-color: #F0BA00;
+  color: #FFF;
 }
