@@ -599,3 +599,9 @@ UL.post-items {
   background-color: #F0BA00;
   color: #FFF;
 }
+
+
+body:not(.user-admin) .adminonly {
+  display: none;
+}
+
