@@ -1,0 +1,36 @@
+
+<div id="player"></div>
+
+<div id="playlist-container">
+
+</div>
+
+<table class="playlist table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th colspan="2">Title</th>
+        <th>Duration</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in site.data.playlistTutorial %}
+    <tr>
+        <td>
+            {{ forloop.index }}
+        </td>
+        <td>
+            <a href="#item" data-id="{{ item.id }}" class="video-link">{% icon fa-play %}</a>
+        </td>
+        <td>
+            {{ item.title }}
+        </td>
+        <td>
+            {{ item.duration }}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% javascript youtube-player %}

@@ -223,17 +223,6 @@ function sendAnalytic() {
           login_el.href = '/kb/profile/' + user.Id.$t;
           if (user.is_admin || user.email === 'kyawtun@yathit.com') {
             document.body.classList.add('user-admin');
-            var type = document.querySelector('INPUT[name=type][type="hidden"]');
-            if (type) {
-              type.type = 'text';
-              type.style.width = '6em';
-              var list = document.createElement('datalist');
-              list.id = 'posttype';
-              list.innerHTML = '<option value="FAQ"><option value="Idea"><option value="Question">' +
-                  '<option value="Blog"><option value="UserStory">';
-              document.body.appendChild(list);
-              type.setAttribute('list', 'posttype');
-            }
           }
           localStorage.setItem('uid', user.email);
         } else {

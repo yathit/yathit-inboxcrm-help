@@ -605,3 +605,14 @@ body:not(.user-admin) .adminonly {
   display: none;
 }
 
+TABLE.playlist {
+  width: 100%;
+}
+
+TABLE.playlist TH {
+  text-align: center;
+}
+
+TABLE.playlist TD:last-child {
+  text-align: right;
+}
