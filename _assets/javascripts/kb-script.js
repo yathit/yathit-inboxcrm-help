@@ -92,6 +92,9 @@ function sendAnalytic() {
   }
 
   function send(cb, mth, path, body) {
+    if (!cb) {
+      cb = function(x) {console.log(x);}
+    }
     var xhr = new XMLHttpRequest();
     xhr.open(mth || 'GET', path, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
