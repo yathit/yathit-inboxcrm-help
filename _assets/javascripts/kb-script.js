@@ -108,6 +108,7 @@ function sendAnalytic() {
     var payload = body ? JSON.stringify(body) : null;
     xhr.send(payload);
   }
+  window.send = send;
 
   function sendKb(cb, mth, path, body) {
     send(cb, mth, '/kb/' + path, body);
