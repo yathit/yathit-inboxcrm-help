@@ -113,6 +113,9 @@ function sendAnalytic() {
   }
 
   function send(cb, mth, path, body) {
+    if (!cb) {
+      cb = function(x) {console.log(x);}
+    }
     var xhr = new XMLHttpRequest();
     xhr.open(mth || 'GET', path, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
@@ -129,6 +132,7 @@ function sendAnalytic() {
     var payload = body ? JSON.stringify(body) : null;
     xhr.send(payload);
   }
+  window.send = send;
 
   function sendKb(cb, mth, path, body) {
     send(cb, mth, '/kb/' + path, body);
@@ -244,17 +248,6 @@ function sendAnalytic() {
           login_el.href = '/kb/profile/' + user.Id.$t;
           if (user.is_admin || user.email === 'kyawtun@yathit.com') {
             document.body.classList.add('user-admin');
-            var type = document.querySelector('INPUT[name=type][type="hidden"]');
-            if (type) {
-              type.type = 'text';
-              type.style.width = '6em';
-              var list = document.createElement('datalist');
-              list.id = 'posttype';
-              list.innerHTML = '<option value="FAQ"><option value="Idea"><option value="Question">' +
-                  '<option value="Blog"><option value="UserStory">';
-              document.body.appendChild(list);
-              type.setAttribute('list', 'posttype');
-            }
           }
           localStorage.setItem('uid', user.email);
         } else {
@@ -381,7 +374,12 @@ function sendAnalytic() {
         $item.find('[name="remain-vote"]').text(vote.remain);
       }
     }, 'POST', 'vote/' + id + '?vote=' + vote);
-  })
+  });
+
+  $('.video-link').on('click', function(ev) {
+    ev.preventDefault();
+    $('#player').attr('src', $(this).attr('href'));
+  });
 
 })();
 

@@ -353,7 +353,12 @@ function sendAnalytic() {
         $item.find('[name="remain-vote"]').text(vote.remain);
       }
     }, 'POST', 'vote/' + id + '?vote=' + vote);
-  })
+  });
+
+  $('.video-link').on('click', function(ev) {
+    ev.preventDefault();
+    $('#player').attr('src', $(this).attr('href'));
+  });
 
 })();
 
