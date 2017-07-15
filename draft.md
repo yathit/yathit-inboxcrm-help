@@ -1,22 +1,257 @@
-[SugarCRM](https://www.sugarcrm.com)/[SuiteCRM](https://www.suitecrm.com) developers and administrators love working with this versatile software! The software’s wide usage, source code availability and upgrades place SugarCRM professionals in high demand and present many opportunities to customize the software. Unfortunately, there is a dark side to our professional niche. Too often, updates and fixes are hard to execute, especially when multiple modifications are involved. Server side changes involving PHP tend slow the server down and rarely achieve the UI design goals. 
+When your default [SugarCRM](https://www.sugarcrm.com)/[SuiteCRM](https://suitecrm.com) modules are not enough to fulfill your requirements then we need to create our own plugin.
 
-There are many adverse scenarios where SugarCRM redesign is simply impossible to accomplish on the back end. Mediocre Gmail integration, stalling updates, issues with security fixes and poorly designed UI are just some of the problems. What a nightmare! Fortunately, we offer a great front-end solution to these problems – [Yathit Chrome Extension](https://www.yathit.com). This Chrome extension makes updates easy, UI design more responsive and it does not involve server manipulations. In this article, we will discuss Yathit advantages in detail.      
-            
-As the modern businesses continue to demand better technology and hyper customization, SugarCRM users desire an ability to customize user interface and redesign it to fit their business needs. At this time, most of the SugarCRM development and upgrades are happening on the client side. On one hand, it makes the developers’ job much easier as a professional with advanced HTML/CSS and Javascript skills can make necessary UI changes as the software supports CSS style sheets. In addition, Ajax UI can be successfully utilized to redesign the UI. 
+What if your new module still does not fit your requirement? What if you need to construct some sort of special functionality that Sugar does not provide out of the box? Then building a module manually is definitely the course of action you will need to take to accomplish your goals, and in this tutorial you’ll take a step-by-step journey on how to do this. Let’s begin our journey to create new custom module.
 
-However, the design changes become more difficult when the user interface is being supported by back-end PHP. Very often, it becomes difficult to make major design changes, as PHP’s purpose is mostly workflow processes and logic. Resulting PHP changes may not fit the server’s capacity and frequently result in substandard UI design as well as server slowdown (these variances are prevalent in Sugar 5.x era).  In addition, color scheme changes and changes in header or Sugar Sidebar become problematic. Even Ajax UI may not be a good solution in every case - especially for design changes in Sugar 6.5, where the amended UI often underperforms in search queries and email management. As you can see, it is nearly impossible to get an exact look and feel for your UI, when server modifications are involved.
+If you have got to this point then you have decided that building a module by hand is exactly the course of action you wish to embark on. The process to do so requires a bunch of steps that are important, so that your module is properly recognized by the Sugar instance. Missing any one step could potentially result in your module not functioning as expected, whether it because of errors in the application or data loss.
 
-Many developers are also having issues with deployment of custom modules. In some cases, the issues related to the deployment are [limited to error messages](http://cheleguanaco.blogspot.sg/2011/09/sugarcrm-troubleshooting-error.html). In other cases, more serious deployment tool problems occur and require [specific development changes](https://github.com/sugarcrm/sugarcrm_dev/issues/174), such as clearing out caches, editing upgrade history tables and more complex database manipulations.
+It is quite easy to create our own plugin in SuiteCRM and SugarCRM. They are providing us a great inbuilt GUI tool called Module Builder. The main benefit of this plugin is that, we also can use this plugin in other SuiteCRM and SugarCRM instance too.
 
-A Chrome browser extension Yathit can be a good front-end solution to the SugarCRM UI re-design problems we just discussed. The extension can be easily integrated and customized to fit the business requirements. The core of Yathit browser enables a fast response query, which makes writing of a custom back-end PHP code unnecessary. 
+## Module Types
 
-Yathit powers a highly effective lead management system by searching emails for relevant information through the company’s Gmail. Other important features include:
+Using module builder we can create following types of modules : 
 
-* Quick record creation and retrieval.
-* *Contextual info*: recognizes the contact and provides status of the relationship
-* *Email template*: mail merges with Sugar email
-* *Sync contact/calendar*: automatically synchronizes Google calendar with Sugar records. There are existing solution for synchronizing contacts and calendar, such as an add-on RT Gsync. Unfortunately, the add-on requires lengthy and complex installation. Yathit on the other hand is quicker and safer in comparison to RT Gsync
-* *Email tracking*: shows when a customer opened an email. Again, there are existing solutions to track and improve email experience, but Yathit is much easier and safer to install 
-* *Social insight*: automatically provides fresh intel for leads and contacts
+1. *Basic*: A basic template with only fields for a name and description
 
-Yathit extension offers an effective solution to the design problems experienced by SugarCRM developers and admins. Its simplicity and effectiveness will help the admins save hours of installation time and thousands of dollars for their companies. Besides the obvious savings and helping the admins to avoid frustration, this extension provides automated sales tools and customer management solutions. Yathit will help you keep clients engaged and make your firm’s relationship with them more profitable. 
+2. *Company*: Fields that would normally be used with a company, such as name, address, phone, website, or industry
+
+3. *File*: Used when the object stores files that the user uploads.
+
+4. *Issue*: For modeling an issue or job tracking system
+
+5. *Person*: Fields that represent a person, such as name, address, phone, or email.
+
+6. *Sale*: Used when the object is for sales transactions or forecasting
+
+### Create Module Using GUI
+
+Now let’s see the steps to create our own custom module/plugin in SuiteCRM.
+
+* **Step 1**: Go to Admin panel.
+* **Step 2**: Click on Module Builder
+* **Step 3**: Click on Add Package
+	Module Builder organizes things into units called Packages, each of which can contain one or more modules.
+* **Step 4**: Now you need to add package name, author, key and description.
+	 Key will used as a prefix in database tables of your module.
+* **Step 5**: Follow instruction below
+* **Step 6**: Now, after save; you can see many options like :
+  * *Duplicate* 	
+		If you want to clone this module.
+  * *View Fields*
+		Will show you all the default fields of this module.If you want to add more then you can add from View Fields -> Add Field
+  * *View Relationship*
+		You can see module relation with other module and can add new relation with already available module.
+  * *View Layouts*
+		You can set all the layouts same as we are doing in Studio for already available modules.
+  * *Delete*
+		Definitely, if you don’t want this module anymore.Please note that this action is non-undoable action. You may lose your whole hard work if press “DELETE” by mistake.
+
+
+
+## Module Action
+
+After completing all these steps, you will have following options to take action
+
+### Deploy
+
+Install module package into the current running instance of CRM.
+
+### Publish
+
+Publish the module package as a loadable package that can be installed into an another SuiteCRM instance using Module Loader.
+
+### Export
+
+Export the module package as a loadable package that will only be installed back into Module Loader for further customization on the target system.
+
+## Custom Code In Custom Module
+
+Till now, it was all about GUI. We have not write a single line  of code - just Click - Drag and Drop. What if still it is not upto your requirement? You have to do custom code inside newly created module and also you have to include these new files in module package to copy along with module’s default files  to another SuiteCRM instance.
+
+
+Let’s take one simple example;
+
+Suppose you want to create one tracker module which will store all the deleted accounts from your CRM
+
+For this, first of all  we will create one Company type module from module builder with name “Tracker” and then deploy it but it will create just structure, it will not store deleted account. Now we have to write one “before delete” logic hook for account module.
+
+You need to create two file like this : 
+logic_hooks.php
+KeepTrack.php
+
+Now logic_hooks.php file will be look like this at path  ./custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php
+
+
+
+**logic_hooks.php**
+
+```php
+
+<?php   
+  $hook_array[‘before_delete’][] = array(
+        1,
+        'This will store deleted accounts in Tracker Module',
+        'custom/modules/Accounts/KeepTrack.php,
+        ‘KeepTrack’        
+        'storeDeletedAccounts'
+  );
+?>
+```
+
+**KeepTrack.php** file at path `custom/modules/Accounts/KeepTrack.php`
+
+```php
+<?php
+
+class KeepTrack
+{
+    function 'storeDeletedAccounts'($bean, $event, $arguments)
+    {     	
+      $oTracker = new Tracker();
+      $oTracker->name = $bean->name;
+      $oTracker->phone_work = $bean->phone_work;
+      ...
+      ...
+      ...
+      ...
+      ...
+      $oTracker->save();
+     }
+}
+?>
+```
+
+Now you need to include this both files  **logic_hooks.php** and **KeepTrack.php** in manifest file. So you need to include this both files in copy array of manifest.php file.
+
+```php
+'copy' => 
+  array (
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
+      'to' => './custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/modules/Accounts/KeepTrack.php',
+      'to' => 'custom/modules/Accounts/KeepTrack.php',
+    ),
+  ),
+```
+
+There is one alternative way of adding logic_hooks from manifest file and that is instead of adding file in copy array, add `logic hooks` in `logic_hooks` array of manifest file.
+
+```php
+ 'logic_hooks' => 
+      array(
+        0 =>
+            array(
+                'module' => 'Accounts',
+                'hook' => 'before_delete',
+                'order' => 101,
+                'description' => 'This will store deleted accounts in Tracker Module',
+                'file' => 'custom/modules/Accounts/KeepTrack.php',
+                'class' => 'KeepTrack',
+                'function' => 'storeDeletedAccounts',
+            ),
+         ),
+```
+
+## Understanding Manifest 
+
+When we publish package, it is generating one .zip file package. Inside this zip folder, there will be one file with name manifest.php. This is the first file to run when we installing our plugin in any system.
+
+Now our manifest file will be look like something this…
+
+```php
+
+$manifest = array(
+  'key' => 1397052912,
+  'name' => 'Example Manifest',
+  'description' => 'Example Description',
+  'author' => 'SugarCRM',
+  'version' => '1.0',
+  'is_uninstallable' => true,
+  'published_date' => '2014-04-09 14:15:12',
+  'type' => 'module',
+  'acceptable_sugar_versions' =>   array(
+          'exact_matches' => array(
+                  '7.2.0',
+                  '7.2.1',
+                  '7.6.0.0'
+                  ),    
+                  //or    
+                  'regex_matches' => array(
+                      '7\\.2\\.[0-1]$', //7.2.0 - 7.2.1
+                      '7\\.6\\.(.*?)\\.(.*?)' //any 7.6 release    
+                  ),
+          ),  
+      'acceptable_sugar_flavors' =>   array(
+          'PRO',
+          'CORP',    
+          'ENT',    
+          'ULT',
+      );  
+      'readme' => '',  
+      'icon' => '',  
+      'remove_tables' => ''
+    );
+    
+$installdefs = array (
+  'id' => 'SpecLoginTrack',
+  'beans' => 
+  array (
+    0 => 
+    array (
+      'module' => 'spec_logtrack',
+      'class' => 'spec_logtrack',
+      'path' => 'modules/spec_logtrack/spec_logtrack.php',
+      'tab' => false,
+    ),
+  ),
+  'layoutdefs' => 
+  array (
+  ),
+  'relationships' => 
+  array (
+  ),
+  'image_dir' => '<basepath>/icons',
+  'copy' => 
+  array (
+    array (
+      'from' => '<basepath>/custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
+      'to' => './custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
+    ),
+    array (
+      'from' => '<basepath>/custom/modules/Accounts/KeepTrack.php',
+      'to' => 'custom/modules/Accounts/KeepTrack.php',
+    ),
+  ),
+  'logic_hooks' => 
+      array(
+        0 =>
+            array(
+                'module' => 'Accounts',
+                'hook' => 'before_delete',
+                'order' => 101,
+                'description' => 'This will store deleted accounts in Tracker Module',
+                'file' => 'custom/modules/Accounts/KeepTrack.php',
+                'class' => 'KeepTrack',
+                'function' => 'storeDeletedAccounts',
+            ),
+         ),
+```
+
+For more information on manifest.php, please visit this [All about manifest.php documentation](support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.9/Architecture/Module_Loader/Introduction_to_the_Manifest/).
+
+## Why Repair and Rebuild?
+
+After installing your plugin in other suitecrm system, please don’t forget to run repair and rebuild. 
+Although after instaling module SuiteCRM running repair and rebuild but it is recommended to see our new module working perfectly.
+
+When we do repair and rebuild, following things happens,
+
+1. Javascript related changes will take effect
+2. Any def related changes (Defs like, Layout `defs` and `vardefs`)
+3. All custom added entrypoint.
+4. All added custom logic hooks.
+
+If we don’t do repair and rebuild, it may possible that we can’t see our code change effect.It is also recommended to do cache clear.
+
