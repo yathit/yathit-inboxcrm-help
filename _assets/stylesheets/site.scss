@@ -89,6 +89,9 @@ h1 {
   padding-top: 0;
   margin-bottom: 0.75em;
   font-size: 32px;
+}
+
+.Blog h1 {
   text-align: center;
 }
 
@@ -377,6 +380,10 @@ UL.post-items {
   align-self: flex-start;
 }
 
+.item-row .vote-row-content {
+  flex-grow: 1;
+}
+
 .vote-wrapper BUTTON {
   border-radius: 5px;
   font-size: 13px;
@@ -576,7 +583,6 @@ UL.post-items {
   line-height: 15px;
   padding: 2px 4px;
   border-radius: 3px;
-  position: relative;
   text-transform: uppercase;
 }
 
@@ -620,4 +626,9 @@ TABLE.playlist TH {
 
 TABLE.playlist TD:last-child {
   text-align: right;
+}
+
+.vote-row-content H2 {
+  margin-top: 0;
+  font-size: 24px;
 }

@@ -141,6 +141,7 @@ function sendAnalytic() {
   /**
    * patchPost({type: 'FAQ'});
    * patchPost({status: 'Completed'});
+   * patchPost({createdAt: new Date('Feb 2, 2015').getTime()})
    */
   window.patchPost = function(post) {
     if (!post.id) {

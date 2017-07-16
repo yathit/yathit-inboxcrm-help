@@ -33,18 +33,28 @@ Now let’s see the steps to create our own custom module/plugin in SuiteCRM.
 * **Step 4**: Now you need to add package name, author, key and description.
 	 Key will used as a prefix in database tables of your module.
 * **Step 5**: Follow instruction below
+
+![Create Module](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/CreateModule.png)
+
 * **Step 6**: Now, after save; you can see many options like :
   * *Duplicate* 	
 		If you want to clone this module.
   * *View Fields*
 		Will show you all the default fields of this module.If you want to add more then you can add from View Fields -> Add Field
+		
+![View Fields](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/ViewFields.png)		
+		
   * *View Relationship*
 		You can see module relation with other module and can add new relation with already available module.
+		
+![Add Relationship](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/AddRelationship.png)				
+		
   * *View Layouts*
 		You can set all the layouts same as we are doing in Studio for already available modules.
   * *Delete*
 		Definitely, if you don’t want this module anymore.Please note that this action is non-undoable action. You may lose your whole hard work if press “DELETE” by mistake.
-
+		
+![Package](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/Package.png)			
 
 
 ## Module Action
@@ -86,7 +96,7 @@ Now logic_hooks.php file will be look like this at path  ./custom/Extension/modu
 
 ```php
 
-<?php   
+<?php
   $hook_array[‘before_delete’][] = array(
         1,
         'This will store deleted accounts in Tracker Module',
