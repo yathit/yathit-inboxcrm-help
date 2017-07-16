@@ -1,267 +1,40 @@
-When your default [SugarCRM](https://www.sugarcrm.com)/[SuiteCRM](https://suitecrm.com) modules are not enough to fulfill your requirements then we need to create our own plugin.
+One of the common problems that SugarCRM shares with other PHP-based applications is a vulnerability to Cross-site Scripting [1]. The fact that cross-site scripting, which is also known as XSS is a common attack, similar to SQL injection, does not make it less dangerous. A malicious script injected via XSS can potentially compromise all aspects of our business information security – confidentiality, integrity and availability of information we rely on. A SugarCRM professional may simply refer to a button that says "Remove XSS" [2] on the admin portal. Unfortunately, if it sounds too good to be true, it probably is!
 
-What if your new module still does not fit your requirement? What if you need to construct some sort of special functionality that Sugar does not provide out of the box? Then building a module manually is definitely the course of action you will need to take to accomplish your goals, and in this tutorial you’ll take a step-by-step journey on how to do this. Let’s begin our journey to create new custom module.
+![Remove XSS Joke](https://yathit-assets.storage.googleapis.com/upload/sugarcrm-remove-xss-joke.jpg)
 
-If you have got to this point then you have decided that building a module by hand is exactly the course of action you wish to embark on. The process to do so requires a bunch of steps that are important, so that your module is properly recognized by the Sugar instance. Missing any one step could potentially result in your module not functioning as expected, whether it because of errors in the application or data loss.
+There is little explanation in regards to when to click the “Remove XSS” button. How often should we do it? Most SugarCRM admins have limited knowledge of script-related security solutions and not everyone can afford an advice of security consultants. Do not despair! There is a way to resolve XSS threats to SugarCRM by utilizing Content Security Policy [3] or CSP. Hailed as a holy grail of security policies, CSP came standard with all major browsers [4]. It serves as additional level of security for browsers and is designed to mitigate XSS and sniffing attacks.
 
-It is quite easy to create our own plugin in SuiteCRM and SugarCRM. They are providing us a great inbuilt GUI tool called Module Builder. The main benefit of this plugin is that, we also can use this plugin in other SuiteCRM and SugarCRM instance too.
+CSP is easy to implement by adding HTTP header in your Apache web server configuration [as advised in SugarCRM support](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.7/Security/Web_Server_Configuration/ ) by deploying `.htaccess` or `VirtualHost` file as follows:
 
-## Module Types
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self';"
 
-Using module builder we can create following types of modules : 
+There is a number of security policies available, but first, we would like to concentrate on “script-src” attribute. If your SugarCRM add-on module has an access to external websites using Javascript, you would have to relax the CSP by adding permission to access the target domain. For example: `script-src: thirdparty.com 'self'`. You might ask, “How come we need to relax the CSP and issue more permissions and tighten security in the same time?” This is a fair question to ask. Fortunately, CSP with certain permissions provides more security than no CSP at all. However, this procedure may not lower XSS threat to acceptable level, specifically when inline javascript is used, such as:
 
-1. *Basic*: A basic template with only fields for a name and description
+    'validation' =>  array (
+        'type' => 'callback', 
+        'callback' => 'function() {return false;}'
+     ),
 
-2. *Company*: Fields that would normally be used with a company, such as name, address, phone, website, or industry
+An relaxing inline javascript with `unsafe-inline` render CSP useless against XSS and other injection attacks. Other improper uses of CSP are all too common and Google security researchers conclude: [“CSP is dead!”](https://research.google.com/pubs/pub45542.html). We can go a different route to solve the inline script issues and improve browser security by utilizing [CSP Level 2](https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/). This improved layer of protection can be very effective in combating XSS and similar threats. 
 
-3. *File*: Used when the object stores files that the user uploads.
+CSP 2 combats these threats by adding support for hashes and nonces for style resources and scripts. (Nonces are cryptographically strong random values generated on each page load). Nonce usage can also help minimize a list of allowed source URL values. This does not make CSP2 a perfect solution, but it helps us adjust `script_src` attribute without weakening it to `unsafe_inline`, which would be unacceptable.  
 
-4. *Issue*: For modeling an issue or job tracking system
+A very good example of a company implementing CSP into their product is Google. The company went extra mile to secure its Chrome browser extension by implementing the most stringent CSP as default configuration. [Google advises](https://youtu.be/GBxv8SaX0gg?t=46m10s) against relaxing CSP settings for Chrome extensions. Our Yathit extension has the strictest and most effective CSP. It has `script-src` attribute without relaxation of the extension’s security settings. Yathit has superior security features than the other SugarCRM extension on the browser end. These specific features stand out when it comes to email and client information management. We highly recommend our users to experiment with CSP deployment, and Yathit security features.   
 
-5. *Person*: Fields that represent a person, such as name, address, phone, or email.
+##### References
 
-6. *Sale*: Used when the object is for sales transactions or forecasting
+[1]: https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) 
+Cross-site Scripting (XSS) *Article from https://www.owasp.org*
+[1]
 
-### Create Module Using GUI
+[2]: https://support.sugarcrm.com/Documentation/Sugar_Versions/7.7/Ent/Administration_Guide/System/Repair/index.html#Remove_XSS
+Remove XSS *SugarCRM Documentation*
+[2]
 
-Now let’s see the steps to create our own custom module/plugin in SuiteCRM.
+[3]: https://www.w3.org/TR/CSP1/ 
+Content Security Policy
+[3]
 
-* **Step 1**: Go to Admin panel.
-* **Step 2**: Click on Module Builder
-* **Step 3**: Click on Add Package
-	Module Builder organizes things into units called Packages, each of which can contain one or more modules.
-* **Step 4**: Now you need to add package name, author, key and description.
-	 Key will used as a prefix in database tables of your module.
-* **Step 5**: Follow instruction below
-
-![Create Module](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/CreateModule.png)
-
-* **Step 6**: Now, after save; you can see many options like :
-  * *Duplicate* 	
-		If you want to clone this module.
-  * *View Fields*
-		Will show you all the default fields of this module.If you want to add more then you can add from View Fields -> Add Field
-		
-![View Fields](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/ViewFields.png)		
-		
-  * *View Relationship*
-		You can see module relation with other module and can add new relation with already available module.
-		
-![Add Relationship](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/AddRelationship.png)				
-		
-  * *View Layouts*
-		You can set all the layouts same as we are doing in Studio for already available modules.
-  * *Delete*
-		Definitely, if you don’t want this module anymore.Please note that this action is non-undoable action. You may lose your whole hard work if press “DELETE” by mistake.
-		
-![Package](https://yathit-assets.storage.googleapis.com/upload/5995154846515200/Package.png)			
-
-
-## Module Action
-
-After completing all these steps, you will have following options to take action
-
-### Deploy
-
-Install module package into the current running instance of CRM.
-
-### Publish
-
-Publish the module package as a loadable package that can be installed into an another SuiteCRM instance using Module Loader.
-
-### Export
-
-Export the module package as a loadable package that will only be installed back into Module Loader for further customization on the target system.
-
-## Custom Code In Custom Module
-
-Till now, it was all about GUI. We have not write a single line  of code - just Click - Drag and Drop. What if still it is not upto your requirement? You have to do custom code inside newly created module and also you have to include these new files in module package to copy along with module’s default files  to another SuiteCRM instance.
-
-
-Let’s take one simple example;
-
-Suppose you want to create one tracker module which will store all the deleted accounts from your CRM
-
-For this, first of all  we will create one Company type module from module builder with name “Tracker” and then deploy it but it will create just structure, it will not store deleted account. Now we have to write one “before delete” logic hook for account module.
-
-You need to create two file like this : 
-logic_hooks.php
-KeepTrack.php
-
-Now logic_hooks.php file will be look like this at path  ./custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php
-
-
-
-**logic_hooks.php**
-
-```php
-
-<?php
-  $hook_array[‘before_delete’][] = array(
-        1,
-        'This will store deleted accounts in Tracker Module',
-        'custom/modules/Accounts/KeepTrack.php,
-        ‘KeepTrack’        
-        'storeDeletedAccounts'
-  );
-?>
-```
-
-**KeepTrack.php** file at path `custom/modules/Accounts/KeepTrack.php`
-
-```php
-<?php
-
-class KeepTrack
-{
-    function 'storeDeletedAccounts'($bean, $event, $arguments)
-    {     	
-      $oTracker = new Tracker();
-      $oTracker->name = $bean->name;
-      $oTracker->phone_work = $bean->phone_work;
-      ...
-      ...
-      ...
-      ...
-      ...
-      $oTracker->save();
-     }
-}
-?>
-```
-
-Now you need to include this both files  **logic_hooks.php** and **KeepTrack.php** in manifest file. So you need to include this both files in copy array of manifest.php file.
-
-```php
-'copy' => 
-  array (
-    array (
-      'from' => '<basepath>/custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
-      'to' => './custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
-    ),
-    array (
-      'from' => '<basepath>/custom/modules/Accounts/KeepTrack.php',
-      'to' => 'custom/modules/Accounts/KeepTrack.php',
-    ),
-  ),
-```
-
-There is one alternative way of adding logic_hooks from manifest file and that is instead of adding file in copy array, add `logic hooks` in `logic_hooks` array of manifest file.
-
-```php
- 'logic_hooks' => 
-      array(
-        0 =>
-            array(
-                'module' => 'Accounts',
-                'hook' => 'before_delete',
-                'order' => 101,
-                'description' => 'This will store deleted accounts in Tracker Module',
-                'file' => 'custom/modules/Accounts/KeepTrack.php',
-                'class' => 'KeepTrack',
-                'function' => 'storeDeletedAccounts',
-            ),
-         ),
-```
-
-## Understanding Manifest 
-
-When we publish package, it is generating one .zip file package. Inside this zip folder, there will be one file with name manifest.php. This is the first file to run when we installing our plugin in any system.
-
-Now our manifest file will be look like something this…
-
-```php
-
-$manifest = array(
-  'key' => 1397052912,
-  'name' => 'Example Manifest',
-  'description' => 'Example Description',
-  'author' => 'SugarCRM',
-  'version' => '1.0',
-  'is_uninstallable' => true,
-  'published_date' => '2014-04-09 14:15:12',
-  'type' => 'module',
-  'acceptable_sugar_versions' =>   array(
-          'exact_matches' => array(
-                  '7.2.0',
-                  '7.2.1',
-                  '7.6.0.0'
-                  ),    
-                  //or    
-                  'regex_matches' => array(
-                      '7\\.2\\.[0-1]$', //7.2.0 - 7.2.1
-                      '7\\.6\\.(.*?)\\.(.*?)' //any 7.6 release    
-                  ),
-          ),  
-      'acceptable_sugar_flavors' =>   array(
-          'PRO',
-          'CORP',    
-          'ENT',    
-          'ULT',
-      );  
-      'readme' => '',  
-      'icon' => '',  
-      'remove_tables' => ''
-    );
-    
-$installdefs = array (
-  'id' => 'SpecLoginTrack',
-  'beans' => 
-  array (
-    0 => 
-    array (
-      'module' => 'spec_logtrack',
-      'class' => 'spec_logtrack',
-      'path' => 'modules/spec_logtrack/spec_logtrack.php',
-      'tab' => false,
-    ),
-  ),
-  'layoutdefs' => 
-  array (
-  ),
-  'relationships' => 
-  array (
-  ),
-  'image_dir' => '<basepath>/icons',
-  'copy' => 
-  array (
-    array (
-      'from' => '<basepath>/custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
-      'to' => './custom/Extension/modules/Accounts/Ext/LogicHooks/logic_hooks.php',
-    ),
-    array (
-      'from' => '<basepath>/custom/modules/Accounts/KeepTrack.php',
-      'to' => 'custom/modules/Accounts/KeepTrack.php',
-    ),
-  ),
-  'logic_hooks' => 
-      array(
-        0 =>
-            array(
-                'module' => 'Accounts',
-                'hook' => 'before_delete',
-                'order' => 101,
-                'description' => 'This will store deleted accounts in Tracker Module',
-                'file' => 'custom/modules/Accounts/KeepTrack.php',
-                'class' => 'KeepTrack',
-                'function' => 'storeDeletedAccounts',
-            ),
-         ),
-```
-
-For more information on manifest.php, please visit this [All about manifest.php documentation](support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.9/Architecture/Module_Loader/Introduction_to_the_Manifest/).
-
-## Why Repair and Rebuild?
-
-After installing your plugin in other suitecrm system, please don’t forget to run repair and rebuild. 
-Although after instaling module SuiteCRM running repair and rebuild but it is recommended to see our new module working perfectly.
-
-When we do repair and rebuild, following things happens,
-
-1. Javascript related changes will take effect
-2. Any def related changes (Defs like, Layout `defs` and `vardefs`)
-3. All custom added entrypoint.
-4. All added custom logic hooks.
-
-If we don’t do repair and rebuild, it may possible that we can’t see our code change effect.It is also recommended to do cache clear.
-
+[4]: http://caniuse.com/#feat=contentsecuritypolicy 
+Can I Use: Content Security Policy
+[4]
