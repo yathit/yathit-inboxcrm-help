@@ -135,6 +135,32 @@ function sendAnalytic() {
   }
   window.sendRequest = send;
 
+  /**
+   * queryPost({}, 'vote');
+   * @param {Object} post
+   * @param {string=} ns
+   */
+  window.queryPost = function(post, ns) {
+    if (!post.id) {
+      post.id = parseInt($('[data-id]').attr('data-id'), 10);
+    }
+    if (!post.id) {
+      console.error('id');
+      return;
+    }
+    var params = [];
+    for (var key in post) {
+      params.push(key + '=' + post[key]);
+    }
+    ns = ns || '';
+    if (ns) {
+      ns = ns + '/';
+    }
+    sendKb(function(json, status) {
+      console.log(json, status);
+    }, 'GET', ns + post.id + '?' + params.join('&'));
+  };
+
   function sendKb(cb, mth, path, body) {
     send(cb, mth, '/kb/' + path, body);
   }
