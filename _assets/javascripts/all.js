@@ -139,8 +139,9 @@ function sendAnalytic() {
    * queryPost({}, 'vote');
    * @param {Object} post
    * @param {string=} ns
+   * @param {Function=} cb
    */
-  window.queryPost = function(post, ns) {
+  window.queryPost = function(post, ns, cb) {
     if (!post.id) {
       post.id = parseInt($('[data-id]').attr('data-id'), 10);
     }
@@ -157,8 +158,21 @@ function sendAnalytic() {
       ns = ns + '/';
     }
     sendKb(function(json, status) {
-      console.log(json, status);
+      if (cb) {
+        cb(json);
+      } else {
+        console.log(json, status);
+      }
     }, 'GET', ns + post.id + '?' + params.join('&'));
+  };
+
+  window.viewVotes = function() {
+    queryPost({}, 'vote', function(json) {
+      console.info('Post ' + json.postId);
+      for (var i = 0; i < json.votes.length; i++) {
+        console.info(json.votes[i] + ' vote by ' + json.voters[i].email);
+      }
+    });
   };
 
   function sendKb(cb, mth, path, body) {
@@ -264,6 +278,22 @@ function sendAnalytic() {
     });
   }
 
+  function processAdmin(user) {
+    document.body.classList.add('user-admin');
+    $('.vote-panel').on('click', function() {
+      var $post = $(this).parents('[data-id]');
+      var id = $post.attr('data-id');
+      queryPost({id: id}, 'vote', function(json) {
+        var h = $post.find('H1, H2');
+        var votes = [];
+        for (var i = 0; json.votes && i < json.votes.length; i++) {
+          votes.push(json.votes[i] + ' ' + json.voters[i].email);
+        }
+        $('<div>' + votes.join(', ') + '</div>').insertAfter(h);
+      });
+    });
+  }
+
   var path = '/rpc_login?url=' + location.href;
   send(function(login_resp) {
         const user = login_resp.User || {};
@@ -275,7 +305,7 @@ function sendAnalytic() {
           login_el.textContent = 'Profile';
           login_el.href = '/kb/profile/' + user.Id.$t;
           if (user.is_admin || user.email === 'kyawtun@yathit.com') {
-            document.body.classList.add('user-admin');
+            processAdmin(user);
           }
           localStorage.setItem('uid', user.email);
         } else {
