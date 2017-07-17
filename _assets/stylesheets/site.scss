@@ -356,6 +356,11 @@ UL.post-items {
 }
 
 .item-row {
+  margin-bottom: 16px;
+}
+
+
+.vote-row {
   display: flex;
   flex-direction: row;
   margin-bottom: 16px;
@@ -365,7 +370,7 @@ UL.post-items {
   margin-top: 0;
 }
 
-.item-row .vote-wrapper {
+.vote-row .vote-wrapper {
   width: 80px;
   display: flex;
   margin-right: 24px;
@@ -376,11 +381,11 @@ UL.post-items {
   flex-shrink: 0;
 }
 
-.item-row > * {
+.vote-row > * {
   align-self: flex-start;
 }
 
-.item-row .vote-row-content {
+.vote-row .vote-row-content {
   flex-grow: 1;
 }
 
@@ -397,7 +402,7 @@ UL.post-items {
   font-size: 70%;
 }
 
-.item-row .vote-panel {
+.vote-row .vote-panel {
   width: 80px;
   height: 64px;
 
@@ -631,4 +636,8 @@ TABLE.playlist TD:last-child {
 .vote-row-content H2 {
   margin-top: 0;
   font-size: 24px;
+}
+
+.post-root.Blog .vote-wrapper, .post-root.UserStory .vote-wrapper, .post-root.None .vote-wrapper {
+  display: none;
 }

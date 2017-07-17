@@ -116,8 +116,9 @@ function sendAnalytic() {
     if (!cb) {
       cb = function(x) {console.log(x);}
     }
+    mth = mth || 'GET';
     var xhr = new XMLHttpRequest();
-    xhr.open(mth || 'GET', path, true);
+    xhr.open(mth, path, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
     xhr.onload = function(ev) {
       if (/json/.test(xhr.getResponseHeader('Content-Type'))) {
@@ -132,7 +133,7 @@ function sendAnalytic() {
     var payload = body ? JSON.stringify(body) : null;
     xhr.send(payload);
   }
-  window.send = send;
+  window.sendRequest = send;
 
   function sendKb(cb, mth, path, body) {
     send(cb, mth, '/kb/' + path, body);
@@ -356,12 +357,12 @@ function sendAnalytic() {
   });
 
   $('.btn-vote').on('click', function(ev) {
-    var $item = $(this).parents('.post-item');
-    var id = parseInt($item.attr('data-id'), 10);
-    if (!id) {
+    var $item = $(this).parents('[data-id]');
+    if (!$item.length) {
       throw new Error('invalid post id ' + id + ' for ' + $item.attr('data-id') +
           '\nJava long integer not fit in javascript number? Shit, I knew this will come.');
     }
+    var id = parseInt($item.attr('data-id'), 10);
     if (document.body.classList.contains('user-notlogin')) {
       alert('Please login and vote again.');
       location.href = document.getElementById('login').href;
