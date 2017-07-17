@@ -286,7 +286,7 @@ function sendAnalytic() {
           if (user.is_admin || user.email === 'kyawtun@yathit.com') {
             processAdmin(user);
           }
-          localStorage.setItem('uid', user.email);
+          localStorage.setItem('uid', user.Id.$t);
         } else {
           login_el.textContent = 'Login';
           login_el.href = user.login_url;
