@@ -454,12 +454,6 @@ function sendAnalytic() {
     $('#player').attr('src', $(this).attr('href'));
   });
 
-  var codes = document.querySelectorAll('code');
-  for (var i = 0; i < codes.length; i++) {
-    codes[i].innerText = codes[i].innerText.replace(/&lt;/g, '<');
-    codes[i].innerText = codes[i].innerText.replace(/&gt;/g, '>');
-    codes[i].innerText = codes[i].innerText.replace(/&quot;/g, '"');
-  }
 
 })();
 
