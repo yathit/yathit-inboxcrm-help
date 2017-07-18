@@ -186,10 +186,19 @@ function sendAnalytic() {
     }, 'POST', post.id + '?patch=1', post);
   };
 
-  function search(q, done) {
+  function serverSearch(q, done) {
 
       sendKb(function(json, status) {
         if (status == 200) {
+          var n = json ? json.length || 0 : 0;
+          for (var i = 0; i < n; i++) {
+            json[i] = {
+              link: '/kb/' + json[i].id,
+              title: json[i].title,
+              htmlTitle: '<b>' + json[i].title + '</b>',
+              htmlSnippet: json[i].content
+            }
+          }
           done(json);
         } else {
           console.error(json);
@@ -197,18 +206,35 @@ function sendAnalytic() {
       }, 'GET', 'search/?q=' + q);
 
   }
-  window.search = search;
+  window.serverSearch = serverSearch;
+
+  function siteSearch(q, cb) {
+    var key = 'AIzaSyCFI2GA99mBSdfub0jLL0P1wmJhdVaAzsU';
+    var cx = '001835615530595934868:dd_7qpicuzq';
+    var xhr = new XMLHttpRequest();
+    var params = ['key=' + key, 'q=' + q, 'cx=' + cx];
+    xhr.open('GET', 'https://www.googleapis.com/customsearch/v1?' + params.join('&'), true);
+    if (!cb) {
+      cb = function(x) {console.log(x)};
+    }
+    xhr.onload = function() {
+      var json = JSON.parse(xhr.responseText);
+      cb(json.items);
+    };
+    xhr.send();
+  }
+  window.siteSearch = siteSearch;
 
   function exeSearch(q, root) {
-    search(q, function(arr) {
+    siteSearch(q, function(arr) {
       root.innerHTML = '';
       var n = arr ? arr.length || 0 : 0;
       sendAnalytic('trackSiteSearch', q, 'kb', n);
       for (var i = 0; i < n; i++) {
         var json = arr[i];
         var div = document.createElement('div');
-        div.innerHTML = '<h3><a href="/kb/' + json.id + '">' + json.title + '</a></h3><div class="post-content">' +
-            json.content + '</div>';
+        div.innerHTML = '<h4><a href="' + json.link + '">' + json.title + '</a></h3><div class="post-content">' +
+            json.htmlSnippet + '</div>';
         root.appendChild(div);
       }
     });
