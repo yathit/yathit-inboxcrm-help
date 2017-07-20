@@ -486,14 +486,6 @@ UL.post-items {
   margin-top: 16px;
 }
 
-.post-items.FAQ .item-detail, .post-items.Blog .vote-wrapper {
-  display: none;
-}
-
-.post-items.Blog .vote-wrapper, .post-items.Question .vote-wrapper {
-  display: none;
-}
-
 .vote-wrapper {
   display: flex;
   flex-direction: column;
@@ -639,6 +631,23 @@ TABLE.playlist TD:last-child {
   font-size: 24px;
 }
 
+.post-items.FAQ .item-detail, .post-items.Blog .vote-wrapper {
+  display: none;
+}
+
+.post-items.Blog .vote-wrapper, .post-items.None .vote-wrapper {
+  display: none;
+}
+
 .post-root.Blog .vote-wrapper, .post-root.UserStory .vote-wrapper, .post-root.None .vote-wrapper {
   display: none;
+}
+
+.empty .hide-empty {
+  display: none;
+}
+
+.ydn-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

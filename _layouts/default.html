@@ -14,6 +14,7 @@
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/iccdnijlhdogaccaiafdpjmbakdcdakk">
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ldikiokclnbceabnlbkabmcacpiednop">
 
+
     {% stylesheet site %}
 
   </head>
@@ -26,6 +27,7 @@
             {% include toc.html %}
           </div>
           <div class="col-sm-9 content-wrapper">
+            {% include post-form.html %}
             <div class="content" id="main-content">
               {{ content || autolink }}
             </div>

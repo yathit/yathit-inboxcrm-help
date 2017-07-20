@@ -225,9 +225,18 @@ function sendAnalytic() {
       el2.style.display = '';
     }
   }, 500);
-  var $searchBox = $('.search-box INPUT');
+  var $searchBox = $('INPUT.search');
   $searchBox.on('keyup', function(ev) {
-    dispSearchBox($searchBox.val());
+    var val = $(this).val();
+    dispSearchBox(val);
+    var form = $(this).parents('FORM').get(0);
+    if (form) {
+      if (val) {
+        form.classList.remove('empty');
+      } else {
+        form.classList.add('empty');
+      }
+    }
   });
 
   function renderNewPost(form) {
