@@ -110,10 +110,11 @@ function sendAnalytic() {
     xhr.open(mth, path, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
     xhr.onload = function(ev) {
+      if (xhr.status == 401 && /^https/.test(xhr.responseText)) {
+        location.href = xhr.responseText;
+        return;
+      }
       if (/json/.test(xhr.getResponseHeader('Content-Type'))) {
-        if (xhr.status == 401 && /^https/.test(xhr.responseText)) {
-          location.href = xhr.responseText;
-        }
         cb(JSON.parse(xhr.responseText), xhr.status, xhr.responseText);
       } else {
         cb(xhr.responseText, xhr.status, xhr.responseText);
