@@ -14,7 +14,7 @@ Install [Yathit Chrome Extension](https://chrome.google.com/webstore/detail/yath
 
 
  
-[Login](https://www.yathit.com/sugarcrm-gmail/getting-started.html) to the extension using your Gmail account. Then login to Sugar in the extension side panel.
+[Login](https://www.yathit.com/sugarcrm-gmail/index.html) to the extension using your Gmail account. Then login to Sugar in the extension side panel.
 
 ## Basic tests
 

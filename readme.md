@@ -14,6 +14,18 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
     
 * Go to [http://localhost:4000/sugarcrm-gmail/(http://localhost:4000/sugarcrm-gmail/)
 
+## Uploading screenshoot
+
+    gsutil -m rsync -r ../../screenshot gs://yathit-assets/screenshot 
+    
+List files
+
+    gsutil ls gs://yathit-assets/screenshot    
+
+## Updating tutorial list
+
+To update [tutorial video list](https://www.yathit.com/sugarcrm-gmail/tutorial-videos.html) go to [video data page](http://127.0.0.1:4000/sugarcrm-gmail/video-data.html). Authorize if necessary and copy data in chrome console by `copy(JSON.stringify(data, null, 2))`. Paste data to `_data\playlistTutorial.json`.
+
 ## How to build in production
 
 This is mostly:
