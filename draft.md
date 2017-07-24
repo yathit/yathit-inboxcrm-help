@@ -1,40 +1,32 @@
-One of the common problems that SugarCRM shares with other PHP-based applications is a vulnerability to Cross-site Scripting [1]. The fact that cross-site scripting, which is also known as XSS is a common attack, similar to SQL injection, does not make it less dangerous. A malicious script injected via XSS can potentially compromise all aspects of our business information security – confidentiality, integrity and availability of information we rely on. A SugarCRM professional may simply refer to a button that says "Remove XSS" [2] on the admin portal. Unfortunately, if it sounds too good to be true, it probably is!
+![crm-super](https://yathit-assets.storage.googleapis.com/upload/crm-powered.jpg)
 
-![Remove XSS Joke](https://yathit-assets.storage.googleapis.com/upload/sugarcrm-remove-xss-joke.jpg)
+Many salespeople hate dealing with CRM software. It is often slow to retrieve important customer information and difficult to navigate. The sales personnel has to deal with a multitude of links and buttons, prompting the users to click in excess and being unable to retrieve important client info [1]. Unlike installed software, browser based apps process the information that is heavily dependent on URL-enabled links. In addition, the client application has to process large volumes of data received from the server.
+            
+About a decade ago, Google succeeded as a major Web platform, the company developed a number of apps by heavily relying on client’s processing ability or browser’s ability to process a large amount of data. Modern app developers continue chasing the web app technology magic, but neglect browser database technology [2] that powers such popular Google apps as Gmail, Google Docs, Google Sheets, Photo, etc.
 
-There is little explanation in regards to when to click the “Remove XSS” button. How often should we do it? Most SugarCRM admins have limited knowledge of script-related security solutions and not everyone can afford an advice of security consultants. Do not despair! There is a way to resolve XSS threats to SugarCRM by utilizing Content Security Policy [3] or CSP. Hailed as a holy grail of security policies, CSP came standard with all major browsers [4]. It serves as additional level of security for browsers and is designed to mitigate XSS and sniffing attacks.
+Browser database technology was first introduced [3] during Google Summer of Code in 2008  – ’09 for Webkit browser engine, which powered Safari and Chrome at the time. It was a major development as the Web application could now be enabled offline and significant amount of data could be queried relatively quickly without sending requests to the Web server. Google internal code that enables Google gear is API, which is a quick solution for utilizing [SQLite technology](https://www.sqlite.org/). Matching SQL technology to various browser standards and specifications was not an easy task [4]. 
 
-CSP is easy to implement by adding HTTP header in your Apache web server configuration [as advised in SugarCRM support](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.7/Security/Web_Server_Configuration/ ) by deploying `.htaccess` or `VirtualHost` file as follows:
+It took years for browser vendors to come to specification agreements. Micron Technology came up with a new standard – WebSimple DB specification [5], which was incorporated into all popular browsers and eventually became Indexed Database standard [6]. However, Apple did not incorporate Indexed DB and WebSQL was used in Apple devices until 2017, when all major browsers including Safari started to support Indexed DB. Microsoft struggled to continue modernizing its Web technology and started to support Indexed DB in its Edge browser with few limitations [7].
 
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self';"
+Another important issue we should mention – Indexed DB remains [controversial](http://blog.harritronics.com/2011/04/more-thoughts-on-indexeddb-and-web-sql.html) due to issues resulting from the asynchronous API. Unlike a more familiar WebSQL, Indexed DB is more difficult, which makes it [unpopular among web developers](https://news.ycombinator.com/item?id=9978540). Another major difficulty the developers often encounter when using browser databases, is inability to cache large amounts of data. This is one of the reasons why CRMs are rarely implemented together with browser databases. On the bright side, Indexed DBs are faster than relationship databases and able to process large volumes of data. Indexed database is also harder to understand if you have been dealing solely with relational databases. However, in addition to asynchronous API and ability to run Java Script, Indexed DB offers fast indexing, efficient data management and ability to work offline. 
+ 
+Yathit project initially started as a cross-platform JavaScript browser library [8] and eventually contributed to the development of Indexed DB API in order [to support more complex queries](https://www.w3.org/Bugs/Public/show_bug.cgi?id=20257). Currently, the open source Yathit database library is widely used in CRM and other enterprise Web applications. Unfortunately, a browser-based platform like SugarCRM is very far from using browser database and missing a lot of good user experience. We can clearly identify the following advantages offered by Yathit when it is combined with SugarCRM:
 
-There is a number of security policies available, but first, we would like to concentrate on “script-src” attribute. If your SugarCRM add-on module has an access to external websites using Javascript, you would have to relax the CSP by adding permission to access the target domain. For example: `script-src: thirdparty.com 'self'`. You might ask, “How come we need to relax the CSP and issue more permissions and tighten security in the same time?” This is a fair question to ask. Fortunately, CSP with certain permissions provides more security than no CSP at all. However, this procedure may not lower XSS threat to acceptable level, specifically when inline javascript is used, such as:
+* **Full text search support**: If a user cannot remember spelling of a name, but remembers what the name sounds like, Yathit is able to pull the record by fuzzy search or phonetic synonyms [9].
+* **Quick retrieval**: Yathit is able to display customer records very quickly such as when a user hovers a cursor above a customer name in the email. These simple features save users lots of time, add convenience and improve overall user experience.
+* **Caching**: Customer records search is not required as records are quickly displayed and most of the data is cached. This works especially well with Chrome browser, which has capability to cache large amounts of data in comparison with other browsers
+* **Low memory usage**: Last but not least - unlike other Chrome extensions, Yathit does not need a lot of memory to run and conduct its functions.
 
-    'validation' =>  array (
-        'type' => 'callback', 
-        'callback' => 'function() {return false;}'
-     ),
+How great it would be if your CRM was as fast and responsive as Google apps! As browser platforms become more powerful in the near future, we will see a wider use of browser-based databases along with CRM software. Yathit extension will complement CRM software and add valuable features, making the browser software more competitive and reliable. Yathit is a sure bet for the future!
 
-An relaxing inline javascript with `unsafe-inline` render CSP useless against XSS and other injection attacks. Other improper uses of CSP are all too common and Google security researchers conclude: [“CSP is dead!”](https://research.google.com/pubs/pub45542.html). We can go a different route to solve the inline script issues and improve browser security by utilizing [CSP Level 2](https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/). This improved layer of protection can be very effective in combating XSS and similar threats. 
+**References:**
 
-CSP 2 combats these threats by adding support for hashes and nonces for style resources and scripts. (Nonces are cryptographically strong random values generated on each page load). Nonce usage can also help minimize a list of allowed source URL values. This does not make CSP2 a perfect solution, but it helps us adjust `script_src` attribute without weakening it to `unsafe_inline`, which would be unacceptable.  
-
-A very good example of a company implementing CSP into their product is Google. The company went extra mile to secure its Chrome browser extension by implementing the most stringent CSP as default configuration. [Google advises](https://youtu.be/GBxv8SaX0gg?t=46m10s) against relaxing CSP settings for Chrome extensions. Our Yathit extension has the strictest and most effective CSP. It has `script-src` attribute without relaxation of the extension’s security settings. Yathit has superior security features than the other SugarCRM extension on the browser end. These specific features stand out when it comes to email and client information management. We highly recommend our users to experiment with CSP deployment, and Yathit security features.   
-
-##### References
-
-[1]: https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) 
-Cross-site Scripting (XSS) *Article from https://www.owasp.org*
-[1]
-
-[2]: https://support.sugarcrm.com/Documentation/Sugar_Versions/7.7/Ent/Administration_Guide/System/Repair/index.html#Remove_XSS
-Remove XSS *SugarCRM Documentation*
-[2]
-
-[3]: https://www.w3.org/TR/CSP1/ 
-Content Security Policy
-[3]
-
-[4]: http://caniuse.com/#feat=contentsecuritypolicy 
-Can I Use: Content Security Policy
-[4]
+1. [The state of CRM adoption by the financial services in the UK: an empirical investigation](http://www.sciencedirect.com/science/article/pii/S0378720604001296)
+2. [Lovefield javascript library](https://google.github.io/lovefield/)
+3. [Google Gear](http://gearsblog.blogspot.sg/2010/02/hello-html5.html)
+4. [Web SQL Database: In Memoriam](https://nolanlawson.com/2014/04/26/web-sql-database-in-memoriam/)
+5. [WebSimpleDB gets thumbs up from major browser vendors](https://o-micron.com/2011/11/05/websimpledb-gets-thumbs-up-from-major-browser-vendors/)
+6. [Indexed Database API](https://www.w3.org/TR/IndexedDB/)
+7. [Indexed Database browser support](http://caniuse.com/#feat=indexeddb)
+8. [YDN-DB](https://github.com/yathit/ydn-db)
+9. [Yathit Full Text search javascript library](https://github.com/yathit/ydn-db-fulltext)

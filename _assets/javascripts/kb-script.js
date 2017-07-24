@@ -232,7 +232,8 @@ function sendAnalytic() {
     dispSearchBox(val);
     var form = $(this).parents('FORM').get(0);
     if (form) {
-      if (val.match(/([\s]+)/g).length > 2) {
+      var m = val.match(/([\s]+)/g);
+      if (m && m.length > 2) {
         form.classList.remove('empty');
       } else {
         form.classList.add('empty');
