@@ -5,24 +5,39 @@ index: 7
 ---
 
 •	{{ site.product }} provides a bi-directional sync of events between Google & Sugar.
+
 •	Events created and edited in either platform will automatically be synced to the other hourly. 
+
 •	With YathitInboxCRM you have the only solution that automatically syncs events to corresponding attendee records in Sugar.
+
 •	Only upcoming Meetings records that you participated in are sync.
+
 •	To enable Calendar Sync, click the gear icon, {{ "settings" | svg_icon }}, on the sidebar and then click "Calendar Sync Setting". 
+
 [screenshot]
+
 •	Grant permissions on Google Calendar: Make sure to grant the proper permissions on Google Calendar as below:
+
 [screenshot]
+
 Click Grant link, to open popup window that allow you to give YathitInboxCRM access to your calendar. Scroll down and click Accept.
 
 
 ## Automatic Regular Sync 
 To apply the automatic regular calendar sync, you need to define:
-1-	Sync interval in minutes
-2-	Sync direction settings
+
+ 1-	Sync interval in minutes
+
+ 2-	Sync direction settings
+
 The following notes should be considered when use the regular sync: 
-•	The sync process will be executed only when Chrome browser is running.
-•	Short sync interval definition might cause more load on your server.
-•	Only 100 records will be sync at a time, the remained records will be synced in next period.
+
+ •	The sync process will be executed only when Chrome browser is running.
+
+ •	Short sync interval definition might cause more load on your server.
+
+ •	Only 100 records will be sync at a time, the remained records will be synced in next period.
+
 
 {% include full-screenshot.html file="calendar-sync-setting.png" %}
 
