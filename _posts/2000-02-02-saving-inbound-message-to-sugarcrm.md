@@ -22,23 +22,23 @@ index: 2
 
 ❺ {{ site }}  provides the ability to add various types of related records to the archived email:
 
-1.	Any type of records can be added as relationship (Contacts, Accounts, Cases, Meetings, Notes, Project, Tasks… etc.)
+♦ Any type of records can be added as relationship (Contacts, Accounts, Cases, Meetings, Notes, Project, Tasks… etc.)
 
 [sceenshot]
 
-2.	The related Contacts and Account recordswill automatically be populated as per the sender email address
+♦ The related Contacts and Account recordswill automatically be populated as per the sender email address
 
 [sceenshot]
 
-3.	Other possible suggested related record can be added easily by one click on the item
+♦ Other possible suggested related record can be added easily by one click on the item
 
 [sceenshot]
 
-4.	To search for a specific related record, use Searchtext box then add theselected related record
+♦ To search for a specific related record, use Searchtext box then add theselected related record
 
 [sceenshot]
 
-5-	Click on the Attachments checkbox to archive the email attachments
+♦ Click on the Attachments checkbox to archive the email attachments
 
 [sceenshot]
 
