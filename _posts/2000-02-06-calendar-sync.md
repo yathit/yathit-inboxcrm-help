@@ -4,34 +4,56 @@ section: How To ...
 index: 7
 ---
 
-{{ site.product }} provides a bi-directional sync of events between Google & Sugar. Events created and edited in either platform will automatically sync to the other hourly. And with {{ site.product }} you have the only solution that automatically syncs events to corresponding attendee records in Sugar.
+•	{{ site.product }} provides a bi-directional sync of events between Google & Sugar.
+•	Events created and edited in either platform will automatically be synced to the other hourly. 
+•	With YathitInboxCRM you have the only solution that automatically syncs events to corresponding attendee records in Sugar.
+•	Only upcoming Meetings records that you participated in are sync.
+•	To enable Calendar Sync, click the gear icon, {{ "settings" | svg_icon }}, on the sidebar and then click "Calendar Sync Setting". 
+[screenshot]
+•	Grant permissions on Google Calendar: Make sure to grant the proper permissions on Google Calendar as below:
+[screenshot]
+Click Grant link, to open popup window that allow you to give YathitInboxCRM access to your calendar. Scroll down and click Accept.
 
-To enable Calendar Sync, click the gear icon, {{ "settings" | svg_icon }}, on the sidebar and then click "Calendar Sync Setting". 
 
-You will have to grant Google Calendar permission, if you have not granted so. See detail process in [Contact Sync]. 
-
-Only upcoming Meetings records that you participated in are sync.
-
-## Automatic sync
-
-Sync process can be configured very detail according to your need. The first option is whether to sync in regular interval or not. You can sync manually by clicking "Sync Now" button. If you choose to sync regularly, you can set sync interval in minutes. Sync happen only when you are running Chrome browser. Note: too frequent sync interval increase your server load.
-
-Sync operation are performance in batch in each sync period. Only 100 records will be sync at a time. The remaining records will be sync in next period.
+## Automatic Regular Sync 
+To apply the automatic regular calendar sync, you need to define:
+1-	Sync interval in minutes
+2-	Sync direction settings
+The following notes should be considered when use the regular sync: 
+•	The sync process will be executed only when Chrome browser is running.
+•	Short sync interval definition might cause more load on your server.
+•	Only 100 records will be sync at a time, the remained records will be synced in next period.
 
 {% include full-screenshot.html file="calendar-sync-setting.png" %}
 
 
-## Sync direction
+## Manual Sync
+ To apply manual calendar sync whenever you need, select the sync direction settings and then click on the “Sync Now” button.
+ 
+ 
+## Sync Direction
 
-You can choose one way sync from Sugar Meetings to Google Calendar Events by checking "Update from Sugar", or Google Calendar Events to Sugar Meetings by checking "Update from Google" or check both options for bi-directional sync.
+•	To apply sync from Sugar Meetings to Google Calendar Events , select “Update from Sugar” and then specify the sync records actions:
+  o	Update Google Events
+  o	Create Google Events
+  o	Delete Google Events
+•	To apply sync from Google Calendar Events to Sugar Meetings, select “Update from Google” and then specify the sync records actions:
+  o	Update Sugar Records
+  o	Create Sugar Records
+  o	Delete Sugar Records
+•	To apply bi-directional sync, select both above options.
 
-You can also choose to do not not to do 1) Create, 2) Update 3) Delete on each sync direction. 
+
+## Sync Preview
+Displays all the applied changes after the sync:
+[screenshot]
 
 
-## Preview, History and Backlog
+## Sync History
+Displays a time based history for all synced records with their previous record details and the applied changes:
+[screenshot]
 
-You can check preview if you want to see what changes will be make after the sync.
 
-You can also see history of sync records with their previous record details and change made.
-
+## Sync Backlogs
 Backlogs are failed update, quarantine from synchronization. To participate in synchronization again, click release after manually inspecting each records.
+[screenshot]
