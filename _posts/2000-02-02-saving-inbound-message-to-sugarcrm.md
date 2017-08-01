@@ -6,20 +6,49 @@ index: 2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TcwbeEQsId0?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU"  frameborder="0" allowfullscreen></iframe>
 
-❶ To archive or save email message to Sugar, click Yathit menu and then select Archive email item. 
+{{ site }}  provides an easy way to save or archive any email message with all attachments to Sugar, as following steps:
 
- ![archive-menu](https://yathit-assets.storage.googleapis.com/web/archive-menu.png)
+❶ Open the email which you want to save or archive
 
-❷ That will bring archive dialog box as followed. Notice that related Contact and Account record are automatically populated for you base on sender email address.
+❷ Click on Yathit menu, and then select Archive email
 
  ![archive-dialog](https://yathit-assets.storage.googleapis.com/web/archive-dialog.png) 
 
-❸ Possible related record that you might want to relate with the email are also suggested. Click the item, if you want to relate with the record.
- 
-❹ Any type of records can be added as relationship. 
+❸ The below Archive Emaildialog will be displayed:
 
-❺ You can also search record to add a related link with the email.
+ ![archive-menu](https://yathit-assets.storage.googleapis.com/web/archive-menu.png)
 
-❻ To include the attachment, click the checkbox.
+❹ The archive email subject will be displayed with the ability to edit it if necessary.
 
-❼ Optionally, you can change the email subject.
+❺ {{ site }}  provides the ability to add various types of related records to the archived email:
+
+1.	Any type of records can be added as relationship (Contacts, Accounts, Cases, Meetings, Notes, Project, Tasks… etc.)
+
+[sceenshot]
+
+2.	The related Contacts and Account recordswill automatically be populated as per the sender email address
+
+[sceenshot]
+
+3.	Other possible suggested related record can be added easily by one click on the item
+
+[sceenshot]
+
+4.	To search for a specific related record, use Searchtext box then add theselected related record
+
+[sceenshot]
+
+5-	Click on the Attachments checkbox to archive the email attachments
+
+[sceenshot]
+
+Click on the Archive button to save the archive email immediately in the Sugar, or click on the Cancel button to close the Archive Email dialog and ignore the defined email archive information.
+
+
+* To view the archived email at Yathit, click on the Yathit menu, then select View Archive:
+
+[sceenshot]
+
+* The archived email will be displayed with all related records as below:
+
+[sceenshot]
