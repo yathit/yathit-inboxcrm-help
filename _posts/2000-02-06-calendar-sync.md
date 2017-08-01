@@ -49,26 +49,38 @@ The following notes should be considered when use the regular sync:
 ## Sync Direction
 
 •	To apply sync from Sugar Meetings to Google Calendar Events , select “Update from Sugar” and then specify the sync records actions:
+
   o	Update Google Events
+  
   o	Create Google Events
+  
   o	Delete Google Events
+  
 •	To apply sync from Google Calendar Events to Sugar Meetings, select “Update from Google” and then specify the sync records actions:
+
   o	Update Sugar Records
+  
   o	Create Sugar Records
+  
   o	Delete Sugar Records
+  
 •	To apply bi-directional sync, select both above options.
+
 
 
 ## Sync Preview
 Displays all the applied changes after the sync:
+
 [screenshot]
 
 
 ## Sync History
 Displays a time based history for all synced records with their previous record details and the applied changes:
+
 [screenshot]
 
 
 ## Sync Backlogs
 Backlogs are failed update, quarantine from synchronization. To participate in synchronization again, click release after manually inspecting each records.
+
 [screenshot]
