@@ -4,6 +4,10 @@ section: Admin Guide
 index: 5
 ---
 
+* TOC
+{:toc}
+
+
 ## Overview
 
 You can pre-reconfigure the Yathit InboxCRM Chrome Extension directly from Enterprise Configuration File, which is available in the [License Management](/portal/index.html) Portal. The configuration provides the capability to pre-configure all licensed users.
