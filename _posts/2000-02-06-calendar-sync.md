@@ -14,16 +14,18 @@ index: 7
 
 * To enable Calendar Sync, click the gear icon, {{ "settings" | svg_icon }}, on the sidebar and then click "Calendar Sync Setting". 
 
-[screenshot]
+{% include full-screenshot.html file="calendar-sync-setting.png" %}
+
 
 * Grant permissions on Google Calendar: Make sure to grant the proper permissions on Google Calendar as below:
 
-[screenshot]
+![calendar-grant-permission](https://yathit-assets.storage.googleapis.com/screenshot/calendar-grant-permission.png)
 
 Click Grant link, to open popup window that allow you to give YathitInboxCRM access to your calendar. Scroll down and click Accept.
 
 
 ## Automatic Regular Sync 
+
 To apply the automatic regular calendar sync, you need to define:
 
 ❶ Sync interval in minutes
@@ -43,7 +45,8 @@ The following notes should be considered when use the regular sync:
 
 
 ## Manual Sync
- To apply manual calendar sync whenever you need, select the sync direction settings and then click on the “Sync Now” button.
+
+To apply manual calendar sync whenever you need, select the sync direction settings and then click on the “Sync Now” button.
  
  
 ## Sync Direction
@@ -69,18 +72,20 @@ The following notes should be considered when use the regular sync:
 
 
 ## Sync Preview
-Displays all the applied changes after the sync:
 
-[screenshot]
+Displays what will happen if sync is performed:
 
-
+![cal-sync-preview](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-preview.png)
+ 
 ## Sync History
+
 Displays a time based history for all synced records with their previous record details and the applied changes:
 
-[screenshot]
-
+![cal-sync-history](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-history.png)
 
 ## Sync Backlogs
+
 Backlogs are failed update, quarantine from synchronization. To participate in synchronization again, click release after manually inspecting each records.
 
-[screenshot]
+![cal-sync-backlog](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-backlog.png)
+ 

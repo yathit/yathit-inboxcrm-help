@@ -19,7 +19,7 @@ Hover over to sender or recipient name in Gmail that you are interested in. Cont
 
 * In case the email address is new, Yathit will enable you to create a new lead, contact, or account record by click on the add button at the right panel:
 
-![create-record-context-widget](https://yathit-assets.storage.googleapis.com/screenshot/create-record-context-widget.png )
+![create-record-context-widget](https://yathit-assets.storage.googleapis.com/screenshot/create-record-context-widget.png)
 
 ### Create new SugarCRM records with Sidebar
 
