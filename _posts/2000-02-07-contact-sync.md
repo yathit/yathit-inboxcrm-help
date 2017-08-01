@@ -4,11 +4,15 @@ section: How To ...
 index: 6
 ---
 
-{{ site.product }} brings you bi-drectional Sugar Contact Sync with Gmail Contacts. You can quickly and easily sync contacts from Sugar to Google Contacts and your mobile devices.
+* {{ site.product }} provides a bi-directional sync of contacts between Google & Sugar.
 
-Click "Contact Sync Setting" tab in "Setting" panel to begin Contact sync configuration. The first step is to grant Google Contacts permission, if you have not grant so. 
+* You can quickly and easily sync contacts from Sugar to Google Contacts and your mobile devices.
 
+* To enable Contact Sync, click the “Contact Sync Setting” tab in the “Setting” panel. 
 
+[Screenshot]
+
+* Grant permissions on Google Contacts: Make sure to grant the proper permissions on Google Contacts as below:
 <details>
 <summary>Figure: How to grant permission</summary>
 {% include full-screenshot.html file="grant-contacts-permission.gif" %}
@@ -16,26 +20,70 @@ Click "Contact Sync Setting" tab in "Setting" panel to begin Contact sync config
 
 Click 'grant' link, this will pop up a window that asks you to give {{ site.product }} access to your contacts. Scroll down and click Accept.
 
-## Automatic sync
 
-Sync process can be configured very detail according to your need. The first option is whether to sync in regular interval or not. You can sync manually by clicking "Sync Now" button. If you choose to sync regularily, you can set sync interval in minutes. Sync happen only when you are running Chrome browser. Note: too frequent sync interval increase your server load.
+## Automatic Regular Sync 
 
-Sync operation are performance in batch in each sync period. Only 100 records will be sync at a time. The remaining records will be sync in next period.
+To apply the automatic regular contact sync, you need to define:
+
+❶ Sync interval in minutes
+
+❷ Sync direction settings
+
+The following notes should be considered when use the regular sync: 
+
+* The sync process will be executed only when Chrome browser is running.
+
+* Short sync interval definition might cause more load on your server.
+
+* Only 100 records will be sync at a time, the remained records will be synced in next period.
 
 {% include full-screenshot.html file="sync-setting-panel.png" %}
 
-## Sync direction
 
-You can choose one way sync from Sugar Contacts to Google Contacts by checking "Update from Sugar", or Google Contacts to Sugar Contacts by checking "Update from Google" or check both options for bi-directional sync.
+## Manual Sync 
 
-You can also choose to do not not to do 1) Create, 2) Update 3) Delete on each sync direction. 
+To apply manual contact sync whenever you need, select the sync direction settings and then click on the “Sync Now” button.
 
-Contacts with same email address between Gmail and Sugar are merged.
 
-## Preview, History and Backlog
+## Sync Direction
 
-You can check preview if you want to see what changes will be make after the sync.
+* To apply sync from Sugar Contacts to Google Contacts, select “Update from Sugar” and then specify the sync records actions:
 
-You can also see history of sync records with their previous record details and change made.
+  o	Update Google Contacts
+  
+  o	Create Google Contacts
+  
+  o	Delete Google Contacts
+  
+* To apply sync from Google Contacts Events to Sugar Contacts, select “Update from Google” and then specify the sync records actions:
+
+  o	Update Sugar Records
+  
+  o	Create Sugar Records
+  
+  o	Delete Sugar Records
+  
+* To apply bi-directional sync, select both above options.
+
+* Contacts with same email address between Gmail and Sugar are merged.
+
+
+## Sync Preview
+
+Displays all the applied changes after the sync:
+
+[screenshot]
+
+
+## Sync History
+
+Displays a time based history for all synced records with their previous record details and the applied changes:
+
+[screenshot]
+
+
+## Sync Backlogs
 
 Backlogs are failed update, quarantine from synchronization. To participate in synchronization again, click release after manually inspecting each records.
+
+[screenshot]
