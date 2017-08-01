@@ -23,12 +23,19 @@ Hover over to sender or recipient name in Gmail that you are interested in. Cont
 
 ### Create new SugarCRM records with Sidebar
 
-* To create a new Lead record, you can either type email address or full name to the search input and then click search button, {{ "search" | svg_icon }}, or press enter. 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nE09-8xddHU?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU" frameborder="0" allowfullscreen></iframe>
 
-![create-record-context-widget](https://yathit-assets.storage.googleapis.com/screenshot/create-record-context-widget.png )
+❶ In _Sidebar_ click Sugar _Record Browser_ panel tab, {{ "sugarcrm" | svg_icon }}.
 
-Edit the fields as necessary and click _submit button_, {{ "check-circle" | svg_icon }}, on the header.
+❷ In _Record Browser_, select the module you want to create. 
 
+![module-panel-create-record](https://yathit-assets.storage.googleapis.com/screenshot/module-panel-create-record.png )
+
+❸ Click _Add Record_, {{ "plus" | svg_icon }}, button to create a new record.
+
+❹ Fill in the record fields as needed and click _Save_ button to create a new record.
+
+![record-edit-panel](https://yathit-assets.storage.googleapis.com/screenshot/record-edit-panel.png )
 
 
 
