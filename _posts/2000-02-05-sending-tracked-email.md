@@ -15,7 +15,7 @@ Let us see how it works.
 
 ## How to track an email
 
-To track an outbound email, select the Tracking check box when compose or reply a message: 
+To track an outbound email, select the *Track* checkbox when compose or reply a message: 
 
 {% include full-screenshot.html file="sending-tracked-email.png" %}
 <br/>
