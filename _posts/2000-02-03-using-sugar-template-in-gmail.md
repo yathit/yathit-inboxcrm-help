@@ -28,7 +28,7 @@ index: 3
 
 * The dynamic fields can be used in both email subject and content
 
-* Yathit template is also available in email reply panel:
+* {{ site }} template is also available in email reply panel:
 
 [Screenshot]
 
@@ -40,7 +40,7 @@ index: 3
 
 ![filled-template](https://yathit-assets.storage.googleapis.com/web/filled-template.png)
 
-❹ To create a new Yathit template in Sugar, click on New template… menu. This will forward you to the Create New Template page in your SugarCRM portal. After finish creating new template in SugarCRM portal, click on “Refresh” button to get the Yathit templates list updated.
+❹ To create a new {{ site }}  template in Sugar, click on New template… menu. This will forward you to the Create New Template page in your SugarCRM portal. After finish creating new template in SugarCRM portal, click on “Refresh” button to get the Yathit templates list updated.
 
 [Screenshots for creating new Yathit template in SugarCRM portal]
 
