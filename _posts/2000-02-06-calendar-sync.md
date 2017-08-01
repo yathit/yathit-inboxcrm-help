@@ -4,19 +4,19 @@ section: How To ...
 index: 7
 ---
 
-•	{{ site.product }} provides a bi-directional sync of events between Google & Sugar.
+* {{ site.product }} provides a bi-directional sync of events between Google & Sugar.
 
-•	Events created and edited in either platform will automatically be synced to the other hourly. 
+* Events created and edited in either platform will automatically be synced to the other hourly. 
 
-•	With YathitInboxCRM you have the only solution that automatically syncs events to corresponding attendee records in Sugar.
+* With YathitInboxCRM you have the only solution that automatically syncs events to corresponding attendee records in Sugar.
 
-•	Only upcoming Meetings records that you participated in are sync.
+* Only upcoming Meetings records that you participated in are sync.
 
-•	To enable Calendar Sync, click the gear icon, {{ "settings" | svg_icon }}, on the sidebar and then click "Calendar Sync Setting". 
+* To enable Calendar Sync, click the gear icon, {{ "settings" | svg_icon }}, on the sidebar and then click "Calendar Sync Setting". 
 
 [screenshot]
 
-•	Grant permissions on Google Calendar: Make sure to grant the proper permissions on Google Calendar as below:
+* Grant permissions on Google Calendar: Make sure to grant the proper permissions on Google Calendar as below:
 
 [screenshot]
 
@@ -26,17 +26,17 @@ Click Grant link, to open popup window that allow you to give YathitInboxCRM acc
 ## Automatic Regular Sync 
 To apply the automatic regular calendar sync, you need to define:
 
- 1-	Sync interval in minutes
+❶ Sync interval in minutes
 
- 2-	Sync direction settings
+❷ Sync direction settings
 
 The following notes should be considered when use the regular sync: 
 
- •	The sync process will be executed only when Chrome browser is running.
+* The sync process will be executed only when Chrome browser is running.
 
- •	Short sync interval definition might cause more load on your server.
+* Short sync interval definition might cause more load on your server.
 
- •	Only 100 records will be sync at a time, the remained records will be synced in next period.
+* Only 100 records will be sync at a time, the remained records will be synced in next period.
 
 
 {% include full-screenshot.html file="calendar-sync-setting.png" %}
@@ -48,7 +48,7 @@ The following notes should be considered when use the regular sync:
  
 ## Sync Direction
 
-•	To apply sync from Sugar Meetings to Google Calendar Events , select “Update from Sugar” and then specify the sync records actions:
+* To apply sync from Sugar Meetings to Google Calendar Events , select “Update from Sugar” and then specify the sync records actions:
 
   o	Update Google Events
   
@@ -56,7 +56,7 @@ The following notes should be considered when use the regular sync:
   
   o	Delete Google Events
   
-•	To apply sync from Google Calendar Events to Sugar Meetings, select “Update from Google” and then specify the sync records actions:
+* To apply sync from Google Calendar Events to Sugar Meetings, select “Update from Google” and then specify the sync records actions:
 
   o	Update Sugar Records
   
@@ -64,7 +64,7 @@ The following notes should be considered when use the regular sync:
   
   o	Delete Sugar Records
   
-•	To apply bi-directional sync, select both above options.
+* To apply bi-directional sync, select both above options.
 
 
 
