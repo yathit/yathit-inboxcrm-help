@@ -10,7 +10,7 @@ index: 6
 
 * To enable Contact Sync, click the “Contact Sync Setting” tab in the “Setting” panel. 
 
-[Screenshot]
+![contact-sync-setting](https://yathit-assets.storage.googleapis.com/screenshot/contact-sync-setting.png)
 
 * Grant permissions on Google Contacts: Make sure to grant the proper permissions on Google Contacts as below:
 <details>
@@ -72,18 +72,19 @@ To apply manual contact sync whenever you need, select the sync direction settin
 
 Displays all the applied changes after the sync:
 
-[screenshot]
-
+![cal-sync-preview](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-preview.png)
+ 
 
 ## Sync History
 
 Displays a time based history for all synced records with their previous record details and the applied changes:
 
-[screenshot]
+![cal-sync-history](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-history.png)
 
 
 ## Sync Backlogs
 
 Backlogs are failed update, quarantine from synchronization. To participate in synchronization again, click release after manually inspecting each records.
 
-[screenshot]
+![cal-sync-backlog](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-backlog.png)
+ 
