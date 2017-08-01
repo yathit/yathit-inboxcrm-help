@@ -22,28 +22,30 @@ index: 2
 
 ❺ {{ site }}  provides the ability to add various types of related records to the archived email:
 
-♦ Any type of records can be added as relationship (Contacts, Accounts, Cases, Meetings, Notes, Project, Tasks… etc.)
+* Any type of records can be added as relationship (Contacts, Accounts, Cases, Meetings, Notes, Project, Tasks… etc.)
 
 [sceenshot]
 
-♦ The related Contacts and Account recordswill automatically be populated as per the sender email address
+* The related Contacts and Account recordswill automatically be populated as per the sender email address
 
 [sceenshot]
 
-♦ Other possible suggested related record can be added easily by one click on the item
+* Other possible suggested related record can be added easily by one click on the item
 
 [sceenshot]
 
-♦ To search for a specific related record, use Searchtext box then add theselected related record
+* To search for a specific related record, use Searchtext box then add theselected related record
 
 [sceenshot]
 
-♦ Click on the Attachments checkbox to archive the email attachments
+* Click on the Attachments checkbox to archive the email attachments
 
 [sceenshot]
 
 Click on the Archive button to save the archive email immediately in the Sugar, or click on the Cancel button to close the Archive Email dialog and ignore the defined email archive information.
 
+
+## view Archived Email
 
 * To view the archived email at Yathit, click on the Yathit menu, then select View Archive:
 
