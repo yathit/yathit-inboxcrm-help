@@ -10,6 +10,8 @@ index: 1
 
 With the [License Management portal](https://www.yathit.com/portal/index.html), users can easily be assigned with a purchased subscription. 
 
+Users can assign a person via email to have access to the licence's and 'Subscriptions' on a page.
+
 {% include screenshot.html file="license-portal.png" %}
 
 
