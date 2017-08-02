@@ -10,12 +10,12 @@ index: 1
 
 With the [License Management portal](https://www.yathit.com/portal/index.html), users can easily be assigned with a purchased subscription. 
 
-Users can assign a person via email to have access to the licence's and 'Subscriptions' on the page.
-
 {% include screenshot.html file="license-portal.png" %}
 
 
 ## Enterprise licensing 
+
+Users can assign a person via email to have access to the licence's and 'Subscriptions' on the page.
 
 Any Google domain admin or a person who has access to the Admin Directory API can easily manage not only the bill payments but also the usage auditing as well. To do this, login to the [Yathit Admin Portal](https://www.yathit.com/portal/crm-admin.html). 
 
