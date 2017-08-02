@@ -12,7 +12,7 @@ index: 3
 
 ![template-receipent](https://yathit-assets.storage.googleapis.com/web/template-receipent.png)
 
-* {{ site }} will help you search and find the email addresses from your Sugar, just click on the Search [SearchIcon] icon in right side of recipients, and select the email recipients from SugarCRM contacts list.
+* {{ site.product }} will help you search and find the email addresses from your Sugar, just click on the Search {{ "search" | svg_icon }} icon in right side of recipients, and select the email recipients from SugarCRM contacts list.
 
 * Note: The email addresses from Leads, Accounts and Contacts records are suggested.
 
@@ -22,15 +22,15 @@ index: 3
 
 ![template-menu](https://yathit-assets.storage.googleapis.com/web/template-menu.png)
 
-* Select the {{ site }} template from the menu that you want to use
+* Select the {{ site.product }} template from the menu that you want to use
 
-* {{ site }} will merge dynamic fields (such as, contact name, address, related cases, etc.) in Sugar template with the given contact by its related records
+* {{ site.product }} will merge dynamic fields (such as, contact name, address, related cases, etc.) in Sugar template with the given contact by its related records
 
 * The dynamic fields can be used in both email subject and content
 
-* {{ site }} template is also available in email reply panel:
+* {{ site.product }} template is also available in email reply panel:
 
-[Screenshot]
+Screenshot
 
 * The following is raw template in the CRM:
 
@@ -42,6 +42,6 @@ index: 3
 
 ❹ To create a new {{ site }}  template in Sugar, click on New template… menu. This will forward you to the Create New Template page in your SugarCRM portal. After finish creating new template in SugarCRM portal, click on “Refresh” button to get the Yathit templates list updated.
 
-[Screenshots for creating new Yathit template in SugarCRM portal]
+Screenshots for creating new Yathit template in SugarCRM portal
 
 
