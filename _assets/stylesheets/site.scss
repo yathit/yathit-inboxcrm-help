@@ -657,3 +657,18 @@ TABLE.playlist TD:last-child {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.step-number {
+  display: inline-block;
+  color: white;
+  background-color: rgb(233, 75, 68);
+  height: 22px;
+  width: 22px;
+  border-radius: 12px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+}

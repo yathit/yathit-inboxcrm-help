@@ -1,7 +1,7 @@
 name: Yathit Help
 baseurl: /sugarcrm-gmail
 permalink: /:title.html
-product: Yathit InboxCRM
+product: Yathit Browser Extension
 gems: 
   - jekyll-assets
   - jekyll-last-modified-at
