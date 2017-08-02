@@ -22,13 +22,13 @@ index: 3
 
 ![template-menu](https://yathit-assets.storage.googleapis.com/web/template-menu.png)
 
-* Select the {{ site.product }} template from the menu that you want to use
+* Select the template from the menu that you want to use.
 
 * {{ site.product }} will merge dynamic fields (such as, contact name, address, related cases, etc.) in Sugar template with the given contact by its related records
 
 * The dynamic fields can be used in both email subject and content
 
-* {{ site.product }} template is also available in email reply panel:
+* Template menu is also available in email reply panel:
 
 Screenshot
 
@@ -41,7 +41,5 @@ Screenshot
 ![filled-template](https://yathit-assets.storage.googleapis.com/web/filled-template.png)
 
 ❹ To create a new Sugar template in Sugar, click on New template… menu. This will forward you to the Create New Template page in your SugarCRM portal. After finish creating new template in SugarCRM portal, click on “Refresh” button to get the Yathit templates list updated.
-
-Screenshots for creating new Yathit template in SugarCRM portal
 
 
