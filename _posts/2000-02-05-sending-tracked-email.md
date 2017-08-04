@@ -1,6 +1,6 @@
 ---
 title: Track Email
-section: How To ...
+section: User Guide
 index: 5
 ---
 
