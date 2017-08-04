@@ -89,7 +89,7 @@ You can also upload any attachment to the SugarCRM’s Documents module directly
 
 * In case, the attachment is already available on the SugarCRM’s Document module, you will not see the Upload button. Rather you will see the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon. Clicking this icon will provide you details about the attachment on the side panel. If you want more details, you can visit to the Record detail page in the SugarCRM.
 
-# Archive Inbound Email
+## Archive Inbound Email
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TcwbeEQsId0?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU"  frameborder="0" allowfullscreen></iframe>
 
