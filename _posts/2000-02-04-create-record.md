@@ -1,6 +1,6 @@
 ---
 title: Manage records
-section: How To ...
+section: User Guide
 index: 4
 ---
 
