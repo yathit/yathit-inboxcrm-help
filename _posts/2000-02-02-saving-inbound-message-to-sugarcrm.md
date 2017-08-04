@@ -1,6 +1,6 @@
 ---
 title: Archive Email
-section: How To ...
+section: User Guide
 index: 2
 ---
 
