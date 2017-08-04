@@ -1,6 +1,6 @@
 ---
 title: Sync Calendar
-section: How To ...
+section: User Guide
 index: 7
 ---
 
