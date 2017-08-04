@@ -1,6 +1,6 @@
 ---
 title: Sync Contact 
-section: How To ...
+section: User Guide
 index: 6
 ---
 
