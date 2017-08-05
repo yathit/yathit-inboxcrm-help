@@ -4,7 +4,7 @@ section: User Guide
 index: 2
 ---
 
-# Email Archive Settings
+## Email Archive Settings
 
 SugarCRM makes archiving of email messages easier and faster through the Yathit toolbar.
 
@@ -30,15 +30,15 @@ Email messages are saved on SugarCRM as HTML email version and only text version
 
 the below archiving configurations are available:
 
-* [Always Archived]: all your outgoing email messages from your browser are saved in the SugarCRM.
+* **Always Archived**: all your outgoing email messages from your browser are saved in the SugarCRM.
 
-* [Archived Normally]: Archive all outgoing emails in SugarCRM. If you don't want to archive all emails, then uncheck the “archive” option in the message toolbar. 
+* **Archived Normally**: Archive all outgoing emails in SugarCRM. If you don't want to archive all emails, then uncheck the “archive” option in the message toolbar. 
 
-* [Not Archived Normally]: Means your outgoing emails will not be saved in the SugarCRM.
+* **Not Archived Normally**: Means your outgoing emails will not be saved in the SugarCRM.
 
-* [Enabled for Archiving]: This is the default settings option. With this option activated, your previous email archive selection will become active.
+* **Enabled for Archiving**: This is the default settings option. With this option activated, your previous email archive selection will become active.
 
-* [Disabled for Archive]: For those who do not want to use the archive feature can select this option.
+* **Disabled for Archive**: For those who do not want to use the archive feature can select this option.
 
 
 ## Relationship record suggestion
@@ -60,7 +60,7 @@ Gmail is a necessity for anyone who uses the net, whether personal or business a
 {{site.product}} offers an easy option for saving your mails in SugarCRM. And, to do this all you have to do is click the {{ "ydn-logo-bw" | svg_icon }} icon in the Gmail message toolbar.
 
 
-# Archiving Emails
+## Archiving Emails
 
 {% include screenshot.html file="archive-email.gif" %}
 
