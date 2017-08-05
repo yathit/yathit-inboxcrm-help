@@ -19,7 +19,7 @@ module Jekyll
   # Display step number.
   #
   module ScreenShootInjector
-    def screenshoot(name)
+    def screenshot(name)
       out = '<p><img class="img-responsive" src="https://yathit-assets.storage.googleapis.com/screenshot/'
       out << "#{name}"
       out << '"/></p>'

@@ -10,17 +10,17 @@ index: 3
 
 ❷ Fill the recipient email in the To field
 
-{{ "template-receipent.png" | screenshoot }}
+{{ "template-receipent.png" | screenshot }}
 
 * {{ site.product }} will help you search and find the email addresses from your Sugar, just click on the Search icon, {{ "search" | svg_icon }}, in right side of recipients, and select the email recipients from SugarCRM contacts list.
 
 * Note: The email addresses from Leads, Accounts and Contacts records are suggested.
 
-{{ "template-receipent-suggest.png" | screenshoot }}
+{{ "template-receipent-suggest.png" | screenshot }}
 
 ❸ To use an already defined Yathit template, click on the Template button to open the Template Menu:
 
-{{ "template-menu.png" | screenshoot }}
+{{ "template-menu.png" | screenshot }}
 
 * Select the template from the menu that you want to use.
 
@@ -34,11 +34,11 @@ Screenshot
 
 * The following is raw template in the CRM:
 
-{{ "raw-template.png" | screenshoot }}
+{{ "raw-template.png" | screenshot }}
 
 * {{ site.product }} automatically merges dynamic fields and compose message as follow:
 
-{{ "filled-template.png" | screenshoot }}
+{{ "filled-template.png" | screenshot }}
 
 ❹ To create a new Sugar template in Sugar, click on New template… menu. This will forward you to the Create New Template page in your SugarCRM portal. After finish creating new template in SugarCRM portal, click on “Refresh” button to get the Yathit templates list updated.
 

@@ -14,7 +14,7 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
     
 * Go to [http://localhost:4000/sugarcrm-gmail/(http://localhost:4000/sugarcrm-gmail/)
 
-## Uploading screenshoot
+## Uploading screenshot
 
     gsutil -m rsync -r ../../screenshot gs://yathit-assets/screenshot 
     
