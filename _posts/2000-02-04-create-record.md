@@ -16,7 +16,6 @@ Yathit Chrome Extension provides a unique and easy way to create, search, browse
 
 
 ## Create Records
-<iframe width="560" height="315" src="https://www.youtube.com/embed/byJT5n154xg?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU" frameborder="0" allowfullscreen></iframe>
 
 Yathit provides various ways to define and manage SugarCRM records with more convenient and smarter fashion as below:
 
