@@ -686,3 +686,7 @@ TABLE.playlist TD:last-child {
   width: 100%;
   height: 100%;
 }
+
+.content-wrapper P > IMG {
+  max-width: 100%;
+}

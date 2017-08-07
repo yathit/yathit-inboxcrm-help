@@ -14,9 +14,10 @@ This article will give you an overview of what you can do with this simple but p
 ## Send your first mail merge
 
 ### Create your Sugar template
+
 To create a new Sugar template in Sugar, click on New template… menu. This will forward you to the Create New Template page in your SugarCRM portal. After finish creating new template in SugarCRM portal, click on “Refresh” button to get the Yathit templates list updated.
 
-[Screenshots]
+{{ "template-menu.png" | screenshot }}
 
 ### Start your mail merge using Yathit
 
@@ -46,7 +47,7 @@ To create a new Sugar template in Sugar, click on New template… menu. This wil
 
 * Template menu is also available in email reply panel:
 
-[Screenshot]
+{{ "template-menu-in-reply.png" | screenshot }}
 
 * The following is raw template in the CRM:
 
@@ -57,8 +58,6 @@ To create a new Sugar template in Sugar, click on New template… menu. This wil
 {{ "filled-template.png" | screenshot }}
 
 
-Congratulations! You have now successfully sent your first campaign with Yathit. Here's an example of what your recipients received in their inbox:
-
-[Screenshot]
+Congratulations! You have now successfully sent your first campaign with Yathit. 
 
 

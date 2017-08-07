@@ -76,16 +76,13 @@ You can also upload any attachment to the SugarCRM’s Documents module directly
 
 After email is archived, the archive menu label change to 'View Archive' and Yathit icon into cloud icon, {{ "cloud-done" | svg_icon}}. To view the archived email, click the 'View Archive' menu item:
 
-[Screenshot]
-
+{{ "view-archive.png" | screenshot }}
 
 * You can also view your archived email via your SugarCRM Account's contact, leads, opportunities, or case modules and this is easily done without having you to leave your working module:
 
-[Screenshot]
+{{ "related-records-panel-email.png" | screenshot }}
 
 * In fact, the archiving ability of SugarCRM allows you to easily store your Gmail messages into the SugarCRM record of your account, contacts, or cases. You also get a complete record of your communication as all your Gmail attachments, images, and calendar events get updated instantly:
-
-[Screenshot]
 
 <hr>
 
