@@ -16,7 +16,7 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 
 ## Uploading screenshot
 
-    gsutil -m rsync -r ../../screenshot gs://yathit-assets/screenshot 
+    gsutil -m rsync -r ~/screenshot gs://yathit-assets/screenshot 
     
 List files
 
