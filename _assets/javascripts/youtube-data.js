@@ -78,7 +78,7 @@ function renderItems(items) {
 
 function listVideo() {
   gapi.client.youtube.playlistItems.list({
-    'maxResults': '10',
+    'maxResults': '20',
     'part': 'contentDetails',
     'playlistId': 'PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU'
   }).then(function (x) {

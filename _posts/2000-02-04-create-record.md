@@ -63,8 +63,6 @@ Yathit use various smart logic to pre-filled fields when creating record dependi
 
 ### In Sidebar
 
-{{ ""nE09-8xddHU" | youtube_popup }}
-
 
 ![right-float-image](https://yathit-assets.storage.googleapis.com/screenshot/module-panel-create-record.png )
  ❶ In _Sidebar_ click Sugar _Record Browser_ panel tab, {{ "sugarcrm" | svg_icon }}.
@@ -83,8 +81,6 @@ Yathit use various smart logic to pre-filled fields when creating record dependi
 
 
 ### In Context widget
-
-{{ ""byJT5n154xg" | youtube_popup }}
 
 Inside email message view, a context panel is displayed on the right side of the email targeting either sender or a recipient. To change the target hover over the sender or recipient. If the target email is found in CRM (in lead, contact or account modules only), its detail is shown. If not found, buttons appear to create or merge with an existing record. The suggested existing records is search by name. 
 
