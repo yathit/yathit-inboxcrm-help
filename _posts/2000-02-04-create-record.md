@@ -4,157 +4,124 @@ section: User Guide
 index: 4
 ---
 
+Yathit provide easy way to create, update, delete or search any record from any module that you have access to.
+
 * TOC
 {:toc}
 
-Every organization can perform better by being in complete control of the information it creates, processes, and preserves.
 
-Our aim is to help you maximize the value of your corporate memory through the active management and smart information usage from creation through to eventual long-term preservation.
+## Browse
 
-Yathit Chrome Extension provides a unique and easy way to create, search, browse, edit, delete and relate any SugarCRM records, which is available in [Sugar Web Services](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Application_Framework/Web_Services/) API. Yathit use both old [REST v4 API](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Application_Framework/Web_Services/REST/) and new [REST v10 API](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.8/Integration/Web_Services/v10/) depending on availability. 
+❶ Click _the record browse tab_ or _the Sugar tab_, {{ "sugarcrm" | svg_icon }}, on _The Sidebar_ to browse Sugar records. 
 
+❷ A list of modules are display initially, Click on the module you want to browse. You can also select module by the menu on the top toolbar of the browse module panel. 
 
+Browsable module list can be configure via configuration script. There is also an option to show all module in _The Sugar setting panel_.
 
-## Create Records
+Record items are listed on the the panel of the selected module. List can be filtered and sorted using the menu.
 
-Yathit provides various ways to define and manage SugarCRM records with more convenient and smarter fashion as below:
-
-### Create new SugarCRM records using Context widget
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/byJT5n154xg?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU" frameborder="0" allowfullscreen></iframe>
-
-* Creating a new Lead record inside Gmail [Context Widget](../context/index.html) is a little different, more convenient and smarter. 
-
-* When open a new email thread, Gmail shows _info column_ on the right side of the main panel. The top of Gmail info column is about _the most relevant contact_ panel. If there are more contacts involved in the email, additional contact link are provided under the most relevant contact. (Sometimes it may happen that the most relevant contact is not available for some email like system generated message). 
-
-* Yathit InboxCRM context widget panel is injected just below the most relevant contact panel. Email address and its full name are taken to the context widget panel and retrieve from SugarCRM records. If any SugarCRM record is found matching the email address, the record is shown. Otherwise, it is hidden and only _search input_ is shown.
-
-* To create a new Lead record, you can either type email address or full name to the search input and then click search button, {{ "search" | svg_icon }}, or press enter. You may also use auto suggested list in the search input. The new Lead record form will appear below the search input box with email or full name field filled. If social add-on is available, additional contact field values will be fill up from publicly available information from multiple social networks.
-
-* Edit the fields as necessary and click _submit button_, {{ "check-circle" | svg_icon }}, on the header.
+To see record detail and edit it, click on the record item heading. On hovering over the record item will also show record detail on the hover popup panel.
 
 
-### Create new SugarCRM records inside Gmail message view with Context Widget
+## Search 
 
-* In the Gmail message view, Yathit extension will lookup/filter the sender and recipients email addresses to your CRM, and the info column on the right side of the main panel will be displayed:
+Yathit use both server and client side search and hence more sensitive then Sugar search provided. In client side search, Yathit is fuzzy search on name so that you can search without knowing the exact spelling. You can also search email address, phone number, record id and case number, etc. 
 
-![hover-to-view-context-widget](https://yathit-assets.storage.googleapis.com/screenshot/hover-to-view-context-widget.png)
+### In search panel
 
-Hover over to sender or recipient name in Gmail that you are interested in. Context Widget will display it accordingly. 
+❶ Click _the search tab_, {{ "search" | svg_icon }}, on _The Sidebar_ to search Sugar records. 
 
-* In case the email address is new, Yathit will enable you to create a new lead, contact, or account record by click on the add button at the right panel:
+❷ Enter the search query in the search input and press enter or click search button, {{ "search" | svg_icon }}.
+
+{{ "search-panel-tab.png" | screenshot }}
+
+Similar to browse panel, record list item are displayed as search result and can be see detail by clicking or hovering the item.
+
+To search on specific module change module menu on the toolbar beside the search input box. When no module are selected, search result displayed from all modules. 
+
+
+### In snapshot panel
+
+_The snapshot tab_ is used to quickly search people records, i.e, any record having first and last name such as Accounts, Leads and Contacts records. Unlike search tab, snapshot tab search as you type and only record is displayed in the result panel as snapshot. 
+
+{{ "snapshot-panel.png" | screenshot }}
+
+Snapshot panel is designed such that it should all relevant information without additional user input requirement. 
+
+The top parts has quick action buttons, to create Tasks, Log call or create a Cases. The created such activities are linked to the record. Brief info panel show key information commonly needed.
+
+Quick Panels sections can show Activity, Cases and Opportunity panels. What panels can be shown are configuration in settings.
+
+Related records panel show related with the current records and its parent records. For example a Contact record may be parent Account records. In that case related records are shown from both Contact and its Account. 
+
+The snapshot panel is also shown in the _Context Widget_ in email message view.
+
+
+## Create 
+
+Yathit use various smart logic to pre-filled fields when creating record depending on context.
+
+### In Sidebar
+
+{{ ""nE09-8xddHU" | youtube_popup }}
+
+
+![right-float-image](https://yathit-assets.storage.googleapis.com/screenshot/module-panel-create-record.png )
+ ❶ In _Sidebar_ click Sugar _Record Browser_ panel tab, {{ "sugarcrm" | svg_icon }}.
+
+❷ In _Record Browser_, select the module you want to create. 
+
+❸ Click **Add Record**, {{ "plus" | svg_icon }}, button to create a new record.
+
+<div class="clearfix"></div>
+
+❹ Fill in the record fields as needed.
+
+{{ "record-edit-panel.png" | screenshot }}
+
+❺ Click **Save** button to create a new record.
+
+
+### In Context widget
+
+{{ ""byJT5n154xg" | youtube_popup }}
+
+Inside email message view, a context panel is displayed on the right side of the email targeting either sender or a recipient. To change the target hover over the sender or recipient. If the target email is found in CRM (in lead, contact or account modules only), its detail is shown. If not found, buttons appear to create or merge with an existing record. The suggested existing records is search by name. 
+
+If merge button is clicked, the sender/recipient address is added to the existing record. 
+
+If create record is clicked, a new record is created with name, email address and other available information. You can create contact, lead or account. To change that, click the drop down arrow beside the button.
+
 
 ![create-record-context-widget](https://yathit-assets.storage.googleapis.com/screenshot/create-record-context-widget.png)
 
 
-### Create new SugarCRM records with Sidebar
+## Update
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nE09-8xddHU?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU" frameborder="0" allowfullscreen></iframe>
+To update a record, search the record either by **searching** or **browsing**. Click the record item, which will bring the record into edit panel, {{ "pencil" | svg_icon }}.
 
-❶ In _Sidebar_ click Sugar _Record Browser_ panel tab, {{ "sugarcrm" | svg_icon }}.
+Edit the fields as necessary and click _Save button_ on the header. 
 
-❷ In _Record Browser_, select the module you want to create. 
+The _record edit panel_ has a _header_ and _content_. Top header has an SugarCRM _record type icon_ on the left and a more menu button, {{ "more-vert" | svg_icon }},  on the right. Record type icon has two characters symbol of the record type, in this case, "Co" with record type color for _Contact_. Notice that header has as "View in CRM" web link, {{ "launch" | svg_icon }} to view the record in Sugar portal.
 
-![module-panel-create-record](https://yathit-assets.storage.googleapis.com/screenshot/module-panel-create-record.png )
+The content panel consists input for record fields compartmentalized by their groups. Group are Sugar meta data when defining record fields, such as 'first_name' and 'last_name' are in 'name' group. Address group has multiple fields for 'country', 'city', 'address_1', etc. 
 
-❸ Click _Add Record_, {{ "plus" | svg_icon }}, button to create a new record.
-
-❹ Fill in the record fields as needed and click _Save_ button to create a new record.
-
-![record-edit-panel](https://yathit-assets.storage.googleapis.com/screenshot/record-edit-panel.png )
+Not all fields are displayed in the content panel, such as record 'id' fields, which is only used in referencing in programming logic. Field can be show or hide by changing setting in the "Fields..." menu from the hamburger menu. Some field are read only or computed properties and cannot be change, but can still be displayed.
 
 
-### Create new SugarCRM records using browse record panel
+## Delete 
 
-* On the browse record panel, click plus icon, {{ "plus" | svg_icon }}, on the toolbar to create a new record which bring to _record edit panel_. 
-
-![create-new-record](https://yathit-assets.storage.googleapis.com/screenshot/create-new-record.gif) 
-
-* The _record form_ has a _header_ and _content_. Top header has an SugarCRM _record type icon_ on the left and a more menu button, {{ "more-vert" | svg_icon }},  on the right. 
-
-* Record type icon has two characters symbol of the record type, in this case, "Co" with record type color for _Contact_. To change type of record to be created, use the menu to change it.
-
-* The content panel consists input for record fields compartmentalized by their groups. 
-
-  o	If a field does not have group, it is placed under the default group. 
-  
-  o	The label of a field can be seen by tooltip over the field input. 
-  
-  o	Not all fields are displayed in the content panel. 
-  
-  o	Field can be show or hide by changing setting in the "Fields..." menu from the hamburger menu. 
-  
-  o	Some field are read only and cannot be change, but still be displayed.
-
-* Edit the fields as necessary and click _Save button_ on the header. 
-
-* The submit button appears automatically if content value(s) is dirty (change from initial value). Clicking submit button will send a new record create request to SugarCRM backend server. If success, header and content will be update with field values received from the server. 
-
-* Notice that header now should record label (Contact's full name) as web link to SugarCRM record view. You may use the web link to see record in SugarCRM web app.
-
-
-## Browse Records
-
-* Click _the record browse tab_ or _the Sugar tab_, {{ "sugarcrm" | svg_icon }}, on _The Sidebar_ to browse Sugar records. 
-
-* A list of modules are display initially, Click on the module you want to browse. 
-
-* You can also select module by the menu on the top toolbar of the browse module panel. 
-
-* Browsable module list can be configure via configuration script. 
-
-* There is also an option to show all module in _The Sugar setting panel_.
-
-![record-browse-panel](https://yathit-assets.storage.googleapis.com/screenshot/record-browser-with-popup.png) 
-
-* Record items are listed on the the panel of the selected module. List can be filtered and sorted using the menu.
-
-* To see record detail and edit it, click on the record item heading. On hovering over the record item will also show record detail on the hover popup panel.
-
-
-## Search Records
-
-* Click _the search tab_, {{ "search" | svg_icon }}, on _The Sidebar_ to search Sugar records. 
-
-![search-panel](https://yathit-assets.storage.googleapis.com/screenshot/search-panel-tab.png) 
-
-* Similar to browse panel, record list item are displayed as search result and can be see detail by clicking or hovering the item.
-
-* To search on specific module change module menu on the toolbar beside the search input box. When no module are selected, search result displayed from all modules. 
-
-* Full text search is used so that in-exact phase or phonetic synonym or similar word can be used to query.
-
-
-## Searching people with snapshot result
-
-* _The snapshot tab_ is used to quickly search people records, i.e, any record having first and last name such as Accounts, Leads and Contacts records. 
-
-* Unlike search tab, snapshot tab search as you type and only record is displayed in the result panel as snapshot.
-
-![snapshot-panel](https://yathit-assets.storage.googleapis.com/screenshot/snapshot-panel.png) 
-
-* Snapshot panel is designed and configurable such that it should all relevant information without additional user input requirement. 
-
-* The top parts has quick action buttons, to create Tasks, Log call or create a Cases. The created such activities are linked to the record. 
-
-* Brief info panel show key information commonly needed.
-
-* Quick Panels sections can show Activity, Cases and Opportunity panels. What panels can be shown are configuration in settings.
-
-* Related records panel show related with the current records and its parent records. For example a Contact record may be parent Account records. In that case related records are shown from both Contact and its Account. 
-
-* The snapshot panel is also shown in the _Email Context Panel_.
-
-
-## Delete Record
+{% include side-image.html file="delete-Leads.gif" %}
 
 * To delete a record, search the record you want to delete. Click search button tab, {{ "magnifying-glass" | svg_icon }}, on the Sidebar. 
 
-{% include side-image.html file="delete-Leads.gif" %}
+
 
 * Click delete menu item from the hamburger menu, {{ "menu" | svg_icon }}, on the right of record header to delete the record.
 
 * A message should appear to notify the record is deleted.
 
+## Access right
 
+Yathit Chrome Extension provides a unique and easy way to create, search, browse, edit, delete and relate any SugarCRM records, which is available in [Sugar Web Services](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Application_Framework/Web_Services/) API. Yathit use both old [REST v4 API](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Application_Framework/Web_Services/REST/) and new [REST v10 API](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.8/Integration/Web_Services/v10/) depending on availability. 
 

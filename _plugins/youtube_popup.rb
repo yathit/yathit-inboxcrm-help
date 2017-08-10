@@ -16,15 +16,15 @@ require "jekyll/assets_plugin/asset_path"
 
 module Jekyll
   #
-  # Display step number.
+  # Youtube Popup button.
   #
-  module ScreenShootInjector
-    def screenshot(name)
-      out = '<div class="image-section"><img class="img-responsive" src="https://yathit-assets.storage.googleapis.com/screenshot/'
+  module YoutubePopupInjector
+    def youtube_popup(name)
+      out = '<div class="image-section"><button class="youtube-popup" rel="'
       out << "#{name}"
-      out << '"/></div>'
+      out << '">Watch Video</button></div>'
     end
   end
 end
 
-Liquid::Template.register_filter(Jekyll::ScreenShootInjector)
+Liquid::Template.register_filter(Jekyll::YoutubePopupInjector)

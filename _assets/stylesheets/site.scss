@@ -700,3 +700,16 @@ IMG[alt="right-float-image"] {
 .forum-post .post-content P {
   text-align: justify;
 }
+
+.image-section {
+  clear: both;
+  text-align: center;
+  margin: 8px auto;
+
+  IMG {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+}
+

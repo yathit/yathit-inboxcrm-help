@@ -441,5 +441,9 @@ function sendAnalytic() {
 
 })();
 
+$(function () {
+  $(".youtube-popup").YouTubeModal({autoplay:0, width:640, height:360});
+});
+
 
 
