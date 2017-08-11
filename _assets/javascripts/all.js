@@ -17,7 +17,7 @@ var e=c.find(".active:last a"),f=a.Event("hide.bs.tab",{relatedTarget:b[0]}),g=a
  * http://lab.abhinayrathore.com/bootstrap-youtube/
  * https://github.com/abhinayrathore/Bootstrap-Youtube-Popup-Player-Plugin
  */
-(function ($) {
+(function ($, apiKey) {
   var $YouTubeModal = null,
       $YouTubeModalDialog = null,
       $YouTubeModalTitle = null,
@@ -34,14 +34,19 @@ var e=c.find(".active:last a"),f=a.Event("hide.bs.tab",{relatedTarget:b[0]}),g=a
       // initialize YouTube Player Modal
       if ($YouTubeModal == null) {
         $YouTubeModal = $('<div class="modal fade ' + options.cssClass + '" id="YouTubeModal" role="dialog" aria-hidden="true">');
-        var modalContent = '<div class="modal-dialog" id="YouTubeModalDialog">' +
-            '<div class="modal-content" id="YouTubeModalContent">' +
-            '<div class="modal-header">' +
-            '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
-            '<h4 class="modal-title" id="YouTubeModalTitle"></h4>' +
-            '</div>' +
-            '<div class="modal-body" id="YouTubeModalBody" style="padding:0;"></div>' +
-            '</div>' +
+        var modalContent = '' +
+            '<div class="modal-dialog" id="YouTubeModalDialog">' +
+            '  <div class="modal-content" id="YouTubeModalContent">' +
+            '    <div class="modal-header">' +
+            '      <button type="button" class="close" data-dismiss="modal">&times;</button>' +
+            '      <h4 class="modal-title" id="YouTubeModalTitle"></h4>' +
+            '    </div>' +
+            '    <div class="modal-body" id="YouTubeModalBody" style="padding:0;">' +
+            '    </div>' +
+            '    <div class="modal-footer">\n' +
+            '      <a class="pull-left" href="tutorial-videos.html">All Tutorials</a>\n' +
+            '    </div>' +
+            '  </div>' +
             '</div>';
         $YouTubeModal.html(modalContent).hide().appendTo('body');
         $YouTubeModalDialog = $("#YouTubeModalDialog");
@@ -131,15 +136,10 @@ var e=c.find(".active:last a"),f=a.Event("hide.bs.tab",{relatedTarget:b[0]}),g=a
 
   function setYouTubeTitle(youtubeId) {
     $.ajax({
-      url: window.location.protocol + '//query.yahooapis.com/v1/public/yql',
-      data: {
-        q: "select * from json where url ='https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + youtubeId + "&format=json'",
-        format: "json"
-      },
-      dataType: "jsonp",
+      url: 'https://www.googleapis.com/youtube/v3/videos?key=' + apiKey + '&part=snippet&id=' + youtubeId,
       success: function (data) {
-        if (data && data.query && data.query.results && data.query.results.json) {
-          setModalTitle(data.query.results.json.title);
+        if (data && data.items && data.items[0]) {
+          setModalTitle(data.items[0].snippet.title);
         }
       }
     });
@@ -183,7 +183,7 @@ var e=c.find(".active:last a"),f=a.Event("hide.bs.tab",{relatedTarget:b[0]}),g=a
     showinfo: 0,
     theme: 'light'
   };
-})(jQuery);/* Garlicjs dist/garlic.min.js build version 1.2.3 http://garlicjs.org */
+})(jQuery, "AIzaSyAxo_I4HiCpwGFKZvsndhICAPKw6naZcOs");/* Garlicjs dist/garlic.min.js build version 1.2.3 http://garlicjs.org */
 !function(b){var h=function(a){this.defined="undefined"!==typeof localStorage};h.prototype={constructor:h,get:function(a,b){return localStorage.getItem(a)?localStorage.getItem(a):"undefined"!==typeof b?b:null},has:function(a){return localStorage.getItem(a)?!0:!1},set:function(a,b,d){"string"===typeof b&&(""===b?this.destroy(a):localStorage.setItem(a,b));return"function"===typeof d?d():!0},destroy:function(a,b){localStorage.removeItem(a);return"function"===typeof b?b():!0},clean:function(a){for(var b=
 localStorage.length-1;0<=b;b--)"undefined"===typeof Array.indexOf&&-1!==localStorage.key(b).indexOf("garlic:")&&localStorage.removeItem(localStorage.key(b));return"function"===typeof a?a():!0},clear:function(a){localStorage.clear();return"function"===typeof a?a():!0}};var k=function(a,b,d){this.init("garlic",a,b,d)};k.prototype={constructor:k,init:function(a,c,d,e){this.type=a;this.$element=b(c);this.options=this.getOptions(e);this.storage=d;this.path=this.options.getPath(this.$element)||this.getPath();
 this.parentForm=this.$element.closest("form");this.$element.addClass("garlic-auto-save");this.expiresFlag=!this.options.expires?!1:(this.$element.data("expires")?this.path:this.getPath(this.parentForm))+"_flag";this.$element.on(this.options.events.join("."+this.type+" "),!1,b.proxy(this.persist,this));if(this.options.destroy)b(this.parentForm).on("submit reset",!1,b.proxy(this.destroy,this));this.retrieve()},getOptions:function(a){return b.extend({},b.fn[this.type].defaults,a,this.$element.data())},
