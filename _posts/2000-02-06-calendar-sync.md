@@ -4,7 +4,7 @@ section: User Guide
 index: 7
 ---
 
-{{ site.product }} provides a bi-directional sync of events between Google & Sugar. Events created and edited in either platform will automatically be synced in regular interval by your browser.
+{{ site.product }} provides a bi-directional sync of events between Google and Sugar. Events created and edited in either platform will automatically be synced in regular interval by your browser.
 
 To setup Calendar Sync, visit to **Setting** panel, {{ "settings" | svg_icon }}, on the sidebar and then click **Calendar Sync Setting**. 
 
@@ -15,7 +15,7 @@ If you have not grant read and write access right of your Google calendar to Yat
 
 ![calendar-grant-permission](https://yathit-assets.storage.googleapis.com/screenshot/calendar-grant-permission.png)
 
-Click Grant link, to open popup window that allow you to give YathitInboxCRM access to your calendar. Scroll down and click Accept.
+Click Grant link, to open popup window that allow you to give Yathit access to your calendar. Scroll down and click Accept.
 
 
 ## Sync Direction Setting
@@ -49,20 +49,23 @@ Please note that the sync process will be executed only when Chrome browser is r
 
 To apply manual calendar sync whenever you need, select the sync direction settings and then click on the “Sync Now” button.
  
+## Advanced Settings 
+
+There are additional settings or reports, mostly to understand what is happen after the sync.
  
-## Sync Preview
+#### Sync Preview
 
 Displays what will happen if sync is performed:
 
 ![cal-sync-preview](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-preview.png)
  
-## Sync History
+#### Sync History
 
 Displays a time based history for all synced records with their previous record details and the applied changes:
 
 ![cal-sync-history](https://yathit-assets.storage.googleapis.com/screenshot/cal-sync-history.png)
 
-## Sync Backlogs
+#### Sync Backlogs
 
 Backlogs are failed update, quarantine from synchronization. To participate in synchronization again, click release after manually inspecting each records.
 
