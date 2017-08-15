@@ -142,6 +142,16 @@ function sendAnalytic() {
     send(cb, mth, '/kb/' + path, body);
   }
 
+  window.deletePost = function(id) {
+    if (!id) {
+      id = parseInt($('[data-id]').attr('data-id'), 10);
+    }
+    var post = {'id': id, 'status': 'Deleted'};
+    sendKb(function(json, status) {
+      console.log(json, status);
+    }, 'POST', 'delete/' + id + '?delete=1', post);
+  };
+
   /**
    * patchPost({type: 'FAQ'});
    * patchPost({status: 'Completed'});
