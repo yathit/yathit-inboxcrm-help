@@ -142,19 +142,10 @@ function sendAnalytic() {
     send(cb, mth, '/kb/' + path, body);
   }
 
-  window.deletePost = function(id) {
-    if (!id) {
-      id = parseInt($('[data-id]').attr('data-id'), 10);
-    }
-    var post = {'id': id, 'status': 'Deleted'};
-    sendKb(function(json, status) {
-      console.log(json, status);
-    }, 'POST', 'delete/' + id + '?delete=1', post);
-  };
-
   /**
    * patchPost({type: 'FAQ'});
    * patchPost({status: 'Completed'});
+   * patchPost({status: 'Deleted'}); // delete a post
    * patchPost({ownerId: 'jaap.de.koning@a4u.taxi'});
    * patchPost({createdAt: new Date('Feb 2, 2015').getTime()})
    */
