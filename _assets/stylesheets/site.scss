@@ -697,6 +697,12 @@ IMG[alt="right-float-image"] {
   margin-left: 16px;
 }
 
+P IMG[alt="centered-image"] {
+  clear: both;
+  display: block;
+  margin-right: auto;
+}
+
 .forum-post .post-content P {
   text-align: justify;
 }
