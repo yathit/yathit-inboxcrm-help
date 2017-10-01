@@ -71,6 +71,24 @@ Not only you can remove the module setting but also make changes in a specific p
        }
      }
      
+To set all fields, replace module name with '*', such as     
+
+     {
+       "Sugar": {
+         "ModuleSetting": {
+           "Modules": {
+             "*": {
+               "Fields": {
+                 "id": {
+                   "normallyHide": false
+                 }
+               }
+             }
+           }
+         }
+       }
+     }
+     
 Define color and symbol for custom module "Recruitment".
 
      {
