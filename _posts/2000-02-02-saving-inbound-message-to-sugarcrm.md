@@ -4,72 +4,71 @@ section: User Guide
 index: 2
 ---
 
+{{ site.product }} provides an easy way to save or archive incoming and outgoing emails with attachments to Sugar.
+
 * TOC
 {:toc}
 
-## Archive Inbound Email
+## Archiving Inbound Emails
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TcwbeEQsId0?list=PL0ZVs2MTcLP82s0qTsQ3RTZXad_dZCSbU"  frameborder="0" allowfullscreen></iframe>
+{{ "TcwbeEQsId0" | youtube_popup }}
 
-{{ site.product }}  provides an easy way to save or archive any email message with all attachments to Sugar, as following steps:
+Open the email which you want to save or archive.
 
-* Open the email which you want to save or archive
-
-{{ "1" | step }} Click on Yathit menu, and then select Archive email. 
+❶ Click on Yathit menu {{ "1" | step }}, and then select *Archive* menu item. 
 
 ![archive-menu](https://yathit-assets.storage.googleapis.com/web/archive-menu.png)
 
 
-The below Archive Email dialog will be displayed:
+It will bring up the following **Archive Email Dialog Box**.
 
 ![archive-dialog](https://yathit-assets.storage.googleapis.com/web/archive-dialog.png) 
 
+{{ site.product }}  provides the ability to add various types of related records to the archived email.
 
-{{ site.product }}  provides the ability to add various types of related records to the archived email:
+❷ The related records {{ "2" | step }} will automatically be populated as per the sender and recipient email addresses.
 
-* {{ "2" | step }} The related Contacts and Account records will automatically be populated as per the sender email address
+❸ Other possible related records {{ "3" | step }} are suggested base on your historical selection. To related a suggested record, click on it.
 
-* {{ "3" | step }} Other possible suggested related record can be added easily by one click on the item
+❹ To add additional related records, choose module {{ "4" | step }} and then search {{ "5" | step }} for a specific related record. Select the search result item to add as related record.
 
-* {{ "4" | step }} Any type of records can be added as relationship (Contacts, Accounts, Cases, Meetings, Notes, Project, Tasks… etc.)
+❺ If email has attachment(s), those will be listed in **Attachments** section {{ "6" | step }}. Click on the Attachments checkbox to include attachment(s) with the email.
 
-* {{ "5" | step }} To search for a specific related record, use Searchtext box then add theselected related record
+➏ If you need to change email subject {{ "7" | step }}, you can change it.
 
-* {{ "6" | step }} Click on the Attachments checkbox to archive the email attachments
+➐ Click **Archive** button to archive the email immediately in the Sugar.
 
-* {{ "7" | step }} The archive email subject will be displayed with the ability to edit it if necessary.
-
-Click on the Archive button to save the archive email immediately in the Sugar, or click on the Cancel button to close the Archive Email dialog and ignore the defined email archive information.
+Notice that archive menu icon change from Yathit logo, {{ "ydn-logo" | svg_icon }} to cloud upload icon {{ "cloud-done" | svg_icon }}. The menu is now linked to archived email record in Sugar.
 
 
 ## Archiving Outbound Emails
 
-For an easy management of Outbound emails, Yathit provides the capability to archive the Outbound emails. 
+Although you can archive outbound email like inbound email, usually it is easier to mark to archive before sending. 
 
-* You can do this using the Yathit toolbor, which appears below the recipients input in Gmail compose and reply panels. 
+Yathit toolbor appeared in Gmail _compose_ and _reply_ panels. 
 
-* To archive the outbound emails to SugarCRM, select the Archive checkbox in the toolbar.
+❶ To archive the outbound emails to SugarCRM, select the **Archive** checkbox in the toolbar.
 
-* If you want to assign the archived email to a particular contact or record, then click Archive in the Yathit toolbar. It will show you the primary contact and record already assigned to the email. If you want to change it, then click Details. You will see a Lead or Contact record that exists in SugarCRM. Select them as per your requirement to save your email in any of the existing record:
+❷ If you want to assign the archived email or relate to a particular contact or record, then click Archive in the Yathit toolbar. It will show you the primary contact and record already assigned to the email. If you want to change it, then click Details. You will see a Lead or Contact record that exists in SugarCRM. Select them as per your requirement to save your email in any of the existing record:
  
 {% include full-screenshot.html file="archiving-outbound-email.gif" %}
 
-* After you have selected the required contact or record, send the email. When you will send the email, it will be archived, including the attachments, if selected. Archiving attachment requires additional permission for web site data access to download the attached files.
+❸ After you have selected the required contact or record, send the email. When you will send the email, it will be archived, including the attachments, if selected. Archiving attachment requires additional permission for web site data access to download the attached files.
 
 
 ## Uploading Attachment
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4m4uhUj1iDo" frameborder="0" allowfullscreen></iframe>
+{{ "4m4uhUj1iDo" | youtube_popup }}
 
-You can also upload any attachment to the SugarCRM’s Documents module directly from your Gmail interface using the {{site.product}}. 
+You can also upload attachment to the SugarCRM’s Documents module directly from your Gmail interface using {{site.product}}. 
 
-* To upload an attachment, click the Upload button {{ "cloud-upload" | svg_icon }} on the attachment. You may need to give permission to upload the document so, do not ignore it. 
+❶ To upload an attachment, click the Upload button {{ "cloud-upload" | svg_icon }} on the attachment. You may need to give permission to upload the document. 
 
-* Once the document upload process starts, the cloud icon will become green. And, after the upload is finished, the cloud icon will be changed to the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon.
+❷ Once the document upload process starts, the cloud icon will become green. And, after the upload is finished, the cloud icon will be changed to the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon.
 
 {% include screenshot.html file="upload-attachment.gif" %}
 
-* In case, the attachment is already available on the SugarCRM’s Document module, you will not see the Upload button. Rather you will see the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon. Clicking this icon will provide you details about the attachment on the side panel. If you want more details, you can visit to the Record detail page in the SugarCRM.
+❸ In case, the attachment is already available on the SugarCRM’s Document module, you will not see the Upload button. Rather you will see the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon. Clicking this icon will provide you details about the attachment on the side panel. If you want more details, you can visit to the Record detail page in the SugarCRM.
 
 
 ## View Archived Email

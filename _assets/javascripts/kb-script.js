@@ -145,6 +145,8 @@ function sendAnalytic() {
   /**
    * patchPost({type: 'FAQ'});
    * patchPost({status: 'Completed'});
+   * patchPost({status: 'Deleted'}); // delete a post
+   * patchPost({ownerId: 'jaap.de.koning@a4u.taxi'});
    * patchPost({createdAt: new Date('Feb 2, 2015').getTime()})
    */
   window.patchPost = function(post) {

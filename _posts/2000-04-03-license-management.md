@@ -1,6 +1,6 @@
 ---
 title: License
-section: Installation Guide
+section: Getting Started
 index: 4
 ---
 

@@ -3,7 +3,7 @@
  * http://lab.abhinayrathore.com/bootstrap-youtube/
  * https://github.com/abhinayrathore/Bootstrap-Youtube-Popup-Player-Plugin
  */
-(function ($) {
+(function ($, apiKey) {
   var $YouTubeModal = null,
       $YouTubeModalDialog = null,
       $YouTubeModalTitle = null,
@@ -20,14 +20,19 @@
       // initialize YouTube Player Modal
       if ($YouTubeModal == null) {
         $YouTubeModal = $('<div class="modal fade ' + options.cssClass + '" id="YouTubeModal" role="dialog" aria-hidden="true">');
-        var modalContent = '<div class="modal-dialog" id="YouTubeModalDialog">' +
-            '<div class="modal-content" id="YouTubeModalContent">' +
-            '<div class="modal-header">' +
-            '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
-            '<h4 class="modal-title" id="YouTubeModalTitle"></h4>' +
-            '</div>' +
-            '<div class="modal-body" id="YouTubeModalBody" style="padding:0;"></div>' +
-            '</div>' +
+        var modalContent = '' +
+            '<div class="modal-dialog" id="YouTubeModalDialog">' +
+            '  <div class="modal-content" id="YouTubeModalContent">' +
+            '    <div class="modal-header">' +
+            '      <button type="button" class="close" data-dismiss="modal">&times;</button>' +
+            '      <h4 class="modal-title" id="YouTubeModalTitle"></h4>' +
+            '    </div>' +
+            '    <div class="modal-body" id="YouTubeModalBody" style="padding:0;">' +
+            '    </div>' +
+            '    <div class="modal-footer">\n' +
+            '      <a class="pull-left" href="tutorial-videos.html">All Tutorials</a>\n' +
+            '    </div>' +
+            '  </div>' +
             '</div>';
         $YouTubeModal.html(modalContent).hide().appendTo('body');
         $YouTubeModalDialog = $("#YouTubeModalDialog");
@@ -117,15 +122,10 @@
 
   function setYouTubeTitle(youtubeId) {
     $.ajax({
-      url: window.location.protocol + '//query.yahooapis.com/v1/public/yql',
-      data: {
-        q: "select * from json where url ='https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + youtubeId + "&format=json'",
-        format: "json"
-      },
-      dataType: "jsonp",
+      url: 'https://www.googleapis.com/youtube/v3/videos?key=' + apiKey + '&part=snippet&id=' + youtubeId,
       success: function (data) {
-        if (data && data.query && data.query.results && data.query.results.json) {
-          setModalTitle(data.query.results.json.title);
+        if (data && data.items && data.items[0]) {
+          setModalTitle(data.items[0].snippet.title);
         }
       }
     });
@@ -169,4 +169,4 @@
     showinfo: 0,
     theme: 'light'
   };
-})(jQuery);
+})(jQuery, "AIzaSyAxo_I4HiCpwGFKZvsndhICAPKw6naZcOs");
