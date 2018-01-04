@@ -20,7 +20,16 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
     
 List files
 
-    gsutil ls gs://yathit-assets/screenshot    
+    gsutil ls gs://yathit-assets/screenshot   
+    
+## CSS
+
+Image in css
+
+    ![centered-image](https://yathit-assets.storage.googleapis.com/screenshot/intstall-permission-collabspot.png)
+    
+
+    {{ "sidebar-login-button.png" | screenshot }}         
 
 ## Updating tutorial list
 
