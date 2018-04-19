@@ -1,6 +1,5 @@
 
 var _paq = _paq || [];
-_paq.push(['setUserId', localStorage.getItem('uid') || '']);
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {

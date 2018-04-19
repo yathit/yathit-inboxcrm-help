@@ -1,8 +1,9 @@
 
 
 
-function sendAnalytic() {
-
+if (typeof sendAnalytic === 'undefined') {
+  function sendAnalytic() {
+  }
 }
 
 (function() {

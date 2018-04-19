@@ -199,8 +199,9 @@ events:"DOMAttrModified textInput input change click keypress paste focus".split
 
 
 
-function sendAnalytic() {
-
+if (typeof sendAnalytic === 'undefined') {
+  function sendAnalytic() {
+  }
 }
 
 (function() {
