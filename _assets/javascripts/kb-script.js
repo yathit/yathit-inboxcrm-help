@@ -298,7 +298,7 @@ if (typeof sendAnalytic === 'undefined') {
 
   var path = '/rpc_login?url=' + location.href;
   send(function(login_resp) {
-        const user = login_resp.User || {};
+        var user = login_resp.User || {};
 
         var login_el = document.getElementById('login');
         if (user.is_login) {
