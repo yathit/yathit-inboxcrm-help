@@ -2,7 +2,13 @@
 var _paq = _paq || [];
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
+
 (function() {
+  var uid = localStorage.getItem('uname');
+  if (uid) {
+    _paq.push(['setUserId', uid]);
+  }
+
   var u="https://analytic.yathit.com/";
   _paq.push(['setTrackerUrl', u+'piwik.php']);
   if (location.host === 'www.yathit.com') {

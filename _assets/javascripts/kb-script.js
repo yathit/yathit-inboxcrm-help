@@ -310,6 +310,7 @@ if (typeof sendAnalytic === 'undefined') {
             processAdmin(user);
           }
           localStorage.setItem('uid', user.Id.$t);
+          localStorage.setItem('uname', user.email);
         } else {
           login_el.textContent = 'Login';
           login_el.href = user.login_url;

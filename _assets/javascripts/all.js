@@ -508,6 +508,7 @@ if (typeof sendAnalytic === 'undefined') {
             processAdmin(user);
           }
           localStorage.setItem('uid', user.Id.$t);
+          localStorage.setItem('uname', user.email);
         } else {
           login_el.textContent = 'Login';
           login_el.href = user.login_url;
@@ -652,7 +653,13 @@ $(function () {
 var _paq = _paq || [];
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
+
 (function() {
+  var uid = localStorage.getItem('uname');
+  if (uid) {
+    _paq.push(['setUserId', uid]);
+  }
+
   var u="https://analytic.yathit.com/";
   _paq.push(['setTrackerUrl', u+'piwik.php']);
   if (location.host === 'www.yathit.com') {
