@@ -251,10 +251,19 @@ if (typeof sendAnalytic === 'undefined') {
     form.onsubmit = function(ev) {
       ev.preventDefault();
       var title = form.title.value;
+      var content = form.content.value;
       var post = {
         title: title,
-        content: form.content.value
+        content: content
       };
+      if (title.length < 8) {
+        alert('Title too short.');
+        return;
+      }
+      if (content.length < 30) {
+        alert('Content must be at least 30 characters. Please explain more.');
+        return;
+      }
       if (form.id) {
         post['id'] = form.id.value;
       }
