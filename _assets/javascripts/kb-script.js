@@ -256,10 +256,6 @@ if (typeof sendAnalytic === 'undefined') {
         title: title,
         content: content
       };
-      if (title.length < 8) {
-        alert('Title too short.');
-        return;
-      }
       if (content.length < 30) {
         alert('Content must be at least 30 characters. Please explain more.');
         return;
