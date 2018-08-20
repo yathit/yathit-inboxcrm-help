@@ -120,6 +120,3 @@ DEPENDENCIES
   json
   sass
   uglifier
-
-BUNDLED WITH
-   1.12.5
