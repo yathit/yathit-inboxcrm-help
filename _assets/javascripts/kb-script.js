@@ -313,6 +313,12 @@ if (typeof sendAnalytic === 'undefined') {
         $('<div>' + votes.join(', ') + '</div>').insertAfter(h);
       });
     });
+    var h1 = document.querySelector('H1.post-title');
+    var html = document.createDocumentFragment();
+    html.innerHTML = '<div>' +
+        '<button>Delete</button>' +
+        '</div>';
+    h1.appendChild(html);
   }
 
   function isUserAdmin(email) {
