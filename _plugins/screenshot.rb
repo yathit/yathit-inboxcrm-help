@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require "jekyll/assets_plugin/asset_path"
 
 module Jekyll
@@ -19,10 +20,25 @@ module Jekyll
   # Display step number.
   #
   module ScreenShootInjector
-    def screenshot(name)
-      out = '<div class="image-section"><img class="img-responsive" src="https://yathit-assets.storage.googleapis.com/screenshot/'
-      out << "#{name}"
-      out << '"/></div>'
+    def screenshot(names)
+      parts = names.split(' ')
+      name = parts[0]
+      opt = ''
+      if parts.length > 1
+        opt = parts[1]
+      end
+
+      out = '<div class="image-section">'
+
+      if name.end_with?('.mp4')
+        out << '<video width="466px" muted autoplay loop>'
+        out << "<source src='https://yathit-assets.storage.googleapis.com/screenshot/#{name}' type='video/mp4'>"
+        out << '</video>'
+      else
+        out << '<img class="' "img-responsive #{opt}"
+        out << '" src="https://yathit-assets.storage.googleapis.com/screenshot/' "#{name}" '"/>'
+      end
+      out << '</div>'
     end
   end
 end
