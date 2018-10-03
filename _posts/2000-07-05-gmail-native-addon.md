@@ -20,6 +20,8 @@ Inside Gmail message, Yathit For Sugar Gmail Add-on will popup. If recipient or 
 
 You can quickly create a record with name and email filled.
 
+{{ "gam-create-lead.mp4" | screenshot }}
+
 ### View Record Detail
 
 If recipient or sender of the email is in the CRM, its detail along with related records are shown in the panel.
@@ -28,10 +30,9 @@ If recipient or sender of the email is in the CRM, its detail along with related
 
 ### Edit Record
 
-You can also edit the record.
+You can also edit the record, similar to creating a record. 
 
-{{ "gam-create-lead.mp4" | screenshot }}
-
+You can also
 
 ### Save Email Message
 
