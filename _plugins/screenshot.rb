@@ -31,7 +31,7 @@ module Jekyll
       out = '<div class="image-section">'
 
       if name.end_with?('.mp4')
-        out << '<video width="466px" muted autoplay loop>'
+        out << '<video width="320px" muted autoplay loop>'
         out << "<source src='https://yathit-assets.storage.googleapis.com/screenshot/#{name}' type='video/mp4'>"
         out << '</video>'
       else
