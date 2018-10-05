@@ -314,11 +314,13 @@ if (typeof sendAnalytic === 'undefined') {
       });
     });
     var h1 = document.querySelector('H1.post-title');
-    var html = document.createDocumentFragment();
-    html.innerHTML = '<div>' +
-        '<button>Delete</button>' +
-        '</div>';
-    h1.appendChild(html);
+    if (h1 && false) {
+        var html = document.createDocumentFragment();
+        html.innerHTML = '<div>' +
+            '<button>Delete</button>' +
+            '</div>';
+        h1.appendChild(html);
+    }
   }
 
   function isUserAdmin(email) {

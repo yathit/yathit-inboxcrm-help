@@ -16,6 +16,10 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 
 ## Uploading screenshot
 
+Resize image with 400px width in Ubuntu.  
+  
+    convert Screenshot_1538703449.png -resize 400 sm-sugar-setting-page-2.png
+    
     gsutil -m rsync -r ~/screenshot gs://yathit-assets/screenshot 
     
     gsutil cp ~/Desktop/yathit-about-panel.png gs://yathit-assets/screenshot/
