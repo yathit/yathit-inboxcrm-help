@@ -6,8 +6,8 @@
         <sequential>
             <copy overwrite="true" force="true"
                   file="${gae.dir}/src/main/webapp/static/sugarcrm-gmail/forum.html"
-                  tofile="${gae.dir}/src/main/resources/kb/forum.html" />
-            <replace summary="true" file="${gae.dir}/src/main/resources/kb/forum.html">
+                  tofile="${gae.dir}/src/main/resources/xkb/forum.html" />
+            <replace summary="true" file="${gae.dir}/src/main/resources/xkb/forum.html">
                 <replacetoken><![CDATA[<p>$CONTENT$</p>]]></replacetoken>
                 <replacevalue><![CDATA[{{CONTENT}}]]></replacevalue>
             </replace>
@@ -33,10 +33,11 @@
             </filelist>
         </concat>
     </target>
-    <target name="copy" description="copy distribution files" depends="forum">
-        <copy todir="${gae.dir}/src/main/webapp/static/sugar-mobile-app">
+    <target name="copy" description="copy distribution files" >
+        <copy todir="${gae.dir}/src/main/webapp/static/sugarcrm-gmail">
             <fileset dir="_site"></fileset>
         </copy>
+        <antcall target="forum"/>
     </target>
     <target name="main" depends="concat,build,forum" description="build all">
     </target>
