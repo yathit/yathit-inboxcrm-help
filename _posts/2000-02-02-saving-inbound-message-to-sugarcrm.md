@@ -66,7 +66,7 @@ You can also upload attachment to the SugarCRM’s Documents module directly fro
 
 ❷ Once the document upload process starts, the cloud icon will become green. And, after the upload is finished, the cloud icon will be changed to the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon.
 
-{% include screenshot.html file="upload-attachment.gif" %}
+{{ "upload-attachment.gif" | screenshot }}
 
 ❸ In case, the attachment is already available on the SugarCRM’s Document module, you will not see the Upload button. Rather you will see the SugarCRM {{ "sugarcrm-bw" | svg_icon }} icon. Clicking this icon will provide you details about the attachment on the side panel. If you want more details, you can visit to the Record detail page in the SugarCRM.
 
