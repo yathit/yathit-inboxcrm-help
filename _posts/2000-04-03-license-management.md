@@ -4,9 +4,7 @@ section: Getting Started
 index: 4
 ---
 
-The features available to you depend on the license you have. Please see available licenses and their features in [pricing page](https://www.yathit.com/pricing.html). Please also note you can use Yathit without login, i.e, no license, but **Basic License** has more features, even though it is free.
-
-License can be purchase from [Yathit web site](https://www.yathit.com/pricing.html), from our partners or [SuiteCRM Store](https://store.suitecrm.com). Each license subscription has number of seats, which is counted as Sugar user login from Yathit Browser Extension of a given month. 
+There are two types of Yathit subscription license 1) Individual and 2) Instance license. 
 
 Once you purchase a license, the license will be assigned to a sugar domain. The sugar domain will be automatically assigned from your trial period. You can also send [support email](mailto:sale@yathit.com) to change or assigned a domain to your license.
 
