@@ -50,7 +50,16 @@ This is mostly:
 To build the site    
 
     bundle exec jekyll build --destination ~/gae/yathit-app/src/main/webapp/static/sugarcrm-gmail
-
+   
 Then replace token on forum.html 
 
     ant forum
+
+In windows, use bash for ubuntu to build the site
+
+    cd //mnt/c/Users/mbikyaw/WebstormProjects/yathit-inboxcrm-help
+    jekyll build 
+       
+Then go back to PowerShell to copy files to destination folder
+     
+    ant copy
