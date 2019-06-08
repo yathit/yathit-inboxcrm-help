@@ -4,6 +4,7 @@ section: User Guide
 index: 6
 ---
 
+This feature is deprecated.
 
 {{ site.product }} provides a bi-directional sync of events between Google and Sugar. Events created and edited in either platform will automatically be synced in regular interval by your browser.
 
