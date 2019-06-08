@@ -12,7 +12,10 @@
                 <replacevalue><![CDATA[{{CONTENT}}]]></replacevalue>
             </replace>
             <copy overwrite="true" force="true"
-                  file="${gae.dir}/src/main/resources/kb/forum.html"
+                  file="${gae.dir}/src/main/resources/xkb/forum.html"
+                  tofile="${gae.dir}/src/main/resources/kb/forum.html" />
+            <copy overwrite="true" force="true"
+                  file="${gae.dir}/src/main/resources/xkb/forum.html"
                   tofile="${gae.dir}/src/main/resources/forum/forum.html" />
         </sequential>
     </target>
