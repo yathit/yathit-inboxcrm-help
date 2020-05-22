@@ -6,7 +6,7 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 ## How to run locally
 
 * Clone this repository to your machine.
-* Make sure to have Ruby installed (tested fine on Ruby 2.1.x).
+* Make sure to have Ruby installed (tested fine on Ruby 2.4.x).
 * Install required dependencies with `bundle install`
 * Run 
 
