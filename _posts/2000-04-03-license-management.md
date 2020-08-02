@@ -4,26 +4,35 @@ section: Getting Started
 index: 4
 ---
 
-There are two types of Yathit subscription license 1) Individual and 2) Instance license. 
+There are two types of Yathit license 1) Individual license and 2) Site license (also called domain license, instance license or corporate license). 
 
-Once you purchase a license, the license will be assigned to a sugar domain. The sugar domain will be automatically assigned from your trial period. You can also send [support email](mailto:sale@yathit.com) to change or assigned a domain to your license.
+## Individual license
 
+You can purchase [yearly subscription](https://www.yathit.com/buy-extension-now.html) for individual license. Individual license is tie to your Google account (Gmail or G-Suite) and valid for any CRM instance.
 
-## How to receive a license 
-
-Simply [login to your Sugar, setup] inside Yathit. If your sugar domain has a license, you will see a license on the sugar login panel as shown below. 
-
-{{ "site-license.png" | screenshot }}
-
-Zero-cost Basic License is assigned by Google account login to Yathit browser extension. To received a basic license, simply login to Yathit in the extension.
+You need to login to Yathit via Yathit Chrome Extension to receive the license.  
 
 {{ "login-to-yathit.png" | screenshot }}
 
-## Enterprise licensing 
+## Site license 
 
-Users can assign a person via email to have access to the licence's and 'Subscriptions' on the page.
+You can purchase [yearly subscription](https://www.yathit.com/buy-extension-now.html) for all users in your CRM instance. After purchase, you will be ask to provide your CRM portal URL for activation.
 
-Any Google domain admin or a person who has access to the Admin Directory API can easily manage not only the bill payments but also the usage auditing as well. To do this, login to the [Yathit Admin Portal](https://www.yathit.com/portal/crm-admin.html). 
+When users login to your CRM, end user licenses are activated automatically.    
 
-Note that the user has to be either a Google domain admin or someone who has access to the Admin Directory API. You do not have to use any special [Google apps integration, Google apps integration] for using the Admin portal or to manage the users.
+## Checking license
+
+You can check these licenses in 'About' panel in chrome extension as shown below.
+
+
+{{ "yathit-about-panel.png" | screenshot }}
+
+In the above example in the screen, site license is activated while no individual license.
+
+Use 'Refresh' button (see in the above image) to re-check if you still does not receive  end user license for your CRM site license. 
+
+
+
+
+
 
