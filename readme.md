@@ -12,6 +12,8 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 
     jekyll serve
     
+Or `bundle exec jekyll serve`    
+    
 * Go to [http://localhost:4000/sugarcrm-gmail/(http://localhost:4000/sugarcrm-gmail/)
 
 ## Uploading screenshot
@@ -68,5 +70,6 @@ Then go back to PowerShell to copy files to destination folder
 
 Then, to publish quickly as latest version
 
+    ant
     (cd ~/gae/yathit-app; mvn appengine:deploy -Dapp.deploy.version=website)
              
