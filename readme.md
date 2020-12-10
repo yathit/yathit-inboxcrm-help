@@ -10,10 +10,8 @@ For this opensource Knowledge Base web site generator, please see : [Lessons Lea
 * Install required dependencies with `bundle install`
 * Run 
 
-    jekyll serve
-    
-Or `bundle exec jekyll serve`    
-    
+   bundle exec jekyll serve
+     
 * Go to [http://localhost:4000/sugarcrm-gmail/(http://localhost:4000/sugarcrm-gmail/)
 
 ## Uploading screenshot
@@ -24,7 +22,7 @@ Resize image with 400px width in Ubuntu.
     
     gsutil -m rsync -r ~/screenshot gs://yathit-assets/screenshot 
     
-    gsutil cp ~/Desktop/yathit-about-panel.png gs://yathit-assets/screenshot/
+    gsutil cp ~/Desktop/ex-context-panel-lion.png gs://yathit-assets/screenshot/
     
 List files
 

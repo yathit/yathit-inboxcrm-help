@@ -1,6 +1,5 @@
 ---
 title: Email Tracking Setting
-section: Email Tracking
 index: 4
 ---
 

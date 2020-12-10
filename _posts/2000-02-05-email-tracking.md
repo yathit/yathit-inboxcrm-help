@@ -1,8 +1,9 @@
 ---
-title: Track Email
-section: User Guide
+title: Email Tracking
 index: 5
 ---
+
+[Email Tracking] feature has been deprecated. 
 
 Yathit Browser Extension provides you an option to easily track on email you sent.
 
@@ -28,7 +29,7 @@ The “get notification” feature provides you real-time notification in Google
 
 ## Easy to view tracking
 
-To see the status of your tracked message, just look beside the Gmail message thread.
+Enable in [Email Tracking Setting] panel to use this feature. To see the status of your tracked message, just look beside the Gmail message thread.
 
 {% include full-screenshot.html file="view-tracked-email.gif" %}
 <br/>
